@@ -6,6 +6,7 @@ namespace AfipWebServicesClient
 {
     public class WscdcClient
     {
+        private readonly ServiceSoapClient _wscdcService;
         public bool IsProdEnvironment { get; set; } = false;
         public long Cuit { get; set; }
         public string Token { get; set; } = "";
@@ -14,24 +15,24 @@ namespace AfipWebServicesClient
         public string TestingEnvironment { get; set; } = "https://wswhomo.afip.gov.ar/WSCDC/service.asmx";
         public string ProductionEnvironment { get; set; } = "https://servicios1.afip.gov.ar/WSCDC/service.asmx";
 
+        public WscdcClient()
+        {
+            _wscdcService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
+            _wscdcService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
+        }
+
         public async Task<ComprobanteConstatarResponse> VerifyVoucherAsync(CmpDatos cmpReq)
         {
-            var wscdcService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
-            wscdcService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
 
             var auth = new CmpAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
-            var response = await wscdcService.ComprobanteConstatarAsync(auth, cmpReq);
-
+            var response = await _wscdcService.ComprobanteConstatarAsync(auth, cmpReq);
             return response;
         }
 
         public async Task<ComprobantesTipoConsultarResponse> GetVoucherTypesAsync()
         {
-            var wscdcService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
-            wscdcService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
-
             var auth = new CmpAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
-            var response = await wscdcService.ComprobantesTipoConsultarAsync(auth);
+            var response = await _wscdcService.ComprobantesTipoConsultarAsync(auth);
             return response;
         }
 

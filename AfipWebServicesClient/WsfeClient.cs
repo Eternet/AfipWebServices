@@ -7,6 +7,7 @@ namespace AfipWebServicesClient
 {
     public class WsfeClient
     {
+        private readonly ServiceSoapClient _wsfeService;
         public bool IsProdEnvironment { get; set; } = false;
         public long Cuit { get; set; }
         public string Token { get; set; } = "";
@@ -15,26 +16,24 @@ namespace AfipWebServicesClient
         public string TestingEnvironment { get; set; } = "https://wswhomo.afip.gov.ar/wsfev1/service.asmx";
         public string ProductionEnvironment { get; set; } = "https://servicios1.afip.gov.ar/wsfev1/service.asmx";
 
+        public WsfeClient()
+        {
+            _wsfeService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
+            _wsfeService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
+        }
+
         public async Task<FECompUltimoAutorizadoResponse> GetLastAuthorizedAsync(int salesPoint, int voucherType)
         {
-            var wsfeService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
-            wsfeService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
-
             var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
-            var response = await wsfeService.FECompUltimoAutorizadoAsync(auth, salesPoint, voucherType);
+            var response = await _wsfeService.FECompUltimoAutorizadoAsync(auth, salesPoint, voucherType);
             return response;
         }
 
         // ReSharper disable InconsistentNaming
         public async Task<FECAESolicitarResponse> GetCAEAsync(FECAERequest feCaeReq)
         {
-            var wsfeService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
-            wsfeService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
-
             var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
-
-            var response = await wsfeService.FECAESolicitarAsync(auth, feCaeReq);
-
+            var response = await _wsfeService.FECAESolicitarAsync(auth, feCaeReq);
             return response;
         }
 
