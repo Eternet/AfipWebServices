@@ -26,7 +26,7 @@ namespace AfipWebServicesClient
         }
 
         // ReSharper disable InconsistentNaming
-        public async Task<FECAESolicitarResponse> FECAESolicitarAsync(FECAERequest feCaeReq)
+        public async Task<FECAESolicitarResponse> GetCAEAsync(FECAERequest feCaeReq)
         {
             var wsfeService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
             wsfeService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);

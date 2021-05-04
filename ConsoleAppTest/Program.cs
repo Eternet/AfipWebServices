@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using AfipWebServicesClient;
+using AfipServiceReference;
+
 using Newtonsoft.Json;
 
 namespace ConsoleAppTest
@@ -68,7 +70,7 @@ namespace ConsoleAppTest
                 Sign = wscdcTicket.Sign,
                 Token = wscdcTicket.Token
             };
-            
+
             var comprobantesTipoConsultarResponse = await wscdcClient.GetVoucherTypesAsync();
             var json = JsonConvert.SerializeObject(comprobantesTipoConsultarResponse, Formatting.Indented);
             await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
@@ -77,50 +79,61 @@ namespace ConsoleAppTest
             var last = await wsfeClient.GetLastAuthorizedAsync(1, 6);
             var compNumber = last.Body.FECompUltimoAutorizadoResult.CbteNro + 1;
 
+            var now = DateTime.Now;
+            var monthInit = new DateTime(now.Year,now.Month,1);
+            var nextMonth = now.AddDays(30);
             //Build WSFE FECAERequest            
-            var feCaeReq = new AfipServiceReference.FECAERequest
+            var feCaeReq = new FECAERequest
             {
-                FeCabReq = new AfipServiceReference.FECAECabRequest
+                FeCabReq = new FECAECabRequest
                 {
                     // ReSharper disable CommentTypo
                     CantReg = 1, //Cantidad de registros del detalle del comprobante o lote de comprobantes de ingreso
                     CbteTipo = 6, //Tipo de comprobante que se está informando. Si se informa más de un comprobante, todos deben ser del mismo tipo
                     PtoVta = 1 // Punto de Venta del comprobante que se está informando. Si se informa más de un comprobante, todos deben corresponder al mismo punto de venta.
                 },
-                FeDetReq = new List<AfipServiceReference.FECAEDetRequest>
+                FeDetReq = new List<FECAEDetRequest>
                 {
-                    new AfipServiceReference.FECAEDetRequest
+                    new FECAEDetRequest
                     {
                         CbteDesde = compNumber,
-                        CbteHasta = compNumber,
-                        CbteFch = "20190717",
+                        CbteHasta = compNumber+100,
+                        CbteFch = AfipFormatDate(now),
                         Concepto = ConceptoComprobante.Servicios.ToInt(),
-                        DocNro = 30111222,
-                        DocTipo = 96, //Código de documento identificatorio del comprador
-                        FchVtoPago = "20190718",
+                        DocNro = 0, //Para individual DNI del cliente: 30111222
+                        DocTipo = 99, //Código de documento identificatorio del comprador //Para individual 96
+                        FchVtoPago = AfipFormatDate(nextMonth),
                         ImpNeto = 10,
                         ImpTotal = 10,
-                        FchServDesde = "20190717",
-                        FchServHasta = "20190717",
+                        FchServDesde = AfipFormatDate(monthInit),
+                        FchServHasta = AfipFormatDate(now),
                         MonCotiz = 1,
                         MonId = "PES",
-                        Iva = new List<AfipServiceReference.AlicIva>
+                        Iva = new List<AlicIva>
                         {
-                            new AfipServiceReference.AlicIva
+                            new AlicIva
                             {
                                 BaseImp = 10,
                                 Id = 3,
                                 Importe = 0
                             }
                         }
-                    }
+                    },
                 }
             };
 
             //Call WSFE FECAESolicitar
-            var compResult = await wsfeClient.FECAESolicitarAsync(feCaeReq);
+            var compResult = await wsfeClient.GetCAEAsync(feCaeReq);
             json = JsonConvert.SerializeObject(compResult, Formatting.Indented);
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine(json);
             await File.WriteAllTextAsync("FECAESolicitarResponse.json", json);
+        }
+
+        private static string AfipFormatDate(DateTime dateTime)
+        {
+            return $"{dateTime.Year}{dateTime.Month:00}{dateTime.Day:00}";
         }
     }
 }
