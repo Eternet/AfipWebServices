@@ -69,12 +69,12 @@ namespace ConsoleAppTest
                 Token = wscdcTicket.Token
             };
             
-            var comprobantesTipoConsultarResponse = await wscdcClient.ComprobantesTipoConsultarAsync();
+            var comprobantesTipoConsultarResponse = await wscdcClient.GetVoucherTypesAsync();
             var json = JsonConvert.SerializeObject(comprobantesTipoConsultarResponse, Formatting.Indented);
             await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
 
             //Get next WSFE Comp. Number
-            var last = await wsfeClient.FECompUltimoAutorizadoAsync(1, 6);
+            var last = await wsfeClient.GetLastAuthorizedAsync(1, 6);
             var compNumber = last.Body.FECompUltimoAutorizadoResult.CbteNro + 1;
 
             //Build WSFE FECAERequest            
