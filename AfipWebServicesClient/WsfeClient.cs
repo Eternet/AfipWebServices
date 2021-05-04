@@ -8,7 +8,7 @@ namespace AfipWebServicesClient
     public class WsfeClient
     {
         private readonly ServiceSoapClient _wsfeService;
-        public bool IsProdEnvironment { get; set; } = false;
+        private bool IsProdEnvironment { get; }
         public long Cuit { get; set; }
         public string Token { get; set; } = "";
         public string Sign { get; set; } = "";
@@ -16,8 +16,9 @@ namespace AfipWebServicesClient
         public string TestingEnvironment { get; set; } = "https://wswhomo.afip.gov.ar/wsfev1/service.asmx";
         public string ProductionEnvironment { get; set; } = "https://servicios1.afip.gov.ar/wsfev1/service.asmx";
 
-        public WsfeClient()
+        public WsfeClient(bool isProdEnvironment)
         {
+            IsProdEnvironment = isProdEnvironment;
             _wsfeService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
             _wsfeService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
         }

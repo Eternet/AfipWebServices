@@ -13,7 +13,7 @@ namespace AfipWebServicesClient
     // ReSharper disable CommentTypo
     public class LoginCmsClient
     {
-        public bool IsProdEnvironment { get; set; } = false;
+        public bool IsProdEnvironment { get; set; }
         public string TestingEnvironment { get; set; } = "https://wsaahomo.afip.gov.ar/ws/services/LoginCms";
         public string ProductionEnvironment { get; set; } = "https://wsaa.afip.gov.ar/ws/services/LoginCms";
 
@@ -36,13 +36,13 @@ namespace AfipWebServicesClient
                                         service + "ticket.json" :
                                         TicketCacheFolderPath + service + "ticket.json";
 
-            if (File.Exists(ticketCacheFile))
-            {
-                var ticketJson = await File.ReadAllTextAsync(ticketCacheFile);
-                var ticket = JsonConvert.DeserializeObject<WsaaTicket>(ticketJson);
-                if (ticket is { } t && DateTime.UtcNow <= t.ExpirationTime)
-                    return ticket;
-            }
+            //if (File.Exists(ticketCacheFile))
+            //{
+            //    var ticketJson = await File.ReadAllTextAsync(ticketCacheFile);
+            //    var ticket = JsonConvert.DeserializeObject<WsaaTicket>(ticketJson);
+            //    if (ticket is { } t && DateTime.UtcNow <= t.ExpirationTime)
+            //        return ticket;
+            //}
 
             const string idFnc = "[ObtenerLoginTicketResponse]";
             CertificatePath = x509CertificateFilePath;

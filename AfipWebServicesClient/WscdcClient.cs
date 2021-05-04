@@ -7,7 +7,7 @@ namespace AfipWebServicesClient
     public class WscdcClient
     {
         private readonly ServiceSoapClient _wscdcService;
-        public bool IsProdEnvironment { get; set; } = false;
+        private bool IsProdEnvironment { get; }
         public long Cuit { get; set; }
         public string Token { get; set; } = "";
         public string Sign { get; set; } = "";
@@ -15,8 +15,9 @@ namespace AfipWebServicesClient
         public string TestingEnvironment { get; set; } = "https://wswhomo.afip.gov.ar/WSCDC/service.asmx";
         public string ProductionEnvironment { get; set; } = "https://servicios1.afip.gov.ar/WSCDC/service.asmx";
 
-        public WscdcClient()
+        public WscdcClient(bool isProdEnvironment)
         {
+            IsProdEnvironment = isProdEnvironment;
             _wscdcService = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
             _wscdcService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
         }
