@@ -1,59 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading.Tasks;
-using AfipWebServicesClient;
-using AfipServiceReference;
-using AfipWebServicesClient.Extensions;
+﻿using AfipWebServicesClient;
 using AfipWebServicesClient.Model;
-using Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
 
 namespace ConsoleAppTest
 {
-
-
-
     internal class Program
     {
-
-        
         private static async Task Main()
         {
+            var productionEnvironment = new AfipEnvironment(true, @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx", "diegotes");
+            var testingEnvironment = new AfipEnvironment(false, @"C:\Fuentes\Afip\Certs\cert.pfx", "diegotes");
             //Get Login Ticket
-            var loginClient = new LoginCmsClient { IsProdEnvironment = true };
-
-            WsaaTicket wsfeTicket;
-            WsaaTicket wscdcTicket;
-            try
-            {
-                //wsfeTicket = await loginClient.LoginCmsAsync("wsfe",
-                //    @"C:\Fuentes\Afip\Certs\cert.pfx",
-                //    "diegotes",
-                //    true);
-
-                //wscdcTicket = await loginClient.LoginCmsAsync("wscdc",
-                //    @"C:\Fuentes\Afip\Certs\cert.pfx",
-                //    "diegotes",
-                //    true);
-
-                wsfeTicket = await loginClient.LoginCmsAsync("wsfe",
-                    @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx",
-                    "diegotes",
-                    true);
-
-                //wscdcTicket = await loginClient.LoginCmsAsync("wscdc",
-                //    @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx",
-                //    "diegotes",
-                //    true);
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return;
-            }
-
-            var wsfeClient = new WsfeClient(loginClient.IsProdEnvironment)
+            var loginClient = new LoginCmsClient(productionEnvironment);
+            var wsfeTicket = await loginClient.LoginCmsAsync("wsfe", true);
+            var wsfeClient = new WsfeClient(loginClient.IsProduction)
             {
                 //Cuit = 20250229209,
                 Cuit = 30667525906,
