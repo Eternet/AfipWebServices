@@ -36,13 +36,13 @@ namespace AfipWebServicesClient
                                         service + "ticket.json" :
                                         TicketCacheFolderPath + service + "ticket.json";
 
-            //if (File.Exists(ticketCacheFile))
-            //{
-            //    var ticketJson = await File.ReadAllTextAsync(ticketCacheFile);
-            //    var ticket = JsonConvert.DeserializeObject<WsaaTicket>(ticketJson);
-            //    if (ticket is { } t && DateTime.UtcNow <= t.ExpirationTime)
-            //        return ticket;
-            //}
+            if (File.Exists(ticketCacheFile))
+            {
+                var ticketJson = await File.ReadAllTextAsync(ticketCacheFile);
+                var ticket = JsonConvert.DeserializeObject<WsaaTicket>(ticketJson);
+                if (ticket is { } t && DateTime.UtcNow <= t.ExpirationTime)
+                    return ticket;
+            }
 
             const string idFnc = "[ObtenerLoginTicketResponse]";
             CertificatePath = x509CertificateFilePath;

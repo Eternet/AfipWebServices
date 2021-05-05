@@ -4,25 +4,13 @@ using System.IO;
 using System.Threading.Tasks;
 using AfipWebServicesClient;
 using AfipServiceReference;
-
+using AfipWebServicesClient.Extensions;
+using AfipWebServicesClient.Model;
 using Newtonsoft.Json;
 
 namespace ConsoleAppTest
 {
-    public enum ConceptoComprobante
-    {
-        Productos = 1,
-        Servicios = 2,
-        ProductosYServicios = 3
-    }
 
-    public static class ConceptoComprobanteExtensions
-    {
-        public static int ToInt(this ConceptoComprobante conceptoComprobante)
-        {
-            return (int) conceptoComprobante;
-        }
-    }
 
 
     internal class Program
@@ -53,10 +41,10 @@ namespace ConsoleAppTest
                     "diegotes",
                     true);
 
-                wscdcTicket = await loginClient.LoginCmsAsync("wscdc",
-                    @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx",
-                    "diegotes",
-                    true);
+                //wscdcTicket = await loginClient.LoginCmsAsync("wscdc",
+                //    @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx",
+                //    "diegotes",
+                //    true);
 
             }
             catch (Exception e)
@@ -73,28 +61,33 @@ namespace ConsoleAppTest
                 Token = wsfeTicket.Token
             };
 
-            var wscdcClient = new WscdcClient(loginClient.IsProdEnvironment)
-            {
-                //Cuit = 20250229209,
-                Cuit = 30667525906,
-                Sign = wscdcTicket.Sign,
-                Token = wscdcTicket.Token
-            };
+            //var wscdcClient = new WscdcClient(loginClient.IsProdEnvironment)
+            //{
+            //    //Cuit = 20250229209,
+            //    Cuit = 30667525906,
+            //    Sign = wscdcTicket.Sign,
+            //    Token = wscdcTicket.Token
+            //};
 
-            var comprobantesTipoConsultarResponse = await wscdcClient.GetVoucherTypesAsync();
-            var json = JsonConvert.SerializeObject(comprobantesTipoConsultarResponse, Formatting.Indented);
-            Console.WriteLine(json);
-            await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
+            //var comprobantesTipoConsultarResponse = await wscdcClient.GetVoucherTypesAsync();
+            //var json = JsonConvert.SerializeObject(comprobantesTipoConsultarResponse, Formatting.Indented);
+            //Console.WriteLine(json);
+            //await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
 
             //Get next WSFE Comp. Number
-            var last = await wsfeClient.GetLastAuthorizedAsync(31, 6);
-            json = JsonConvert.SerializeObject(last, Formatting.Indented);
-            Console.WriteLine(json);
+            var salesPoint = await wsfeClient.GetSalesPointAsync();
+            foreach (var salePoint in salesPoint.Body.FEParamGetPtosVentaResult.ResultGet)
+            {
+                var last = await wsfeClient.GetUltimoAutorizadoAsync(salePoint.Nro, TipoComprobante.FacturaA);
+                Console.WriteLine($"{salePoint.Nro} Factura A:{last.Body.FECompUltimoAutorizadoResult.CbteNro}");
+                last = await wsfeClient.GetUltimoAutorizadoAsync(salePoint.Nro, TipoComprobante.FacturaB);
+                Console.WriteLine($"{salePoint.Nro} Factura B:{last.Body.FECompUltimoAutorizadoResult.CbteNro}");
+            }
             Console.ReadLine();
             //var compNumber = last.Body.FECompUltimoAutorizadoResult.CbteNro + 1;
 
             //var now = DateTime.Now;
-            //var monthInit = new DateTime(now.Year,now.Month,1);
+            //var monthInit = new DateTime(now.Year, now.Month, 1);
             //var nextMonth = now.AddDays(30);
             ////Build WSFE FECAERequest            
             //var feCaeReq = new FECAERequest
@@ -111,7 +104,7 @@ namespace ConsoleAppTest
             //        new FECAEDetRequest
             //        {
             //            CbteDesde = compNumber,
-            //            CbteHasta = compNumber+100,
+            //            CbteHasta = compNumber,
             //            CbteFch = AfipFormatDate(now),
             //            Concepto = ConceptoComprobante.Servicios.ToInt(),
             //            DocNro = 0, //Para individual DNI del cliente: 30111222
@@ -138,11 +131,11 @@ namespace ConsoleAppTest
 
             ////Call WSFE FECAESolicitar
             //var compResult = await wsfeClient.GetCAEAsync(feCaeReq);
-            //json = JsonConvert.SerializeObject(compResult, Formatting.Indented);
+            //var jsonResult = JsonConvert.SerializeObject(compResult, Formatting.Indented);
             //Console.ReadLine();
             //Console.Clear();
-            //Console.WriteLine(json);
-            //await File.WriteAllTextAsync("FECAESolicitarResponse.json", json);
+            //Console.WriteLine(jsonResult);
+            //await File.WriteAllTextAsync("FECAESolicitarResponse.json", jsonResult);
         }
 
         private static string AfipFormatDate(DateTime dateTime)

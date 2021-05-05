@@ -1,6 +1,8 @@
 ﻿using System.ServiceModel;
 using System.Threading.Tasks;
 using AfipServiceReference;
+using AfipWebServicesClient.Extensions;
+using AfipWebServicesClient.Model;
 using ServiceSoapClient = AfipServiceReference.ServiceSoapClient;
 
 namespace AfipWebServicesClient
@@ -23,10 +25,17 @@ namespace AfipWebServicesClient
             _wsfeService.Endpoint.Address = new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment);
         }
 
-        public async Task<FECompUltimoAutorizadoResponse> GetLastAuthorizedAsync(int salesPoint, int voucherType)
+        public async Task<FECompUltimoAutorizadoResponse> GetUltimoAutorizadoAsync(int puntoDeVenta, TipoComprobante tipoComprobante)
         {
             var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
-            var response = await _wsfeService.FECompUltimoAutorizadoAsync(auth, salesPoint, voucherType);
+            var response = await _wsfeService.FECompUltimoAutorizadoAsync(auth, puntoDeVenta, tipoComprobante.ToInt());
+            return response;
+        }
+
+        public async Task<FEParamGetPtosVentaResponse> GetSalesPointAsync()
+        {
+            var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
+            var response = await _wsfeService.FEParamGetPtosVentaAsync(auth);
             return response;
         }
 
