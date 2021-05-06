@@ -9,18 +9,12 @@ namespace ConsoleAppTest
     {
         private static async Task Main()
         {
-            var productionEnvironment = new AfipEnvironment(true, @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx", "diegotes");
-            var testingEnvironment = new AfipEnvironment(false, @"C:\Fuentes\Afip\Certs\cert.pfx", "diegotes");
+            var afipEnvironment = new AfipEnvironment(30667525906,true, @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx", "diegotes");
+            //var testingEnvironment = new AfipEnvironment(20250229209,false, @"C:\Fuentes\Afip\Certs\cert.pfx", "diegotes");
             //Get Login Ticket
-            var loginClient = new LoginCmsClient(productionEnvironment);
+            var loginClient = new LoginCmsClient(afipEnvironment);
             var wsfeTicket = await loginClient.LoginCmsAsync("wsfe", true);
-            var wsfeClient = new WsfeClient(loginClient.IsProduction)
-            {
-                //Cuit = 20250229209,
-                Cuit = 30667525906,
-                Sign = wsfeTicket.Sign,
-                Token = wsfeTicket.Token
-            };
+            var wsfeClient = new WsfeClient(afipEnvironment.Cuit, wsfeTicket.Token, wsfeTicket.Sign, loginClient.IsProduction);
 
             //var wscdcClient = new WscdcClient(loginClient.IsProdEnvironment)
             //{

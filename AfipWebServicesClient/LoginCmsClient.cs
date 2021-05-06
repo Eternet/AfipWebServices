@@ -9,19 +9,38 @@ using System.Xml;
 
 namespace AfipWebServicesClient
 {
+    public class AfipEnvironments
+    {
+        private AfipEnvironment Production { get; }
+        private AfipEnvironment Testing { get; }
+
+        public AfipEnvironments(AfipEnvironment production, AfipEnvironment testing)
+        {
+            Production = production;
+            Testing = testing;
+        }
+
+        public AfipEnvironment GetAfipEnvironment(bool isProduction)
+        {
+            return isProduction ? Production : Testing;
+        }
+    }
     public class AfipEnvironment
     {
+        public long Cuit { get; }
         public bool IsProduction { get; }
         public string CertificateFile { get; }
         public string Password { get; }
 
-        public AfipEnvironment(bool isProduction, string certFile, string password)
+        public AfipEnvironment(long cuit, bool isProduction, string certFile, string password)
         {
+            Cuit = cuit;
             IsProduction = isProduction;
             CertificateFile = certFile;
             Password = password;
         }
     }
+
     // ReSharper disable StringLiteralTypo
     // ReSharper disable CommentTypo
     public class LoginCmsClient
