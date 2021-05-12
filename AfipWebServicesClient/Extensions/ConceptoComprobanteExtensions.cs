@@ -8,7 +8,7 @@ namespace AfipWebServicesClient.Extensions
         {
             return (int)conceptoComprobante;
         }
-        public static int ToInt(this TipoComprobante tipoComprobante)
+        public static int ToInt(this VoucherType tipoComprobante)
         {
             return (int)tipoComprobante;
         }

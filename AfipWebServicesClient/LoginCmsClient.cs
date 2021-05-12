@@ -80,7 +80,6 @@ namespace AfipWebServicesClient
 
             const string idFnc = "[ObtenerLoginTicketResponse]";
             _verboseMode = verbose;
-            X509CertificateManager.VerboseMode = verbose;
 
             // PASO 1: Genero el Login Ticket Request
             var ticketRequest = GenerateTicketRequest(service, idFnc);

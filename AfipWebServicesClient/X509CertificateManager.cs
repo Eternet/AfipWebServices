@@ -4,15 +4,13 @@ using System.Security.Cryptography.Pkcs;
 using System.Security.Cryptography.X509Certificates;
 
 namespace AfipWebServicesClient
-{
+{    
     // ReSharper disable StringLiteralTypo
     public class X509CertificateManager
     {
-        public static bool VerboseMode = false;
 
         public static byte[] SignMessageBytes(byte[] messageBytes, X509Certificate2 signerCertificate)
         {
-            const string idFnc = "[FirmaBytesMensaje]";
             try
             {
                 var contentInfo = new ContentInfo(messageBytes);
@@ -23,25 +21,17 @@ namespace AfipWebServicesClient
                     IncludeOption = X509IncludeOption.EndCertOnly
                 };
 
-                if (VerboseMode) 
-                    Console.WriteLine(idFnc + "***Firmando bytes del mensaje...");
-
                 signedCms.ComputeSignature(cmsSigner);
-
-                if (VerboseMode) 
-                    Console.WriteLine(idFnc + "***OK mensaje firmado");
-
                 return signedCms.Encode();
             }
             catch (Exception ex)
             {
-                throw new Exception(idFnc + "***Error al firmar: " + ex.Message);
+                throw new Exception("X509CertificateManager.SignMessageBytes: " + ex.Message);
             }
         }
 
         public static X509Certificate2 GetCertificateFromFile(string file, SecureString password)
         {
-            const string idFnc = "[ObtieneCertificadoDesdeArchivo]";
             try
             {
                 var objCert = new X509Certificate2(file, password);
@@ -49,7 +39,7 @@ namespace AfipWebServicesClient
             }
             catch (Exception ex)
             {
-                throw new Exception(idFnc + "***Error al leer certificado: " + ex.Message);
+                throw new Exception("X509CertificateManager.GetCertificateFromFile: " + ex.Message);
             }
         }
     }
