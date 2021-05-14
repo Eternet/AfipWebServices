@@ -1,16 +1,12 @@
-﻿using AfipWebServicesClient.Model;
+﻿using System;
+using AfipWebServicesClient.Model;
 
 namespace AfipWebServicesClient.Extensions
 {
+    // ReSharper disable IdentifierTypo
     public static class EnumsExtensions
     {
-        public static int ToInt(this ConceptoComprobante conceptoComprobante)
-        {
-            return (int)conceptoComprobante;
-        }
-        public static int ToInt(this VoucherType tipoComprobante)
-        {
-            return (int)tipoComprobante;
-        }
+        public static int ToInt<TValue>(this TValue value) where TValue : Enum
+            => (int)(object)value;
     }
 }

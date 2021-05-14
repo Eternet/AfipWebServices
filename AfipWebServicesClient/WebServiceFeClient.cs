@@ -26,7 +26,7 @@ namespace AfipWebServicesClient
             _wsfeService = afipSoapClientFactory.CreateClient(new EndpointAddress(IsProdEnvironment ? ProductionEnvironment : TestingEnvironment));
         }
 
-        public async Task<FECompUltimoAutorizadoResponse> GetLastAuthorizedAsync(int salePoint, VoucherType voucherType)
+        public async Task<FECompUltimoAutorizadoResponse> GetLastAuthorizedAsync(int salePoint, TipoComprobante voucherType)
         {
             var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
             var request = new FECompUltimoAutorizadoRequest

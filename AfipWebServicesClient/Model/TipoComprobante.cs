@@ -1,9 +1,9 @@
 ﻿namespace AfipWebServicesClient.Model
 {
     // ReSharper disable UnusedMember.Global
-    public enum VoucherType
+    // ReSharper disable IdentifierTypo
+    public enum TipoComprobante
     {
-        // ReSharper disable IdentifierTypo
         FacturaA = 1,
         NotaDeDebitoA = 2,
         NotaDeCreditoA = 3,
