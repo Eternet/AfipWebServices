@@ -31,7 +31,7 @@ namespace AfipWebServicesClient
             var environment = _afipEnvironments.GetAfipEnvironment(isProduction: isProduction);
             var loginClient = new LoginCmsClient(environment);
             var wsfeTicket = await loginClient.LoginCmsAsync("wsfe", true);
-            var wsfeClient = new WebServiceFeClient(30667525906, wsfeTicket.Token, wsfeTicket.Sign, isProduction, this);
+            var wsfeClient = new WebServiceFeClient(environment.Cuit, wsfeTicket.Token, wsfeTicket.Sign, isProduction, this);
             return wsfeClient;
         }
     }
