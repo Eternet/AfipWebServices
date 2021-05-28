@@ -8,7 +8,7 @@ namespace Eternet.Invoices.Out.WebApi.Extensions
     {
         public static void AddAfipServices(this IServiceCollection services)
         {
-            services.AddTransient<IAfipFeSoapClientFactory, AfipFeSoapClientFactory>();
+            services.AddSingleton<IAfipFeSoapClientFactory, AfipFeSoapClientFactory>();
         }
 
     }

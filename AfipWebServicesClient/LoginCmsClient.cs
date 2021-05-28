@@ -33,7 +33,7 @@ namespace AfipWebServicesClient
         public bool IsProduction { get; }
         public string CertificateFile { get; }
         public string Password { get; }
-
+        public string EnvironmentName => IsProduction ? "Production" : "Testing";
         public AfipEnvironment(long cuit, bool isProduction, string certFile, string password)
         {
             Cuit = cuit;
@@ -57,6 +57,7 @@ namespace AfipWebServicesClient
         public string Password;
         public string XmlStrLoginTicketRequestTemplate = "<loginTicketRequest><header><uniqueId></uniqueId><generationTime></generationTime><expirationTime></expirationTime></header><service></service></loginTicketRequest>";
         private static uint _globalUniqueId; // NO ES THREAD-SAFE
+        private readonly AfipEnvironment _environment;
         private readonly ILogger<LoginCmsClient> _logger;
 
         public LoginCmsClient(AfipEnvironment environment, ILogger<LoginCmsClient>? logger = null)
@@ -64,14 +65,15 @@ namespace AfipWebServicesClient
             IsProduction = environment.IsProduction;
             CertificateFile = environment.CertificateFile;
             Password = environment.Password;
+            _environment = environment;
             _logger = logger ?? new Mock<ILogger<LoginCmsClient>>().Object;
         }
 
         public async Task<WsaaTicket> LoginCmsAsync(string service)
         {
             var ticketCacheFile = string.IsNullOrEmpty(TicketCacheFolderPath) ?
-                                        service + "ticket.json" :
-                                        TicketCacheFolderPath + service + "ticket.json";
+                                        service + $"ticket_{_environment.EnvironmentName}.json" :
+                                        TicketCacheFolderPath + service + $"ticket_{_environment.EnvironmentName}.json";
 
             if (File.Exists(ticketCacheFile))
             {
