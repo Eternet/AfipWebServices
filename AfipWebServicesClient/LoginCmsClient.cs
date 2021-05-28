@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Extensions.Logging;
+using Moq;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Net;
@@ -54,17 +56,18 @@ namespace AfipWebServicesClient
         public string CertificateFile;
         public string Password;
         public string XmlStrLoginTicketRequestTemplate = "<loginTicketRequest><header><uniqueId></uniqueId><generationTime></generationTime><expirationTime></expirationTime></header><service></service></loginTicketRequest>";
-        private bool _verboseMode = true;
         private static uint _globalUniqueId; // NO ES THREAD-SAFE
+        private readonly ILogger<LoginCmsClient> _logger;
 
-        public LoginCmsClient(AfipEnvironment environment)
+        public LoginCmsClient(AfipEnvironment environment, ILogger<LoginCmsClient>? logger = null)
         {
             IsProduction = environment.IsProduction;
             CertificateFile = environment.CertificateFile;
             Password = environment.Password;
+            _logger = logger ?? new Mock<ILogger<LoginCmsClient>>().Object;
         }
 
-        public async Task<WsaaTicket> LoginCmsAsync(string service, bool verbose = false)
+        public async Task<WsaaTicket> LoginCmsAsync(string service)
         {
             var ticketCacheFile = string.IsNullOrEmpty(TicketCacheFolderPath) ?
                                         service + "ticket.json" :
@@ -74,24 +77,21 @@ namespace AfipWebServicesClient
             {
                 var ticketJson = await File.ReadAllTextAsync(ticketCacheFile);
                 var ticket = JsonConvert.DeserializeObject<WsaaTicket>(ticketJson);
-                if (ticket is { } t && DateTime.UtcNow <= t.ExpirationTime)
+                if (ticket is { } t && DateTime.Now < t.ExpirationTime.Date)
                     return ticket;
             }
 
-            const string idFnc = "[ObtenerLoginTicketResponse]";
-            _verboseMode = verbose;
-
             // PASO 1: Genero el Login Ticket Request
-            var ticketRequest = GenerateTicketRequest(service, idFnc);
+            var ticketRequest = GenerateTicketRequest(service);
 
             // PASO 2: Firmo el Login Ticket Request
-            var base64SignedCms = SignLoginTicketRequest(ticketRequest, idFnc);
+            var base64SignedCms = SignLoginTicketRequest(ticketRequest);
 
             // PASO 3: Invoco al WSAA para obtener el Login Ticket Response
-            var loginTicketResponse = await GetLoginTicketResponse(idFnc, base64SignedCms);
+            var loginTicketResponse = await GetLoginTicketResponse(base64SignedCms);
 
             // PASO 4: Analizo el Login Ticket Response recibido del WSAA
-            var ticketResponse = CreateTicketResponse(ticketCacheFile, idFnc, loginTicketResponse);
+            var ticketResponse = CreateTicketResponse(ticketCacheFile, loginTicketResponse);
 
             return ticketResponse;
         }
@@ -105,29 +105,28 @@ namespace AfipWebServicesClient
         */
         private static WsaaTicket CreateTicketResponse(
             string ticketCacheFile,
-            string idFnc,
             string loginTicketResponse)
         {
             var xmlLoginTicketResponse = new XmlDocument();
             xmlLoginTicketResponse.LoadXml(loginTicketResponse);
 
             if (xmlLoginTicketResponse.SelectSingleNode("//uniqueId")?.InnerText is not { } strUniqueId)
-                throw new Exception($"{idFnc}   Error LoginTicketResponse : uniqueId is null");
+                throw new Exception($"Error LoginTicketResponse : uniqueId is null");
 
             if (!uint.TryParse(strUniqueId, out _))
-                throw new Exception($"{idFnc}   Error LoginTicketResponse : can't parse uniqueId to uint");
+                throw new Exception($"Error LoginTicketResponse : can't parse uniqueId to uint");
 
             if (!DateTime.TryParse(xmlLoginTicketResponse.SelectSingleNode("//generationTime")?.InnerText, out _))
-                throw new Exception($"{idFnc}   Error LoginTicketResponse : can't parse GenerationTime");
+                throw new Exception($"Error LoginTicketResponse : can't parse GenerationTime");
 
             if (!DateTime.TryParse(xmlLoginTicketResponse.SelectSingleNode("//expirationTime")?.InnerText, out var expirationTime))
-                throw new Exception($"{idFnc}   Error LoginTicketResponse : can't parse GenerationTime");
+                throw new Exception($"Error LoginTicketResponse : can't parse GenerationTime");
 
             if (xmlLoginTicketResponse.SelectSingleNode("//sign")?.InnerText is not { } sign)
-                throw new Exception($"{idFnc}   Error LoginTicketResponse : sign is null");
+                throw new Exception($"Error LoginTicketResponse : sign is null");
 
             if (xmlLoginTicketResponse.SelectSingleNode("//token")?.InnerText is not { } token)
-                throw new Exception($"{idFnc}   Error LoginTicketResponse : token is null");
+                throw new Exception($"Error LoginTicketResponse : token is null");
 
             var ticketResponse = new WsaaTicket { Sign = sign, Token = token, ExpirationTime = expirationTime };
             File.WriteAllText(ticketCacheFile, JsonConvert.SerializeObject(ticketResponse));
@@ -135,57 +134,44 @@ namespace AfipWebServicesClient
 
         }
 
-        private async Task<string> GetLoginTicketResponse(string idFnc, string base64SignedCms)
+        private async Task<string> GetLoginTicketResponse(string base64SignedCms)
         {
             string loginTicketResponse;
             try
             {
-                if (_verboseMode)
-                {
-                    Console.WriteLine(idFnc + "***Llamando al WSAA en URL: {0}", IsProduction ? ProductionEnvironment : TestingEnvironment);
-                    Console.WriteLine(idFnc + "***Argumento en el request:");
-                    Console.WriteLine(base64SignedCms);
-                }
+                _logger.LogInformation("Call WSAA URL: {url}", IsProduction ? ProductionEnvironment : TestingEnvironment);
 
                 var wsaaService = new AfipLoginCmsServiceReference.LoginCMSClient();
                 wsaaService.Endpoint.Address = new EndpointAddress(IsProduction ? ProductionEnvironment : TestingEnvironment);
 
                 var response = await wsaaService.loginCmsAsync(base64SignedCms);
                 loginTicketResponse = response.loginCmsReturn;
-
-                if (_verboseMode)
-                {
-                    Console.WriteLine(idFnc + "***LoguinTicketResponse: ");
-                    Console.WriteLine(loginTicketResponse);
-                }
-
+                _logger.LogInformation("loginCmsAsync response: {loginResponse}", loginTicketResponse);
             }
             catch (Exception ex)
             {
-                throw new Exception(idFnc + "***Error INVOCANDO al servicio WSAA : " + ex.Message);
+                _logger.LogError("GetLoginTicketResponse Error: {error}", ex.Message);
+                throw new Exception($"GetLoginTicketResponse Error: {ex.Message}");
             }
-
             return loginTicketResponse;
         }
 
-        private string SignLoginTicketRequest(XmlNode? ticketRequest, string idFnc)
+        private string SignLoginTicketRequest(XmlNode? ticketRequest)
         {
             if (ticketRequest is null)
             {
-                Console.WriteLine(idFnc + "XmlLoginTicketRequest is null");
+                _logger.LogError("SignLoginTicketRequest: XmlLoginTicketRequest is null");
                 return string.Empty;
             }
             string base64SignedCms;
             if (string.IsNullOrEmpty(CertificateFile))
             {
-                Console.WriteLine(idFnc + "CertificatePath is null");
+                _logger.LogError("SignLoginTicketRequest: CertificatePath is null");
                 return string.Empty;
             }
             try
             {
-                if (_verboseMode) 
-                    Console.WriteLine(idFnc + "***Leyendo certificado: {0}", CertificateFile);
-
+                _logger.LogInformation("SignLoginTicketRequest - Reading CertificateFile: {fileName}", CertificateFile);
                 var securePassword = new NetworkCredential("", Password).SecurePassword;
                 securePassword.MakeReadOnly();
 
@@ -199,13 +185,13 @@ namespace AfipWebServicesClient
             }
             catch (Exception ex)
             {
-                throw new Exception(idFnc + "***Error FIRMANDO el LoginTicketRequest : " + ex.Message);
+                throw new Exception("SignLoginTicketRequest - Error signing LoginTicketRequest : " + ex.Message);
             }
 
             return base64SignedCms;
         }
 
-        private XmlDocument GenerateTicketRequest(string service, string idFnc)
+        private XmlDocument GenerateTicketRequest(string service)
         {
             try
             {
@@ -227,7 +213,7 @@ namespace AfipWebServicesClient
 
                 if (xmlNodeUniqueId is not null)
                     xmlNodeUniqueId.InnerText = Convert.ToString(_globalUniqueId);
-                
+
                 if (xmlNodeService is not null)
                     xmlNodeService.InnerText = service;
 
@@ -235,7 +221,7 @@ namespace AfipWebServicesClient
             }
             catch (Exception ex)
             {
-                throw new Exception(idFnc + "***Error GENERANDO el LoginTicketRequest : " + ex.Message + ex.StackTrace);
+                throw new Exception("Error generating LoginTicketRequest : " + ex.Message + ex.StackTrace);
             }
         }
     }

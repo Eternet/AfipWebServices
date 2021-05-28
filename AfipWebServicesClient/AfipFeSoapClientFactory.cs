@@ -1,4 +1,5 @@
-﻿using System.ServiceModel;
+﻿using Microsoft.Extensions.Logging;
+using System.ServiceModel;
 using System.Threading.Tasks;
 using ServiceSoapClient = AfipServiceReference.ServiceSoapClient;
 
@@ -12,10 +13,12 @@ namespace AfipWebServicesClient
 
     public class AfipFeSoapClientFactory : IAfipFeSoapClientFactory
     {
+        private readonly ILogger<LoginCmsClient> _logger;
         private readonly AfipEnvironments _afipEnvironments;
 
-        public AfipFeSoapClientFactory(AfipEnvironments afipEnvironments)
+        public AfipFeSoapClientFactory(ILogger<LoginCmsClient> logger, AfipEnvironments afipEnvironments)
         {
+            _logger = logger;
             _afipEnvironments = afipEnvironments;
         }
 
@@ -29,8 +32,8 @@ namespace AfipWebServicesClient
         public async Task<WebServiceFeClient> CreateClientFromEnvironment(bool isProduction)
         {
             var environment = _afipEnvironments.GetAfipEnvironment(isProduction: isProduction);
-            var loginClient = new LoginCmsClient(environment);
-            var wsfeTicket = await loginClient.LoginCmsAsync("wsfe", true);
+            var loginClient = new LoginCmsClient(environment, _logger);
+            var wsfeTicket = await loginClient.LoginCmsAsync("wsfe");
             var wsfeClient = new WebServiceFeClient(environment.Cuit, wsfeTicket.Token, wsfeTicket.Sign, isProduction, this);
             return wsfeClient;
         }
