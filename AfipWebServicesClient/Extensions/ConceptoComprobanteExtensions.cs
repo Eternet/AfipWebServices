@@ -1,5 +1,4 @@
 ﻿using System;
-using AfipWebServicesClient.Model;
 
 namespace AfipWebServicesClient.Extensions
 {
@@ -8,5 +7,8 @@ namespace AfipWebServicesClient.Extensions
     {
         public static int ToInt<TValue>(this TValue value) where TValue : Enum
             => (int)(object)value;
+
+        public static short ToShort<TValue>(this TValue value) where TValue : Enum
+            => (short)(int)(object)value;
     }
 }

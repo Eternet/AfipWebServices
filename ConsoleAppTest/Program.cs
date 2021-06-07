@@ -1,5 +1,4 @@
 ﻿using AfipWebServicesClient;
-using AfipWebServicesClient.Model;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Newtonsoft.Json;
@@ -20,6 +19,7 @@ namespace ConsoleAppTest
 
             var envProd = new AfipEnvironment(30667525906, true, prodCert, "diegotes");
             var envTest = new AfipEnvironment(20250229209, false, testCert, "diegotes");
+
             var envs = new AfipEnvironments(envProd, envTest);
             //Get Login Ticket
             var logger = new Mock<ILogger<LoginCmsClient>>().Object;

@@ -79,7 +79,7 @@ namespace AfipWebServicesClient
             {
                 var ticketJson = await File.ReadAllTextAsync(ticketCacheFile);
                 var ticket = JsonConvert.DeserializeObject<WsaaTicket>(ticketJson);
-                if (ticket is { } t && DateTime.Now < t.ExpirationTime.Date)
+                if (ticket is WsaaTicket t && DateTime.Now < t.ExpirationTime)
                     return ticket;
             }
 
