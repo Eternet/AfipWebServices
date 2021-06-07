@@ -45,6 +45,14 @@ namespace AfipWebServicesClient
             return response;
         }
 
+        public async Task<FEParamGetTiposTributosResponse> GetTaxesTypesAsync()
+        {
+            var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
+            var request = new FEParamGetTiposTributosRequest { Body = new FEParamGetTiposTributosRequestBody(auth) };
+            var response = await _wsfeService.FEParamGetTiposTributosAsync(request);
+            return response;
+        }
+
         // ReSharper disable InconsistentNaming
         public async Task<FECAESolicitarResponse> GetCaeAsync(FECAERequest feCaeReq)
         {

@@ -1,6 +1,11 @@
 ﻿using AfipWebServicesClient;
 using AfipWebServicesClient.Model;
+using Microsoft.Extensions.Logging;
+using Moq;
+using Newtonsoft.Json;
 using System;
+using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace ConsoleAppTest
@@ -9,12 +14,17 @@ namespace ConsoleAppTest
     {
         private static async Task Main()
         {
-            var afipEnvironment = new AfipEnvironment(30667525906,true, @"C:\Fuentes\Afip\Certs\Eternet\Eternet.pfx", "diegotes");
-            //var testingEnvironment = new AfipEnvironment(20250229209,false, @"C:\Fuentes\Afip\Certs\cert.pfx", "diegotes");
+            var current = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            var prodCert = Path.Combine(current, @"Certs\Eternet\Eternet.pfx");
+            var testCert = Path.Combine(current, @"Certs\Testing\cert.pfx");
+
+            var envProd = new AfipEnvironment(30667525906, true, prodCert, "diegotes");
+            var envTest = new AfipEnvironment(20250229209, false, testCert, "diegotes");
+            var envs = new AfipEnvironments(envProd, envTest);
             //Get Login Ticket
-            var loginClient = new LoginCmsClient(afipEnvironment);
-            var wsfeTicket = await loginClient.LoginCmsAsync("wsfe", true);
-            var wsfeClient = new WsfeClient(afipEnvironment.Cuit, wsfeTicket.Token, wsfeTicket.Sign, loginClient.IsProduction);
+            var logger = new Mock<ILogger<LoginCmsClient>>().Object;
+            var clientFabric = new AfipFeSoapClientFactory(logger, envs);
+            var wsfeClient = await clientFabric.CreateClientFromEnvironment(isProduction: false);
 
             //var wscdcClient = new WscdcClient(loginClient.IsProdEnvironment)
             //{
@@ -30,14 +40,14 @@ namespace ConsoleAppTest
             //await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
 
             //Get next WSFE Comp. Number
-            var salesPoint = await wsfeClient.GetSalesPointAsync();
-            foreach (var salePoint in salesPoint.Body.FEParamGetPtosVentaResult.ResultGet)
+            var taxesTypes = await wsfeClient.GetTaxesTypesAsync();
+            foreach(var i in taxesTypes.Body.FEParamGetTiposTributosResult.ResultGet)
             {
-                var last = await wsfeClient.GetUltimoAutorizadoAsync(salePoint.Nro, TipoComprobante.FacturaA);
-                Console.WriteLine($"{salePoint.Nro} Factura A:{last.Body.FECompUltimoAutorizadoResult.CbteNro}");
-                last = await wsfeClient.GetUltimoAutorizadoAsync(salePoint.Nro, TipoComprobante.FacturaB);
-                Console.WriteLine($"{salePoint.Nro} Factura B:{last.Body.FECompUltimoAutorizadoResult.CbteNro}");
+                Console.WriteLine($"{i.Desc.Replace(" ","")}={i.Id}");
             }
+            var json = JsonConvert.SerializeObject(taxesTypes, Formatting.Indented);            
+            await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
+
             Console.ReadLine();
             //var compNumber = last.Body.FECompUltimoAutorizadoResult.CbteNro + 1;
 

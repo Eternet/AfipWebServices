@@ -9,4 +9,13 @@
     <ProjectReference Include="..\AfipWebServicesClient\AfipWebServicesClient.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Certs\Eternet\Eternet.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Certs\Testing\cert.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

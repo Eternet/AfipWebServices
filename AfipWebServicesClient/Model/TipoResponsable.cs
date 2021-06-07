@@ -12,7 +12,7 @@
         SujetoNoCategorizado = 7,
         ProveedorDelExterior = 8,
         ClienteDelExterior = 9,
-        IvaLiberadoLey19640	=	10	,
+        IvaLiberadoLey19640 = 10,
         IvaResponsableInscriptoAgenteDePercepcion = 11,
         PequeñoContribuyenteEventual = 12,
         MonotributistaSocial = 13,
