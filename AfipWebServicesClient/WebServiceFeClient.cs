@@ -1,6 +1,7 @@
 ﻿using AfipServiceReference;
 using AfipWebServicesClient.Extensions;
 using AfipWebServicesClient.Model;
+using System;
 using System.ServiceModel;
 using System.Threading.Tasks;
 
@@ -62,5 +63,11 @@ namespace AfipWebServicesClient
             return response;
         }
 
+        public async Task<FEDummyResponse> Dummy()
+        {
+            var request = new FEDummyRequest{ Body = new FEDummyRequestBody() };
+            var response = await _wsfeService.FEDummyAsync(request);
+            return response;
+        }
     }
 }
