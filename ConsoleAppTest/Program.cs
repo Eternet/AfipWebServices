@@ -1,8 +1,10 @@
-﻿using AfipWebServicesClient;
+﻿using AfipServiceReference;
+using AfipWebServicesClient;
 using Microsoft.Extensions.Logging;
 using Moq;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -24,7 +26,7 @@ namespace ConsoleAppTest
             //Get Login Ticket
             var logger = new Mock<ILogger<LoginCmsClient>>().Object;
             var clientFabric = new AfipFeSoapClientFactory(logger, envs);
-            var wsfeClient = await clientFabric.CreateClientFromEnvironment(isProduction: false);
+            var wsfeClient = await clientFabric.CreateClientFromEnvironment(isProduction: true);
 
             //var wscdcClient = new WscdcClient(loginClient.IsProdEnvironment)
             //{
@@ -40,12 +42,18 @@ namespace ConsoleAppTest
             //await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
 
             //Get next WSFE Comp. Number
+            var result = await wsfeClient.Dummy();
+            var json = JsonConvert.SerializeObject(result, Formatting.Indented);
+            Console.WriteLine(json);
+            
             var taxesTypes = await wsfeClient.GetTaxesTypesAsync();
-            foreach(var i in taxesTypes.Body.FEParamGetTiposTributosResult.ResultGet)
+            var items = taxesTypes.Body.FEParamGetTiposTributosResult.ResultGet ?? new List<TributoTipo>();
+            foreach (var i in items)
             {
                 Console.WriteLine($"{i.Desc.Replace(" ","")}={i.Id}");
             }
-            var json = JsonConvert.SerializeObject(taxesTypes, Formatting.Indented);            
+            json = JsonConvert.SerializeObject(taxesTypes, Formatting.Indented);
+            Console.WriteLine(json);
             await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
 
             Console.ReadLine();
