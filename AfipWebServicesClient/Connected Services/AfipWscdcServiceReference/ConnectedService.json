@@ -19,6 +19,7 @@
       "Item1": "System.Collections.Generic.Dictionary`2",
       "Item2": "System.Collections.dll"
     },
+    "targetFramework": "net6.0",
     "CheckedReferencedAssemblies": [],
     "InstanceId": null,
     "Name": "AfipWscdcServiceReference",

@@ -14,8 +14,8 @@
         ClienteDelExterior = 9,
         IvaLiberadoLey19640 = 10,
         IvaResponsableInscriptoAgenteDePercepcion = 11,
-        PequeñoContribuyenteEventual = 12,
+        //PequeñoContribuyenteEventual = 12,
         MonotributistaSocial = 13,
-        PequeñoContribuyenteEventualSocial = 14
+        //PequeñoContribuyenteEventualSocial = 14
     }
 }

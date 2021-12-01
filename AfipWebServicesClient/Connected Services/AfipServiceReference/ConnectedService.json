@@ -15,7 +15,7 @@
     "namespaceMappings": [
       "*, AfipServiceReference"
     ],
-    "targetFramework": "netstandard2.0",
+    "targetFramework": "net6.0",
     "typeReuseMode": "All"
   }
 }
