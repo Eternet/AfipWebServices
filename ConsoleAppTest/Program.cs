@@ -21,6 +21,35 @@ namespace ConsoleAppTest
 
             var envProd = new AfipEnvironment(30667525906, true, prodCert, "diegotes");
             var envTest = new AfipEnvironment(20250229209, false, testCert, "diegotes");
+            var envs = new AfipEnvironments(envProd, envTest);
+
+            var logger = new Mock<ILogger<LoginCmsClient>>().Object;
+            var environment = envs.GetAfipEnvironment(isProduction: true);
+
+            var loginClient = new LoginCmsClient(environment, logger);
+            var tiket = await loginClient.LoginCmsAsync("ws_sr_constancia_inscripcion");
+            var client = new AfipConstanciaInscripcion.PersonaServiceA5Client();
+            var dummyResponse = await client.dummyAsync(new AfipConstanciaInscripcion.dummy { });
+            Console.WriteLine(dummyResponse);
+
+            var request = new AfipConstanciaInscripcion.getPersona_v2 
+            { 
+                cuitRepresentada = environment.Cuit,
+                token = tiket.Token,
+                sign = tiket.Sign,
+                idPersona = 1
+            };
+            var response = await client.getPersona_v2Async(request); 
+        }
+
+        private static async Task Main2()
+        {
+            var current = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            var prodCert = Path.Combine(current, @"Certs\Eternet\Eternet.pfx");
+            var testCert = Path.Combine(current, @"Certs\Testing\cert.pfx");
+
+            var envProd = new AfipEnvironment(30667525906, true, prodCert, "diegotes");
+            var envTest = new AfipEnvironment(20250229209, false, testCert, "diegotes");
 
             var envs = new AfipEnvironments(envProd, envTest);
             //Get Login Ticket
@@ -45,16 +74,8 @@ namespace ConsoleAppTest
             var result = await wsfeClient.Dummy();
             var json = JsonConvert.SerializeObject(result, Formatting.Indented);
             Console.WriteLine(json);
-            
-            var taxesTypes = await wsfeClient.GetTaxesTypesAsync();
-            var items = taxesTypes.Body.FEParamGetTiposTributosResult.ResultGet ?? new List<TributoTipo>();
-            foreach (var i in items)
-            {
-                Console.WriteLine($"{i.Desc.Replace(" ","")}={i.Id}");
-            }
-            json = JsonConvert.SerializeObject(taxesTypes, Formatting.Indented);
-            Console.WriteLine(json);
-            await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
+
+            //await PrintTaxesTypes(wsfeClient, json);
 
             Console.ReadLine();
             //var compNumber = last.Body.FECompUltimoAutorizadoResult.CbteNro + 1;
@@ -109,6 +130,19 @@ namespace ConsoleAppTest
             //Console.Clear();
             //Console.WriteLine(jsonResult);
             //await File.WriteAllTextAsync("FECAESolicitarResponse.json", jsonResult);
+        }
+
+        private static async Task PrintTaxesTypes(WebServiceFeClient wsfeClient, string json)
+        {
+            var taxesTypes = await wsfeClient.GetTaxesTypesAsync();
+            var items = taxesTypes.Body.FEParamGetTiposTributosResult.ResultGet ?? new List<TributoTipo>();
+            foreach (var i in items)
+            {
+                Console.WriteLine($"{i.Desc.Replace(" ", "")}={i.Id}");
+            }
+            json = JsonConvert.SerializeObject(taxesTypes, Formatting.Indented);
+            Console.WriteLine(json);
+            await File.WriteAllTextAsync("ComprobantesTipoConsultarResponse.json", json);
         }
 
         private static string AfipFormatDate(DateTime dateTime)
