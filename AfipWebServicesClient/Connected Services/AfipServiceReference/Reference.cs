@@ -7,5513 +7,5512 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AfipServiceReference
+namespace AfipServiceReference;
+
+using System.Runtime.Serialization;
+
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FEAuthRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEAuthRequest : object
 {
-    using System.Runtime.Serialization;
     
+    private string TokenField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FEAuthRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEAuthRequest : object
+    private string SignField;
+    
+    private long CuitField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Token
     {
-        
-        private string TokenField;
-        
-        private string SignField;
-        
-        private long CuitField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Token
-        {
-            get
-            {
-                return this.TokenField;
-            }
-            set
-            {
-                this.TokenField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Sign
-        {
-            get
-            {
-                return this.SignField;
-            }
-            set
-            {
-                this.SignField = value;
-            }
+        get
+        {
+            return this.TokenField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public long Cuit
+        set
         {
-            get
-            {
-                return this.CuitField;
-            }
-            set
-            {
-                this.CuitField = value;
-            }
+            this.TokenField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAERequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAERequest : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Sign
     {
-        
-        private AfipServiceReference.FECAECabRequest FeCabReqField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.FECAEDetRequest> FeDetReqField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipServiceReference.FECAECabRequest FeCabReq
-        {
-            get
-            {
-                return this.FeCabReqField;
-            }
-            set
-            {
-                this.FeCabReqField = value;
-            }
+        get
+        {
+            return this.SignField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.FECAEDetRequest> FeDetReq
+        set
         {
-            get
-            {
-                return this.FeDetReqField;
-            }
-            set
-            {
-                this.FeDetReqField = value;
-            }
+            this.SignField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAECabRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAECabRequest : AfipServiceReference.FECabRequest
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public long Cuit
     {
+        get
+        {
+            return this.CuitField;
+        }
+        set
+        {
+            this.CuitField = value;
+        }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAERequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAERequest : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEDetRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECompConsResponse))]
-    public partial class FECAEDetRequest : AfipServiceReference.FEDetRequest
-    {
-    }
+    private AfipServiceReference.FECAECabRequest FeCabReqField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.FECAEDetRequest> FeDetReqField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECabRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEACabRequest))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAECabRequest))]
-    public partial class FECabRequest : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipServiceReference.FECAECabRequest FeCabReq
     {
-        
-        private int CantRegField;
-        
-        private int PtoVtaField;
-        
-        private int CbteTipoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int CantReg
-        {
-            get
-            {
-                return this.CantRegField;
-            }
-            set
-            {
-                this.CantRegField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int PtoVta
-        {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
+        get
+        {
+            return this.FeCabReqField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int CbteTipo
+        set
         {
-            get
-            {
-                return this.CbteTipoField;
-            }
-            set
-            {
-                this.CbteTipoField = value;
-            }
+            this.FeCabReqField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEACabRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEACabRequest : AfipServiceReference.FECabRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.FECAEDetRequest> FeDetReq
     {
+        get
+        {
+            return this.FeDetReqField;
+        }
+        set
+        {
+            this.FeDetReqField = value;
+        }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAECabRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAECabRequest : AfipServiceReference.FECabRequest
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEDetRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECompConsResponse))]
+public partial class FECAEDetRequest : AfipServiceReference.FEDetRequest
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECabRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEACabRequest))]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAECabRequest))]
+public partial class FECabRequest : object
+{
+    
+    private int CantRegField;
+    
+    private int PtoVtaField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FEDetRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEADetRequest))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEDetRequest))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECompConsResponse))]
-    public partial class FEDetRequest : object
+    private int CbteTipoField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int CantReg
     {
-        
-        private int ConceptoField;
-        
-        private int DocTipoField;
-        
-        private long DocNroField;
-        
-        private long CbteDesdeField;
-        
-        private long CbteHastaField;
-        
-        private string CbteFchField;
-        
-        private double ImpTotalField;
-        
-        private double ImpTotConcField;
-        
-        private double ImpNetoField;
-        
-        private double ImpOpExField;
-        
-        private double ImpTribField;
-        
-        private double ImpIVAField;
-        
-        private string FchServDesdeField;
-        
-        private string FchServHastaField;
-        
-        private string FchVtoPagoField;
-        
-        private string MonIdField;
-        
-        private double MonCotizField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.CbteAsoc> CbtesAsocField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Tributo> TributosField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.AlicIva> IvaField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Opcional> OpcionalesField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Comprador> CompradoresField;
-        
-        private AfipServiceReference.Periodo PeriodoAsocField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Concepto
-        {
-            get
-            {
-                return this.ConceptoField;
-            }
-            set
-            {
-                this.ConceptoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int DocTipo
-        {
-            get
-            {
-                return this.DocTipoField;
-            }
-            set
-            {
-                this.DocTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public long DocNro
-        {
-            get
-            {
-                return this.DocNroField;
-            }
-            set
-            {
-                this.DocNroField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public long CbteDesde
-        {
-            get
-            {
-                return this.CbteDesdeField;
-            }
-            set
-            {
-                this.CbteDesdeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public long CbteHasta
-        {
-            get
-            {
-                return this.CbteHastaField;
-            }
-            set
-            {
-                this.CbteHastaField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string CbteFch
-        {
-            get
-            {
-                return this.CbteFchField;
-            }
-            set
-            {
-                this.CbteFchField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
-        public double ImpTotal
-        {
-            get
-            {
-                return this.ImpTotalField;
-            }
-            set
-            {
-                this.ImpTotalField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public double ImpTotConc
-        {
-            get
-            {
-                return this.ImpTotConcField;
-            }
-            set
-            {
-                this.ImpTotConcField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
-        public double ImpNeto
-        {
-            get
-            {
-                return this.ImpNetoField;
-            }
-            set
-            {
-                this.ImpNetoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
-        public double ImpOpEx
-        {
-            get
-            {
-                return this.ImpOpExField;
-            }
-            set
-            {
-                this.ImpOpExField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
-        public double ImpTrib
-        {
-            get
-            {
-                return this.ImpTribField;
-            }
-            set
-            {
-                this.ImpTribField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
-        public double ImpIVA
-        {
-            get
-            {
-                return this.ImpIVAField;
-            }
-            set
-            {
-                this.ImpIVAField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
-        public string FchServDesde
-        {
-            get
-            {
-                return this.FchServDesdeField;
-            }
-            set
-            {
-                this.FchServDesdeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
-        public string FchServHasta
-        {
-            get
-            {
-                return this.FchServHastaField;
-            }
-            set
-            {
-                this.FchServHastaField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
-        public string FchVtoPago
-        {
-            get
-            {
-                return this.FchVtoPagoField;
-            }
-            set
-            {
-                this.FchVtoPagoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
-        public string MonId
-        {
-            get
-            {
-                return this.MonIdField;
-            }
-            set
-            {
-                this.MonIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=16)]
-        public double MonCotiz
-        {
-            get
-            {
-                return this.MonCotizField;
-            }
-            set
-            {
-                this.MonCotizField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=17)]
-        public System.Collections.Generic.List<AfipServiceReference.CbteAsoc> CbtesAsoc
-        {
-            get
-            {
-                return this.CbtesAsocField;
-            }
-            set
-            {
-                this.CbtesAsocField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=18)]
-        public System.Collections.Generic.List<AfipServiceReference.Tributo> Tributos
-        {
-            get
-            {
-                return this.TributosField;
-            }
-            set
-            {
-                this.TributosField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=19)]
-        public System.Collections.Generic.List<AfipServiceReference.AlicIva> Iva
-        {
-            get
-            {
-                return this.IvaField;
-            }
-            set
-            {
-                this.IvaField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=20)]
-        public System.Collections.Generic.List<AfipServiceReference.Opcional> Opcionales
-        {
-            get
-            {
-                return this.OpcionalesField;
-            }
-            set
-            {
-                this.OpcionalesField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=21)]
-        public System.Collections.Generic.List<AfipServiceReference.Comprador> Compradores
-        {
-            get
-            {
-                return this.CompradoresField;
-            }
-            set
-            {
-                this.CompradoresField = value;
-            }
+        get
+        {
+            return this.CantRegField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=22)]
-        public AfipServiceReference.Periodo PeriodoAsoc
+        set
         {
-            get
-            {
-                return this.PeriodoAsocField;
-            }
-            set
-            {
-                this.PeriodoAsocField = value;
-            }
+            this.CantRegField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Periodo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Periodo : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int PtoVta
     {
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+        get
+        {
+            return this.PtoVtaField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.PtoVtaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEADetRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEADetRequest : AfipServiceReference.FEDetRequest
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public int CbteTipo
     {
-        
-        private string CAEAField;
-        
-        private string CbteFchHsGenField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CAEA
-        {
-            get
-            {
-                return this.CAEAField;
-            }
-            set
-            {
-                this.CAEAField = value;
-            }
+        get
+        {
+            return this.CbteTipoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CbteFchHsGen
+        set
         {
-            get
-            {
-                return this.CbteFchHsGenField;
-            }
-            set
-            {
-                this.CbteFchHsGenField = value;
-            }
+            this.CbteTipoField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEACabRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEACabRequest : AfipServiceReference.FECabRequest
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FEDetRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEADetRequest))]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEDetRequest))]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECompConsResponse))]
+public partial class FEDetRequest : object
+{
+    
+    private int ConceptoField;
+    
+    private int DocTipoField;
+    
+    private long DocNroField;
+    
+    private long CbteDesdeField;
+    
+    private long CbteHastaField;
+    
+    private string CbteFchField;
+    
+    private double ImpTotalField;
+    
+    private double ImpTotConcField;
+    
+    private double ImpNetoField;
+    
+    private double ImpOpExField;
+    
+    private double ImpTribField;
+    
+    private double ImpIVAField;
+    
+    private string FchServDesdeField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECompConsResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompConsResponse : AfipServiceReference.FECAEDetRequest
+    private string FchServHastaField;
+    
+    private string FchVtoPagoField;
+    
+    private string MonIdField;
+    
+    private double MonCotizField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.CbteAsoc> CbtesAsocField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Tributo> TributosField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.AlicIva> IvaField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Opcional> OpcionalesField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Comprador> CompradoresField;
+    
+    private AfipServiceReference.Periodo PeriodoAsocField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Concepto
     {
-        
-        private string ResultadoField;
-        
-        private string CodAutorizacionField;
-        
-        private string EmisionTipoField;
-        
-        private string FchVtoField;
-        
-        private string FchProcesoField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Obs> ObservacionesField;
-        
-        private int PtoVtaField;
-        
-        private int CbteTipoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Resultado
-        {
-            get
-            {
-                return this.ResultadoField;
-            }
-            set
-            {
-                this.ResultadoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string CodAutorizacion
-        {
-            get
-            {
-                return this.CodAutorizacionField;
-            }
-            set
-            {
-                this.CodAutorizacionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string EmisionTipo
-        {
-            get
-            {
-                return this.EmisionTipoField;
-            }
-            set
-            {
-                this.EmisionTipoField = value;
-            }
+        get
+        {
+            return this.ConceptoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchVto
-        {
-            get
-            {
-                return this.FchVtoField;
-            }
-            set
-            {
-                this.FchVtoField = value;
-            }
+        set
+        {
+            this.ConceptoField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string FchProceso
-        {
-            get
-            {
-                return this.FchProcesoField;
-            }
-            set
-            {
-                this.FchProcesoField = value;
-            }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int DocTipo
+    {
+        get
+        {
+            return this.DocTipoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public System.Collections.Generic.List<AfipServiceReference.Obs> Observaciones
-        {
-            get
-            {
-                return this.ObservacionesField;
-            }
-            set
-            {
-                this.ObservacionesField = value;
-            }
+        set
+        {
+            this.DocTipoField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
-        public int PtoVta
-        {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public long DocNro
+    {
+        get
+        {
+            return this.DocNroField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public int CbteTipo
+        set
         {
-            get
-            {
-                return this.CbteTipoField;
-            }
-            set
-            {
-                this.CbteTipoField = value;
-            }
+            this.DocNroField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CbteAsoc", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class CbteAsoc : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+    public long CbteDesde
     {
-        
-        private int TipoField;
-        
-        private int PtoVtaField;
-        
-        private long NroField;
-        
-        private string CuitField;
-        
-        private string CbteFchField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Tipo
-        {
-            get
-            {
-                return this.TipoField;
-            }
-            set
-            {
-                this.TipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public int PtoVta
-        {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
+        get
+        {
+            return this.CbteDesdeField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public long Nro
-        {
-            get
-            {
-                return this.NroField;
-            }
-            set
-            {
-                this.NroField = value;
-            }
+        set
+        {
+            this.CbteDesdeField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string Cuit
-        {
-            get
-            {
-                return this.CuitField;
-            }
-            set
-            {
-                this.CuitField = value;
-            }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+    public long CbteHasta
+    {
+        get
+        {
+            return this.CbteHastaField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string CbteFch
+        set
         {
-            get
-            {
-                return this.CbteFchField;
-            }
-            set
-            {
-                this.CbteFchField = value;
-            }
+            this.CbteHastaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Tributo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Tributo : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+    public string CbteFch
     {
-        
-        private short IdField;
-        
-        private string DescField;
-        
-        private double BaseImpField;
-        
-        private double AlicField;
-        
-        private double ImporteField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public short Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
+        get
+        {
+            return this.CbteFchField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public double BaseImp
-        {
-            get
-            {
-                return this.BaseImpField;
-            }
-            set
-            {
-                this.BaseImpField = value;
-            }
+        set
+        {
+            this.CbteFchField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public double Alic
-        {
-            get
-            {
-                return this.AlicField;
-            }
-            set
-            {
-                this.AlicField = value;
-            }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+    public double ImpTotal
+    {
+        get
+        {
+            return this.ImpTotalField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public double Importe
+        set
         {
-            get
-            {
-                return this.ImporteField;
-            }
-            set
-            {
-                this.ImporteField = value;
-            }
+            this.ImpTotalField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AlicIva", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class AlicIva : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+    public double ImpTotConc
     {
-        
-        private int IdField;
-        
-        private double BaseImpField;
-        
-        private double ImporteField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public double BaseImp
-        {
-            get
-            {
-                return this.BaseImpField;
-            }
-            set
-            {
-                this.BaseImpField = value;
-            }
+        get
+        {
+            return this.ImpTotConcField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public double Importe
+        set
         {
-            get
-            {
-                return this.ImporteField;
-            }
-            set
-            {
-                this.ImporteField = value;
-            }
+            this.ImpTotConcField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Opcional", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Opcional : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
+    public double ImpNeto
     {
-        
-        private string IdField;
-        
-        private string ValorField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
+        get
+        {
+            return this.ImpNetoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Valor
+        set
         {
-            get
-            {
-                return this.ValorField;
-            }
-            set
-            {
-                this.ValorField = value;
-            }
+            this.ImpNetoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Comprador", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Comprador : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
+    public double ImpOpEx
     {
-        
-        private int DocTipoField;
-        
-        private long DocNroField;
-        
-        private double PorcentajeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int DocTipo
-        {
-            get
-            {
-                return this.DocTipoField;
-            }
-            set
-            {
-                this.DocTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public long DocNro
-        {
-            get
-            {
-                return this.DocNroField;
-            }
-            set
-            {
-                this.DocNroField = value;
-            }
+        get
+        {
+            return this.ImpOpExField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public double Porcentaje
+        set
         {
-            get
-            {
-                return this.PorcentajeField;
-            }
-            set
-            {
-                this.PorcentajeField = value;
-            }
+            this.ImpOpExField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Obs", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Obs : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
+    public double ImpTrib
     {
-        
-        private int CodeField;
-        
-        private string MsgField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Code
-        {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
+        get
+        {
+            return this.ImpTribField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Msg
+        set
         {
-            get
-            {
-                return this.MsgField;
-            }
-            set
-            {
-                this.MsgField = value;
-            }
+            this.ImpTribField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
+    public double ImpIVA
     {
-        
-        private AfipServiceReference.FECAECabResponse FeCabRespField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.FECAEDetResponse> FeDetRespField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipServiceReference.FECAECabResponse FeCabResp
-        {
-            get
-            {
-                return this.FeCabRespField;
-            }
-            set
-            {
-                this.FeCabRespField = value;
-            }
+        get
+        {
+            return this.ImpIVAField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.FECAEDetResponse> FeDetResp
-        {
-            get
-            {
-                return this.FeDetRespField;
-            }
-            set
-            {
-                this.FeDetRespField = value;
-            }
+        set
+        {
+            this.ImpIVAField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
-        {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
+    public string FchServDesde
+    {
+        get
+        {
+            return this.FchServDesdeField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+        set
         {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+            this.FchServDesdeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAECabResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAECabResponse : AfipServiceReference.FECabResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
+    public string FchServHasta
     {
+        get
+        {
+            return this.FchServHastaField;
+        }
+        set
+        {
+            this.FchServHastaField = value;
+        }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEDetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEDetResponse : AfipServiceReference.FEDetResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=14)]
+    public string FchVtoPago
     {
-        
-        private string CAEField;
-        
-        private string CAEFchVtoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CAE
-        {
-            get
-            {
-                return this.CAEField;
-            }
-            set
-            {
-                this.CAEField = value;
-            }
+        get
+        {
+            return this.FchVtoPagoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CAEFchVto
+        set
         {
-            get
-            {
-                return this.CAEFchVtoField;
-            }
-            set
-            {
-                this.CAEFchVtoField = value;
-            }
+            this.FchVtoPagoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Evt", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Evt : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=15)]
+    public string MonId
     {
-        
-        private int CodeField;
-        
-        private string MsgField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Code
-        {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
+        get
+        {
+            return this.MonIdField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Msg
+        set
         {
-            get
-            {
-                return this.MsgField;
-            }
-            set
-            {
-                this.MsgField = value;
-            }
+            this.MonIdField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Err", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Err : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=16)]
+    public double MonCotiz
     {
-        
-        private int CodeField;
-        
-        private string MsgField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Code
-        {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Msg
-        {
-            get
-            {
-                return this.MsgField;
-            }
-            set
-            {
-                this.MsgField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECabResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEACabResponse))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAECabResponse))]
-    public partial class FECabResponse : object
-    {
-        
-        private long CuitField;
-        
-        private int PtoVtaField;
-        
-        private int CbteTipoField;
-        
-        private string FchProcesoField;
-        
-        private int CantRegField;
-        
-        private string ResultadoField;
-        
-        private string ReprocesoField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long Cuit
-        {
-            get
-            {
-                return this.CuitField;
-            }
-            set
-            {
-                this.CuitField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int PtoVta
-        {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int CbteTipo
-        {
-            get
-            {
-                return this.CbteTipoField;
-            }
-            set
-            {
-                this.CbteTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchProceso
-        {
-            get
-            {
-                return this.FchProcesoField;
-            }
-            set
-            {
-                this.FchProcesoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public int CantReg
-        {
-            get
-            {
-                return this.CantRegField;
-            }
-            set
-            {
-                this.CantRegField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string Resultado
-        {
-            get
-            {
-                return this.ResultadoField;
-            }
-            set
-            {
-                this.ResultadoField = value;
-            }
+        get
+        {
+            return this.MonCotizField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string Reproceso
+        set
         {
-            get
-            {
-                return this.ReprocesoField;
-            }
-            set
-            {
-                this.ReprocesoField = value;
-            }
+            this.MonCotizField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEACabResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEACabResponse : AfipServiceReference.FECabResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=17)]
+    public System.Collections.Generic.List<AfipServiceReference.CbteAsoc> CbtesAsoc
     {
+        get
+        {
+            return this.CbtesAsocField;
+        }
+        set
+        {
+            this.CbtesAsocField = value;
+        }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FEDetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEADetResponse))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEDetResponse))]
-    public partial class FEDetResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=18)]
+    public System.Collections.Generic.List<AfipServiceReference.Tributo> Tributos
     {
-        
-        private int ConceptoField;
-        
-        private int DocTipoField;
-        
-        private long DocNroField;
-        
-        private long CbteDesdeField;
-        
-        private long CbteHastaField;
-        
-        private string CbteFchField;
-        
-        private string ResultadoField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Obs> ObservacionesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Concepto
-        {
-            get
-            {
-                return this.ConceptoField;
-            }
-            set
-            {
-                this.ConceptoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int DocTipo
-        {
-            get
-            {
-                return this.DocTipoField;
-            }
-            set
-            {
-                this.DocTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public long DocNro
-        {
-            get
-            {
-                return this.DocNroField;
-            }
-            set
-            {
-                this.DocNroField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public long CbteDesde
-        {
-            get
-            {
-                return this.CbteDesdeField;
-            }
-            set
-            {
-                this.CbteDesdeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public long CbteHasta
-        {
-            get
-            {
-                return this.CbteHastaField;
-            }
-            set
-            {
-                this.CbteHastaField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string CbteFch
-        {
-            get
-            {
-                return this.CbteFchField;
-            }
-            set
-            {
-                this.CbteFchField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string Resultado
-        {
-            get
-            {
-                return this.ResultadoField;
-            }
-            set
-            {
-                this.ResultadoField = value;
-            }
+        get
+        {
+            return this.TributosField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public System.Collections.Generic.List<AfipServiceReference.Obs> Observaciones
+        set
         {
-            get
-            {
-                return this.ObservacionesField;
-            }
-            set
-            {
-                this.ObservacionesField = value;
-            }
+            this.TributosField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEADetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEADetResponse : AfipServiceReference.FEDetResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=19)]
+    public System.Collections.Generic.List<AfipServiceReference.AlicIva> Iva
     {
-        
-        private string CAEAField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CAEA
+        get
+        {
+            return this.IvaField;
+        }
+        set
         {
-            get
-            {
-                return this.CAEAField;
-            }
-            set
-            {
-                this.CAEAField = value;
-            }
+            this.IvaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FERegXReqResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FERegXReqResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=20)]
+    public System.Collections.Generic.List<AfipServiceReference.Opcional> Opcionales
     {
-        
-        private int RegXReqField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int RegXReq
-        {
-            get
-            {
-                return this.RegXReqField;
-            }
-            set
-            {
-                this.RegXReqField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.OpcionalesField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.OpcionalesField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DummyResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class DummyResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=21)]
+    public System.Collections.Generic.List<AfipServiceReference.Comprador> Compradores
     {
-        
-        private string AppServerField;
-        
-        private string DbServerField;
-        
-        private string AuthServerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string AppServer
-        {
-            get
-            {
-                return this.AppServerField;
-            }
-            set
-            {
-                this.AppServerField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string DbServer
-        {
-            get
-            {
-                return this.DbServerField;
-            }
-            set
-            {
-                this.DbServerField = value;
-            }
+        get
+        {
+            return this.CompradoresField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string AuthServer
+        set
         {
-            get
-            {
-                return this.AuthServerField;
-            }
-            set
-            {
-                this.AuthServerField = value;
-            }
+            this.CompradoresField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FERecuperaLastCbteResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FERecuperaLastCbteResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=22)]
+    public AfipServiceReference.Periodo PeriodoAsoc
     {
-        
-        private int PtoVtaField;
-        
-        private int CbteTipoField;
-        
-        private int CbteNroField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int PtoVta
-        {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public int CbteTipo
-        {
-            get
-            {
-                return this.CbteTipoField;
-            }
-            set
-            {
-                this.CbteTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int CbteNro
-        {
-            get
-            {
-                return this.CbteNroField;
-            }
-            set
-            {
-                this.CbteNroField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.PeriodoAsocField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.PeriodoAsocField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Periodo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Periodo : object
+{
+    
+    private string FchDesdeField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECompConsultaReq", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompConsultaReq : object
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string FchDesde
     {
-        
-        private int CbteTipoField;
-        
-        private long CbteNroField;
-        
-        private int PtoVtaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int CbteTipo
-        {
-            get
-            {
-                return this.CbteTipoField;
-            }
-            set
-            {
-                this.CbteTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public long CbteNro
-        {
-            get
-            {
-                return this.CbteNroField;
-            }
-            set
-            {
-                this.CbteNroField = value;
-            }
+        get
+        {
+            return this.FchDesdeField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int PtoVta
+        set
         {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
+            this.FchDesdeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECompConsultaResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompConsultaResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string FchHasta
     {
-        
-        private AfipServiceReference.FECompConsResponse ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipServiceReference.FECompConsResponse ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.FchHastaField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.FchHastaField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEADetRequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEADetRequest : AfipServiceReference.FEDetRequest
+{
+    
+    private string CAEAField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEARequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEARequest : object
+    private string CbteFchHsGenField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CAEA
     {
-        
-        private AfipServiceReference.FECAEACabRequest FeCabReqField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.FECAEADetRequest> FeDetReqField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipServiceReference.FECAEACabRequest FeCabReq
-        {
-            get
-            {
-                return this.FeCabReqField;
-            }
-            set
-            {
-                this.FeCabReqField = value;
-            }
+        get
+        {
+            return this.CAEAField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.FECAEADetRequest> FeDetReq
+        set
         {
-            get
-            {
-                return this.FeDetReqField;
-            }
-            set
-            {
-                this.FeDetReqField = value;
-            }
+            this.CAEAField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEAResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEAResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CbteFchHsGen
     {
-        
-        private AfipServiceReference.FECAEACabResponse FeCabRespField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.FECAEADetResponse> FeDetRespField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipServiceReference.FECAEACabResponse FeCabResp
-        {
-            get
-            {
-                return this.FeCabRespField;
-            }
-            set
-            {
-                this.FeCabRespField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.FECAEADetResponse> FeDetResp
-        {
-            get
-            {
-                return this.FeDetRespField;
-            }
-            set
-            {
-                this.FeDetRespField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
-        {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+        get
+        {
+            return this.CbteFchHsGenField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+        set
         {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+            this.CbteFchHsGenField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECompConsResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompConsResponse : AfipServiceReference.FECAEDetRequest
+{
+    
+    private string ResultadoField;
+    
+    private string CodAutorizacionField;
+    
+    private string EmisionTipoField;
+    
+    private string FchVtoField;
+    
+    private string FchProcesoField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Obs> ObservacionesField;
+    
+    private int PtoVtaField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEAGetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEAGetResponse : object
+    private int CbteTipoField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Resultado
     {
-        
-        private AfipServiceReference.FECAEAGet ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipServiceReference.FECAEAGet ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.ResultadoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.ResultadoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEAGet", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEAGet : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string CodAutorizacion
     {
-        
-        private string CAEAField;
-        
-        private int PeriodoField;
-        
-        private short OrdenField;
-        
-        private string FchVigDesdeField;
-        
-        private string FchVigHastaField;
-        
-        private string FchTopeInfField;
-        
-        private string FchProcesoField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Obs> ObservacionesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CAEA
-        {
-            get
-            {
-                return this.CAEAField;
-            }
-            set
-            {
-                this.CAEAField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Periodo
-        {
-            get
-            {
-                return this.PeriodoField;
-            }
-            set
-            {
-                this.PeriodoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public short Orden
-        {
-            get
-            {
-                return this.OrdenField;
-            }
-            set
-            {
-                this.OrdenField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchVigDesde
-        {
-            get
-            {
-                return this.FchVigDesdeField;
-            }
-            set
-            {
-                this.FchVigDesdeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string FchVigHasta
-        {
-            get
-            {
-                return this.FchVigHastaField;
-            }
-            set
-            {
-                this.FchVigHastaField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string FchTopeInf
-        {
-            get
-            {
-                return this.FchTopeInfField;
-            }
-            set
-            {
-                this.FchTopeInfField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string FchProceso
-        {
-            get
-            {
-                return this.FchProcesoField;
-            }
-            set
-            {
-                this.FchProcesoField = value;
-            }
+        get
+        {
+            return this.CodAutorizacionField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public System.Collections.Generic.List<AfipServiceReference.Obs> Observaciones
+        set
         {
-            get
-            {
-                return this.ObservacionesField;
-            }
-            set
-            {
-                this.ObservacionesField = value;
-            }
+            this.CodAutorizacionField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEASinMovConsResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASinMovConsResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string EmisionTipo
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.FECAEASinMov> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.FECAEASinMov> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.EmisionTipoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.EmisionTipoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEASinMov", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEASinMovResponse))]
-    public partial class FECAEASinMov : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchVto
     {
-        
-        private string CAEAField;
-        
-        private string FchProcesoField;
-        
-        private int PtoVtaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CAEA
-        {
-            get
-            {
-                return this.CAEAField;
-            }
-            set
-            {
-                this.CAEAField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string FchProceso
-        {
-            get
-            {
-                return this.FchProcesoField;
-            }
-            set
-            {
-                this.FchProcesoField = value;
-            }
+        get
+        {
+            return this.FchVtoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int PtoVta
+        set
         {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
+            this.FchVtoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECAEASinMovResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASinMovResponse : AfipServiceReference.FECAEASinMov
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+    public string FchProceso
     {
-        
-        private string ResultadoField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Resultado
-        {
-            get
-            {
-                return this.ResultadoField;
-            }
-            set
-            {
-                this.ResultadoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.FchProcesoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.FchProcesoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FECotizacionResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECotizacionResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+    public System.Collections.Generic.List<AfipServiceReference.Obs> Observaciones
     {
-        
-        private AfipServiceReference.Cotizacion ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipServiceReference.Cotizacion ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.ObservacionesField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.ObservacionesField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Cotizacion", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Cotizacion : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+    public int PtoVta
     {
-        
-        private string MonIdField;
-        
-        private double MonCotizField;
-        
-        private string FchCotizField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string MonId
-        {
-            get
-            {
-                return this.MonIdField;
-            }
-            set
-            {
-                this.MonIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public double MonCotiz
-        {
-            get
-            {
-                return this.MonCotizField;
-            }
-            set
-            {
-                this.MonCotizField = value;
-            }
+        get
+        {
+            return this.PtoVtaField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchCotiz
+        set
         {
-            get
-            {
-                return this.FchCotizField;
-            }
-            set
-            {
-                this.FchCotizField = value;
-            }
+            this.PtoVtaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FETributoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FETributoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
+    public int CbteTipo
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.TributoTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.TributoTipo> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.CbteTipoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.CbteTipoField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CbteAsoc", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class CbteAsoc : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TributoTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class TributoTipo : object
+    private int TipoField;
+    
+    private int PtoVtaField;
+    
+    private long NroField;
+    
+    private string CuitField;
+    
+    private string CbteFchField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Tipo
     {
-        
-        private short IdField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public short Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+        get
+        {
+            return this.TipoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.TipoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MonedaResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class MonedaResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+    public int PtoVta
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.Moneda> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.Moneda> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.PtoVtaField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.PtoVtaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Moneda", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class Moneda : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public long Nro
     {
-        
-        private string IdField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+        get
+        {
+            return this.NroField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.NroField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IvaTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class IvaTipoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string Cuit
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.IvaTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.IvaTipo> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.CuitField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.CuitField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IvaTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class IvaTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+    public string CbteFch
     {
-        
-        private string IdField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
+        get
+        {
+            return this.CbteFchField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.CbteFchField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Tributo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Tributo : object
+{
+    
+    private short IdField;
+    
+    private string DescField;
+    
+    private double BaseImpField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class OpcionalTipoResponse : object
+    private double AlicField;
+    
+    private double ImporteField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public short Id
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.OpcionalTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.OpcionalTipo> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.IdField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.IdField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class OpcionalTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
     {
-        
-        private string IdField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+        get
+        {
+            return this.DescField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.DescField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ConceptoTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class ConceptoTipoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public double BaseImp
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.ConceptoTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.ConceptoTipo> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.BaseImpField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.BaseImpField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ConceptoTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class ConceptoTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+    public double Alic
     {
-        
-        private int IdField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+        get
+        {
+            return this.AlicField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.AlicField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FEPtoVentaResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEPtoVentaResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+    public double Importe
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.PtoVenta> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.PtoVenta> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.ImporteField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.ImporteField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="AlicIva", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class AlicIva : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PtoVenta", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class PtoVenta : object
+    private int IdField;
+    
+    private double BaseImpField;
+    
+    private double ImporteField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Id
     {
-        
-        private int NroField;
-        
-        private string EmisionTipoField;
-        
-        private string BloqueadoField;
-        
-        private string FchBajaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Nro
-        {
-            get
-            {
-                return this.NroField;
-            }
-            set
-            {
-                this.NroField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string EmisionTipo
-        {
-            get
-            {
-                return this.EmisionTipoField;
-            }
-            set
-            {
-                this.EmisionTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Bloqueado
-        {
-            get
-            {
-                return this.BloqueadoField;
-            }
-            set
-            {
-                this.BloqueadoField = value;
-            }
+        get
+        {
+            return this.IdField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchBaja
+        set
         {
-            get
-            {
-                return this.FchBajaField;
-            }
-            set
-            {
-                this.FchBajaField = value;
-            }
+            this.IdField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CbteTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class CbteTipoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+    public double BaseImp
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.CbteTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.CbteTipo> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.BaseImpField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.BaseImpField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CbteTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class CbteTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public double Importe
     {
-        
-        private int IdField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+        get
+        {
+            return this.ImporteField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.ImporteField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Opcional", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Opcional : object
+{
+    
+    private string IdField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DocTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class DocTipoResponse : object
+    private string ValorField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Id
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.DocTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.DocTipo> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.IdField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.IdField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DocTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class DocTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Valor
     {
-        
-        private int IdField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
-        {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string FchDesde
-        {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+        get
+        {
+            return this.ValorField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.ValorField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Comprador", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Comprador : object
+{
+    
+    private int DocTipoField;
+    
+    private long DocNroField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FEPaisResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEPaisResponse : object
+    private double PorcentajeField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int DocTipo
     {
-        
-        private System.Collections.Generic.List<AfipServiceReference.PaisTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipServiceReference.PaisTipo> ResultGet
-        {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+        get
+        {
+            return this.DocTipoField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+        set
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.DocTipoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PaisTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class PaisTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+    public long DocNro
     {
-        
-        private short IdField;
-        
-        private string DescField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public short Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
+        get
+        {
+            return this.DocNroField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
+        set
         {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
+            this.DocNroField = value;
         }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/", ConfigurationName="AfipServiceReference.ServiceSoap")]
-    public interface ServiceSoap
-    {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAESolicitar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAESolicitarResponse> FECAESolicitarAsync(AfipServiceReference.FECAESolicitarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECompTotXRequest", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECompTotXRequestResponse> FECompTotXRequestAsync(AfipServiceReference.FECompTotXRequestRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEDummy", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEDummyResponse> FEDummyAsync(AfipServiceReference.FEDummyRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECompUltimoAutorizado", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECompUltimoAutorizadoResponse> FECompUltimoAutorizadoAsync(AfipServiceReference.FECompUltimoAutorizadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECompConsultar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECompConsultarResponse> FECompConsultarAsync(AfipServiceReference.FECompConsultarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEARegInformativo", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEARegInformativoResponse> FECAEARegInformativoAsync(AfipServiceReference.FECAEARegInformativoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEASolicitar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEASolicitarResponse> FECAEASolicitarAsync(AfipServiceReference.FECAEASolicitarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEASinMovimientoConsultar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoConsultarResponse> FECAEASinMovimientoConsultarAsync(AfipServiceReference.FECAEASinMovimientoConsultarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEASinMovimientoInformar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoInformarResponse> FECAEASinMovimientoInformarAsync(AfipServiceReference.FECAEASinMovimientoInformarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEAConsultar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEAConsultarResponse> FECAEAConsultarAsync(AfipServiceReference.FECAEAConsultarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetCotizacion", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetCotizacionResponse> FEParamGetCotizacionAsync(AfipServiceReference.FEParamGetCotizacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposTributos", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposTributosResponse> FEParamGetTiposTributosAsync(AfipServiceReference.FEParamGetTiposTributosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposMonedas", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposMonedasResponse> FEParamGetTiposMonedasAsync(AfipServiceReference.FEParamGetTiposMonedasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposIva", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposIvaResponse> FEParamGetTiposIvaAsync(AfipServiceReference.FEParamGetTiposIvaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposOpcional", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposOpcionalResponse> FEParamGetTiposOpcionalAsync(AfipServiceReference.FEParamGetTiposOpcionalRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposConcepto", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposConceptoResponse> FEParamGetTiposConceptoAsync(AfipServiceReference.FEParamGetTiposConceptoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetPtosVenta", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetPtosVentaResponse> FEParamGetPtosVentaAsync(AfipServiceReference.FEParamGetPtosVentaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposCbte", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposCbteResponse> FEParamGetTiposCbteAsync(AfipServiceReference.FEParamGetTiposCbteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposDoc", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposDocResponse> FEParamGetTiposDocAsync(AfipServiceReference.FEParamGetTiposDocRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposPaises", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposPaisesResponse> FEParamGetTiposPaisesAsync(AfipServiceReference.FEParamGetTiposPaisesRequest request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAESolicitarRequest
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public double Porcentaje
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAESolicitar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAESolicitarRequestBody Body;
-        
-        public FECAESolicitarRequest()
+        get
         {
+            return this.PorcentajeField;
         }
-        
-        public FECAESolicitarRequest(AfipServiceReference.FECAESolicitarRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.PorcentajeField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Obs", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Obs : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAESolicitarRequestBody
+    private int CodeField;
+    
+    private string MsgField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Code
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public AfipServiceReference.FECAERequest FeCAEReq;
-        
-        public FECAESolicitarRequestBody()
+        get
         {
+            return this.CodeField;
         }
-        
-        public FECAESolicitarRequestBody(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAERequest FeCAEReq)
+        set
         {
-            this.Auth = Auth;
-            this.FeCAEReq = FeCAEReq;
+            this.CodeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAESolicitarResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Msg
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAESolicitarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAESolicitarResponseBody Body;
-        
-        public FECAESolicitarResponse()
+        get
         {
+            return this.MsgField;
         }
-        
-        public FECAESolicitarResponse(AfipServiceReference.FECAESolicitarResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.MsgField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAESolicitarResponseBody
+    private AfipServiceReference.FECAECabResponse FeCabRespField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.FECAEDetResponse> FeDetRespField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipServiceReference.FECAECabResponse FeCabResp
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECAEResponse FECAESolicitarResult;
-        
-        public FECAESolicitarResponseBody()
+        get
         {
+            return this.FeCabRespField;
         }
-        
-        public FECAESolicitarResponseBody(AfipServiceReference.FECAEResponse FECAESolicitarResult)
+        set
         {
-            this.FECAESolicitarResult = FECAESolicitarResult;
+            this.FeCabRespField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECompTotXRequestRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.FECAEDetResponse> FeDetResp
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompTotXRequest", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECompTotXRequestRequestBody Body;
-        
-        public FECompTotXRequestRequest()
+        get
         {
+            return this.FeDetRespField;
         }
-        
-        public FECompTotXRequestRequest(AfipServiceReference.FECompTotXRequestRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.FeDetRespField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompTotXRequestRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FECompTotXRequestRequestBody()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FECompTotXRequestRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.EventsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECompTotXRequestResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompTotXRequestResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECompTotXRequestResponseBody Body;
-        
-        public FECompTotXRequestResponse()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FECompTotXRequestResponse(AfipServiceReference.FECompTotXRequestResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.ErrorsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAECabResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAECabResponse : AfipServiceReference.FECabResponse
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEDetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEDetResponse : AfipServiceReference.FEDetResponse
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompTotXRequestResponseBody
+    private string CAEField;
+    
+    private string CAEFchVtoField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CAE
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FERegXReqResponse FECompTotXRequestResult;
-        
-        public FECompTotXRequestResponseBody()
+        get
         {
+            return this.CAEField;
         }
-        
-        public FECompTotXRequestResponseBody(AfipServiceReference.FERegXReqResponse FECompTotXRequestResult)
+        set
         {
-            this.FECompTotXRequestResult = FECompTotXRequestResult;
+            this.CAEField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEDummyRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CAEFchVto
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEDummy", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEDummyRequestBody Body;
-        
-        public FEDummyRequest()
+        get
         {
+            return this.CAEFchVtoField;
         }
-        
-        public FEDummyRequest(AfipServiceReference.FEDummyRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.CAEFchVtoField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Evt", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Evt : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class FEDummyRequestBody
-    {
-        
-        public FEDummyRequestBody()
-        {
-        }
-    }
+    private int CodeField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEDummyResponse
+    private string MsgField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Code
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEDummyResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEDummyResponseBody Body;
-        
-        public FEDummyResponse()
+        get
         {
+            return this.CodeField;
         }
-        
-        public FEDummyResponse(AfipServiceReference.FEDummyResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.CodeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEDummyResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Msg
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.DummyResponse FEDummyResult;
-        
-        public FEDummyResponseBody()
+        get
         {
+            return this.MsgField;
         }
-        
-        public FEDummyResponseBody(AfipServiceReference.DummyResponse FEDummyResult)
+        set
         {
-            this.FEDummyResult = FEDummyResult;
+            this.MsgField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Err", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Err : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECompUltimoAutorizadoRequest
+    private int CodeField;
+    
+    private string MsgField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Code
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompUltimoAutorizado", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECompUltimoAutorizadoRequestBody Body;
-        
-        public FECompUltimoAutorizadoRequest()
+        get
         {
+            return this.CodeField;
         }
-        
-        public FECompUltimoAutorizadoRequest(AfipServiceReference.FECompUltimoAutorizadoRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.CodeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompUltimoAutorizadoRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Msg
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int PtoVta;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public int CbteTipo;
-        
-        public FECompUltimoAutorizadoRequestBody()
+        get
         {
+            return this.MsgField;
         }
-        
-        public FECompUltimoAutorizadoRequestBody(AfipServiceReference.FEAuthRequest Auth, int PtoVta, int CbteTipo)
+        set
         {
-            this.Auth = Auth;
-            this.PtoVta = PtoVta;
-            this.CbteTipo = CbteTipo;
+            this.MsgField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECabResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEACabResponse))]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAECabResponse))]
+public partial class FECabResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECompUltimoAutorizadoResponse
+    private long CuitField;
+    
+    private int PtoVtaField;
+    
+    private int CbteTipoField;
+    
+    private string FchProcesoField;
+    
+    private int CantRegField;
+    
+    private string ResultadoField;
+    
+    private string ReprocesoField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public long Cuit
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompUltimoAutorizadoResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECompUltimoAutorizadoResponseBody Body;
-        
-        public FECompUltimoAutorizadoResponse()
+        get
         {
+            return this.CuitField;
         }
-        
-        public FECompUltimoAutorizadoResponse(AfipServiceReference.FECompUltimoAutorizadoResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.CuitField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompUltimoAutorizadoResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int PtoVta
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FERecuperaLastCbteResponse FECompUltimoAutorizadoResult;
-        
-        public FECompUltimoAutorizadoResponseBody()
+        get
         {
+            return this.PtoVtaField;
         }
-        
-        public FECompUltimoAutorizadoResponseBody(AfipServiceReference.FERecuperaLastCbteResponse FECompUltimoAutorizadoResult)
+        set
         {
-            this.FECompUltimoAutorizadoResult = FECompUltimoAutorizadoResult;
+            this.PtoVtaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECompConsultarRequest
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public int CbteTipo
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompConsultar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECompConsultarRequestBody Body;
-        
-        public FECompConsultarRequest()
+        get
         {
+            return this.CbteTipoField;
         }
-        
-        public FECompConsultarRequest(AfipServiceReference.FECompConsultarRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.CbteTipoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompConsultarRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchProceso
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public AfipServiceReference.FECompConsultaReq FeCompConsReq;
-        
-        public FECompConsultarRequestBody()
+        get
         {
+            return this.FchProcesoField;
         }
-        
-        public FECompConsultarRequestBody(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECompConsultaReq FeCompConsReq)
+        set
         {
-            this.Auth = Auth;
-            this.FeCompConsReq = FeCompConsReq;
+            this.FchProcesoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECompConsultarResponse
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+    public int CantReg
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompConsultarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECompConsultarResponseBody Body;
-        
-        public FECompConsultarResponse()
+        get
         {
+            return this.CantRegField;
         }
-        
-        public FECompConsultarResponse(AfipServiceReference.FECompConsultarResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.CantRegField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECompConsultarResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+    public string Resultado
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECompConsultaResponse FECompConsultarResult;
-        
-        public FECompConsultarResponseBody()
+        get
         {
+            return this.ResultadoField;
         }
-        
-        public FECompConsultarResponseBody(AfipServiceReference.FECompConsultaResponse FECompConsultarResult)
+        set
         {
-            this.FECompConsultarResult = FECompConsultarResult;
+            this.ResultadoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEARegInformativoRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+    public string Reproceso
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEARegInformativo", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEARegInformativoRequestBody Body;
-        
-        public FECAEARegInformativoRequest()
+        get
         {
+            return this.ReprocesoField;
         }
-        
-        public FECAEARegInformativoRequest(AfipServiceReference.FECAEARegInformativoRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.ReprocesoField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEACabResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEACabResponse : AfipServiceReference.FECabResponse
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FEDetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEADetResponse))]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEDetResponse))]
+public partial class FEDetResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEARegInformativoRequestBody
+    private int ConceptoField;
+    
+    private int DocTipoField;
+    
+    private long DocNroField;
+    
+    private long CbteDesdeField;
+    
+    private long CbteHastaField;
+    
+    private string CbteFchField;
+    
+    private string ResultadoField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Obs> ObservacionesField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Concepto
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public AfipServiceReference.FECAEARequest FeCAEARegInfReq;
-        
-        public FECAEARegInformativoRequestBody()
+        get
         {
+            return this.ConceptoField;
         }
-        
-        public FECAEARegInformativoRequestBody(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAEARequest FeCAEARegInfReq)
+        set
         {
-            this.Auth = Auth;
-            this.FeCAEARegInfReq = FeCAEARegInfReq;
+            this.ConceptoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEARegInformativoResponse
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int DocTipo
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEARegInformativoResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEARegInformativoResponseBody Body;
-        
-        public FECAEARegInformativoResponse()
+        get
         {
+            return this.DocTipoField;
         }
-        
-        public FECAEARegInformativoResponse(AfipServiceReference.FECAEARegInformativoResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.DocTipoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEARegInformativoResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public long DocNro
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECAEAResponse FECAEARegInformativoResult;
-        
-        public FECAEARegInformativoResponseBody()
+        get
         {
+            return this.DocNroField;
         }
-        
-        public FECAEARegInformativoResponseBody(AfipServiceReference.FECAEAResponse FECAEARegInformativoResult)
+        set
         {
-            this.FECAEARegInformativoResult = FECAEARegInformativoResult;
+            this.DocNroField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEASolicitarRequest
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+    public long CbteDesde
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASolicitar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEASolicitarRequestBody Body;
-        
-        public FECAEASolicitarRequest()
+        get
         {
+            return this.CbteDesdeField;
         }
-        
-        public FECAEASolicitarRequest(AfipServiceReference.FECAEASolicitarRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.CbteDesdeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASolicitarRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+    public long CbteHasta
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int Periodo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public short Orden;
-        
-        public FECAEASolicitarRequestBody()
+        get
         {
+            return this.CbteHastaField;
         }
-        
-        public FECAEASolicitarRequestBody(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
+        set
         {
-            this.Auth = Auth;
-            this.Periodo = Periodo;
-            this.Orden = Orden;
+            this.CbteHastaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEASolicitarResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+    public string CbteFch
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASolicitarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEASolicitarResponseBody Body;
-        
-        public FECAEASolicitarResponse()
+        get
         {
+            return this.CbteFchField;
         }
-        
-        public FECAEASolicitarResponse(AfipServiceReference.FECAEASolicitarResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.CbteFchField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASolicitarResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+    public string Resultado
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECAEAGetResponse FECAEASolicitarResult;
-        
-        public FECAEASolicitarResponseBody()
+        get
         {
+            return this.ResultadoField;
         }
-        
-        public FECAEASolicitarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEASolicitarResult)
+        set
         {
-            this.FECAEASolicitarResult = FECAEASolicitarResult;
+            this.ResultadoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEASinMovimientoConsultarRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+    public System.Collections.Generic.List<AfipServiceReference.Obs> Observaciones
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoConsultar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEASinMovimientoConsultarRequestBody Body;
-        
-        public FECAEASinMovimientoConsultarRequest()
+        get
         {
+            return this.ObservacionesField;
         }
-        
-        public FECAEASinMovimientoConsultarRequest(AfipServiceReference.FECAEASinMovimientoConsultarRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.ObservacionesField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEADetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEADetResponse : AfipServiceReference.FEDetResponse
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASinMovimientoConsultarRequestBody
+    private string CAEAField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CAEA
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string CAEA;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public int PtoVta;
-        
-        public FECAEASinMovimientoConsultarRequestBody()
+        get
         {
+            return this.CAEAField;
         }
-        
-        public FECAEASinMovimientoConsultarRequestBody(AfipServiceReference.FEAuthRequest Auth, string CAEA, int PtoVta)
+        set
         {
-            this.Auth = Auth;
-            this.CAEA = CAEA;
-            this.PtoVta = PtoVta;
+            this.CAEAField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FERegXReqResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FERegXReqResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEASinMovimientoConsultarResponse
+    private int RegXReqField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int RegXReq
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoConsultarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEASinMovimientoConsultarResponseBody Body;
-        
-        public FECAEASinMovimientoConsultarResponse()
+        get
         {
+            return this.RegXReqField;
         }
-        
-        public FECAEASinMovimientoConsultarResponse(AfipServiceReference.FECAEASinMovimientoConsultarResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.RegXReqField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASinMovimientoConsultarResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECAEASinMovConsResponse FECAEASinMovimientoConsultarResult;
-        
-        public FECAEASinMovimientoConsultarResponseBody()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FECAEASinMovimientoConsultarResponseBody(AfipServiceReference.FECAEASinMovConsResponse FECAEASinMovimientoConsultarResult)
+        set
         {
-            this.FECAEASinMovimientoConsultarResult = FECAEASinMovimientoConsultarResult;
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEASinMovimientoInformarRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoInformar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEASinMovimientoInformarRequestBody Body;
-        
-        public FECAEASinMovimientoInformarRequest()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FECAEASinMovimientoInformarRequest(AfipServiceReference.FECAEASinMovimientoInformarRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.EventsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DummyResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class DummyResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASinMovimientoInformarRequestBody
+    private string AppServerField;
+    
+    private string DbServerField;
+    
+    private string AuthServerField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string AppServer
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int PtoVta;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string CAEA;
-        
-        public FECAEASinMovimientoInformarRequestBody()
+        get
         {
+            return this.AppServerField;
         }
-        
-        public FECAEASinMovimientoInformarRequestBody(AfipServiceReference.FEAuthRequest Auth, int PtoVta, string CAEA)
+        set
         {
-            this.Auth = Auth;
-            this.PtoVta = PtoVta;
-            this.CAEA = CAEA;
+            this.AppServerField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEASinMovimientoInformarResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string DbServer
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoInformarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEASinMovimientoInformarResponseBody Body;
-        
-        public FECAEASinMovimientoInformarResponse()
+        get
         {
+            return this.DbServerField;
         }
-        
-        public FECAEASinMovimientoInformarResponse(AfipServiceReference.FECAEASinMovimientoInformarResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.DbServerField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEASinMovimientoInformarResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string AuthServer
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECAEASinMovResponse FECAEASinMovimientoInformarResult;
-        
-        public FECAEASinMovimientoInformarResponseBody()
+        get
         {
+            return this.AuthServerField;
         }
-        
-        public FECAEASinMovimientoInformarResponseBody(AfipServiceReference.FECAEASinMovResponse FECAEASinMovimientoInformarResult)
+        set
         {
-            this.FECAEASinMovimientoInformarResult = FECAEASinMovimientoInformarResult;
+            this.AuthServerField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FERecuperaLastCbteResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FERecuperaLastCbteResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEAConsultarRequest
+    private int PtoVtaField;
+    
+    private int CbteTipoField;
+    
+    private int CbteNroField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int PtoVta
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEAConsultar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEAConsultarRequestBody Body;
-        
-        public FECAEAConsultarRequest()
+        get
         {
+            return this.PtoVtaField;
         }
-        
-        public FECAEAConsultarRequest(AfipServiceReference.FECAEAConsultarRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.PtoVtaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEAConsultarRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+    public int CbteTipo
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int Periodo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public short Orden;
-        
-        public FECAEAConsultarRequestBody()
+        get
         {
+            return this.CbteTipoField;
         }
-        
-        public FECAEAConsultarRequestBody(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
+        set
         {
-            this.Auth = Auth;
-            this.Periodo = Periodo;
-            this.Orden = Orden;
+            this.CbteTipoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FECAEAConsultarResponse
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public int CbteNro
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEAConsultarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FECAEAConsultarResponseBody Body;
-        
-        public FECAEAConsultarResponse()
+        get
         {
+            return this.CbteNroField;
         }
-        
-        public FECAEAConsultarResponse(AfipServiceReference.FECAEAConsultarResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.CbteNroField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FECAEAConsultarResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECAEAGetResponse FECAEAConsultarResult;
-        
-        public FECAEAConsultarResponseBody()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FECAEAConsultarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEAConsultarResult)
+        set
         {
-            this.FECAEAConsultarResult = FECAEAConsultarResult;
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetCotizacionRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetCotizacion", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetCotizacionRequestBody Body;
-        
-        public FEParamGetCotizacionRequest()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FEParamGetCotizacionRequest(AfipServiceReference.FEParamGetCotizacionRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.EventsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECompConsultaReq", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompConsultaReq : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetCotizacionRequestBody
+    private int CbteTipoField;
+    
+    private long CbteNroField;
+    
+    private int PtoVtaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int CbteTipo
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string MonId;
-        
-        public FEParamGetCotizacionRequestBody()
+        get
         {
+            return this.CbteTipoField;
         }
-        
-        public FEParamGetCotizacionRequestBody(AfipServiceReference.FEAuthRequest Auth, string MonId)
+        set
         {
-            this.Auth = Auth;
-            this.MonId = MonId;
+            this.CbteTipoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetCotizacionResponse
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+    public long CbteNro
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetCotizacionResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetCotizacionResponseBody Body;
-        
-        public FEParamGetCotizacionResponse()
+        get
         {
+            return this.CbteNroField;
         }
-        
-        public FEParamGetCotizacionResponse(AfipServiceReference.FEParamGetCotizacionResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.CbteNroField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetCotizacionResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public int PtoVta
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FECotizacionResponse FEParamGetCotizacionResult;
-        
-        public FEParamGetCotizacionResponseBody()
+        get
         {
+            return this.PtoVtaField;
         }
-        
-        public FEParamGetCotizacionResponseBody(AfipServiceReference.FECotizacionResponse FEParamGetCotizacionResult)
+        set
         {
-            this.FEParamGetCotizacionResult = FEParamGetCotizacionResult;
+            this.PtoVtaField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECompConsultaResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompConsultaResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposTributosRequest
+    private AfipServiceReference.FECompConsResponse ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipServiceReference.FECompConsResponse ResultGet
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposTributos", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposTributosRequestBody Body;
-        
-        public FEParamGetTiposTributosRequest()
+        get
         {
+            return this.ResultGetField;
         }
-        
-        public FEParamGetTiposTributosRequest(AfipServiceReference.FEParamGetTiposTributosRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.ResultGetField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposTributosRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposTributosRequestBody()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FEParamGetTiposTributosRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposTributosResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposTributosResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposTributosResponseBody Body;
-        
-        public FEParamGetTiposTributosResponse()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FEParamGetTiposTributosResponse(AfipServiceReference.FEParamGetTiposTributosResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.EventsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEARequest", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEARequest : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposTributosResponseBody
+    private AfipServiceReference.FECAEACabRequest FeCabReqField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.FECAEADetRequest> FeDetReqField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipServiceReference.FECAEACabRequest FeCabReq
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FETributoResponse FEParamGetTiposTributosResult;
-        
-        public FEParamGetTiposTributosResponseBody()
+        get
         {
+            return this.FeCabReqField;
         }
-        
-        public FEParamGetTiposTributosResponseBody(AfipServiceReference.FETributoResponse FEParamGetTiposTributosResult)
+        set
         {
-            this.FEParamGetTiposTributosResult = FEParamGetTiposTributosResult;
+            this.FeCabReqField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposMonedasRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.FECAEADetRequest> FeDetReq
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposMonedas", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposMonedasRequestBody Body;
-        
-        public FEParamGetTiposMonedasRequest()
+        get
         {
+            return this.FeDetReqField;
         }
-        
-        public FEParamGetTiposMonedasRequest(AfipServiceReference.FEParamGetTiposMonedasRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.FeDetReqField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEAResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEAResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposMonedasRequestBody
+    private AfipServiceReference.FECAEACabResponse FeCabRespField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.FECAEADetResponse> FeDetRespField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipServiceReference.FECAEACabResponse FeCabResp
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposMonedasRequestBody()
+        get
         {
+            return this.FeCabRespField;
         }
-        
-        public FEParamGetTiposMonedasRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.FeCabRespField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposMonedasResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.FECAEADetResponse> FeDetResp
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposMonedasResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposMonedasResponseBody Body;
-        
-        public FEParamGetTiposMonedasResponse()
+        get
         {
+            return this.FeDetRespField;
         }
-        
-        public FEParamGetTiposMonedasResponse(AfipServiceReference.FEParamGetTiposMonedasResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.FeDetRespField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposMonedasResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.MonedaResponse FEParamGetTiposMonedasResult;
-        
-        public FEParamGetTiposMonedasResponseBody()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FEParamGetTiposMonedasResponseBody(AfipServiceReference.MonedaResponse FEParamGetTiposMonedasResult)
+        set
         {
-            this.FEParamGetTiposMonedasResult = FEParamGetTiposMonedasResult;
+            this.EventsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposIvaRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposIva", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposIvaRequestBody Body;
-        
-        public FEParamGetTiposIvaRequest()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FEParamGetTiposIvaRequest(AfipServiceReference.FEParamGetTiposIvaRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.ErrorsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEAGetResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEAGetResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposIvaRequestBody
+    private AfipServiceReference.FECAEAGet ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipServiceReference.FECAEAGet ResultGet
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposIvaRequestBody()
+        get
         {
+            return this.ResultGetField;
         }
-        
-        public FEParamGetTiposIvaRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.ResultGetField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposIvaResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposIvaResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposIvaResponseBody Body;
-        
-        public FEParamGetTiposIvaResponse()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FEParamGetTiposIvaResponse(AfipServiceReference.FEParamGetTiposIvaResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposIvaResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.IvaTipoResponse FEParamGetTiposIvaResult;
-        
-        public FEParamGetTiposIvaResponseBody()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FEParamGetTiposIvaResponseBody(AfipServiceReference.IvaTipoResponse FEParamGetTiposIvaResult)
+        set
         {
-            this.FEParamGetTiposIvaResult = FEParamGetTiposIvaResult;
+            this.EventsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEAGet", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEAGet : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposOpcionalRequest
+    private string CAEAField;
+    
+    private int PeriodoField;
+    
+    private short OrdenField;
+    
+    private string FchVigDesdeField;
+    
+    private string FchVigHastaField;
+    
+    private string FchTopeInfField;
+    
+    private string FchProcesoField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Obs> ObservacionesField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CAEA
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposOpcional", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposOpcionalRequestBody Body;
-        
-        public FEParamGetTiposOpcionalRequest()
+        get
         {
+            return this.CAEAField;
         }
-        
-        public FEParamGetTiposOpcionalRequest(AfipServiceReference.FEParamGetTiposOpcionalRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.CAEAField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposOpcionalRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Periodo
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposOpcionalRequestBody()
+        get
         {
+            return this.PeriodoField;
         }
-        
-        public FEParamGetTiposOpcionalRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.PeriodoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposOpcionalResponse
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public short Orden
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposOpcionalResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposOpcionalResponseBody Body;
-        
-        public FEParamGetTiposOpcionalResponse()
+        get
         {
+            return this.OrdenField;
         }
-        
-        public FEParamGetTiposOpcionalResponse(AfipServiceReference.FEParamGetTiposOpcionalResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.OrdenField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposOpcionalResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchVigDesde
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.OpcionalTipoResponse FEParamGetTiposOpcionalResult;
-        
-        public FEParamGetTiposOpcionalResponseBody()
+        get
         {
+            return this.FchVigDesdeField;
         }
-        
-        public FEParamGetTiposOpcionalResponseBody(AfipServiceReference.OpcionalTipoResponse FEParamGetTiposOpcionalResult)
+        set
         {
-            this.FEParamGetTiposOpcionalResult = FEParamGetTiposOpcionalResult;
+            this.FchVigDesdeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposConceptoRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+    public string FchVigHasta
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposConcepto", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposConceptoRequestBody Body;
-        
-        public FEParamGetTiposConceptoRequest()
+        get
         {
+            return this.FchVigHastaField;
         }
-        
-        public FEParamGetTiposConceptoRequest(AfipServiceReference.FEParamGetTiposConceptoRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.FchVigHastaField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposConceptoRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+    public string FchTopeInf
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposConceptoRequestBody()
+        get
         {
+            return this.FchTopeInfField;
         }
-        
-        public FEParamGetTiposConceptoRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.FchTopeInfField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposConceptoResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+    public string FchProceso
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposConceptoResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposConceptoResponseBody Body;
-        
-        public FEParamGetTiposConceptoResponse()
+        get
         {
+            return this.FchProcesoField;
         }
-        
-        public FEParamGetTiposConceptoResponse(AfipServiceReference.FEParamGetTiposConceptoResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.FchProcesoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposConceptoResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+    public System.Collections.Generic.List<AfipServiceReference.Obs> Observaciones
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.ConceptoTipoResponse FEParamGetTiposConceptoResult;
-        
-        public FEParamGetTiposConceptoResponseBody()
+        get
         {
+            return this.ObservacionesField;
         }
-        
-        public FEParamGetTiposConceptoResponseBody(AfipServiceReference.ConceptoTipoResponse FEParamGetTiposConceptoResult)
+        set
         {
-            this.FEParamGetTiposConceptoResult = FEParamGetTiposConceptoResult;
+            this.ObservacionesField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEASinMovConsResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASinMovConsResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetPtosVentaRequest
+    private System.Collections.Generic.List<AfipServiceReference.FECAEASinMov> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.FECAEASinMov> ResultGet
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetPtosVenta", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetPtosVentaRequestBody Body;
-        
-        public FEParamGetPtosVentaRequest()
+        get
         {
+            return this.ResultGetField;
         }
-        
-        public FEParamGetPtosVentaRequest(AfipServiceReference.FEParamGetPtosVentaRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.ResultGetField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetPtosVentaRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetPtosVentaRequestBody()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FEParamGetPtosVentaRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetPtosVentaResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetPtosVentaResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetPtosVentaResponseBody Body;
-        
-        public FEParamGetPtosVentaResponse()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FEParamGetPtosVentaResponse(AfipServiceReference.FEParamGetPtosVentaResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.EventsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEASinMov", Namespace="http://ar.gov.afip.dif.FEV1/")]
+[System.Runtime.Serialization.KnownTypeAttribute(typeof(AfipServiceReference.FECAEASinMovResponse))]
+public partial class FECAEASinMov : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetPtosVentaResponseBody
+    private string CAEAField;
+    
+    private string FchProcesoField;
+    
+    private int PtoVtaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CAEA
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEPtoVentaResponse FEParamGetPtosVentaResult;
-        
-        public FEParamGetPtosVentaResponseBody()
+        get
         {
+            return this.CAEAField;
         }
-        
-        public FEParamGetPtosVentaResponseBody(AfipServiceReference.FEPtoVentaResponse FEParamGetPtosVentaResult)
+        set
         {
-            this.FEParamGetPtosVentaResult = FEParamGetPtosVentaResult;
+            this.CAEAField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposCbteRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string FchProceso
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposCbte", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposCbteRequestBody Body;
-        
-        public FEParamGetTiposCbteRequest()
+        get
         {
+            return this.FchProcesoField;
         }
-        
-        public FEParamGetTiposCbteRequest(AfipServiceReference.FEParamGetTiposCbteRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.FchProcesoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposCbteRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int PtoVta
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposCbteRequestBody()
+        get
         {
+            return this.PtoVtaField;
         }
-        
-        public FEParamGetTiposCbteRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.PtoVtaField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECAEASinMovResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASinMovResponse : AfipServiceReference.FECAEASinMov
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposCbteResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposCbteResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposCbteResponseBody Body;
-        
-        public FEParamGetTiposCbteResponse()
+    private string ResultadoField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Resultado
+    {
+        get
         {
+            return this.ResultadoField;
         }
-        
-        public FEParamGetTiposCbteResponse(AfipServiceReference.FEParamGetTiposCbteResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.ResultadoField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposCbteResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.CbteTipoResponse FEParamGetTiposCbteResult;
-        
-        public FEParamGetTiposCbteResponseBody()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FEParamGetTiposCbteResponseBody(AfipServiceReference.CbteTipoResponse FEParamGetTiposCbteResult)
+        set
         {
-            this.FEParamGetTiposCbteResult = FEParamGetTiposCbteResult;
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposDocRequest
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposDoc", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposDocRequestBody Body;
-        
-        public FEParamGetTiposDocRequest()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FEParamGetTiposDocRequest(AfipServiceReference.FEParamGetTiposDocRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.EventsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FECotizacionResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECotizacionResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposDocRequestBody
+    private AfipServiceReference.Cotizacion ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipServiceReference.Cotizacion ResultGet
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposDocRequestBody()
+        get
         {
+            return this.ResultGetField;
         }
-        
-        public FEParamGetTiposDocRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.ResultGetField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposDocResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposDocResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposDocResponseBody Body;
-        
-        public FEParamGetTiposDocResponse()
+        get
         {
+            return this.ErrorsField;
         }
-        
-        public FEParamGetTiposDocResponse(AfipServiceReference.FEParamGetTiposDocResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposDocResponseBody
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.DocTipoResponse FEParamGetTiposDocResult;
-        
-        public FEParamGetTiposDocResponseBody()
+        get
         {
+            return this.EventsField;
         }
-        
-        public FEParamGetTiposDocResponseBody(AfipServiceReference.DocTipoResponse FEParamGetTiposDocResult)
+        set
         {
-            this.FEParamGetTiposDocResult = FEParamGetTiposDocResult;
+            this.EventsField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Cotizacion", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Cotizacion : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposPaisesRequest
+    private string MonIdField;
+    
+    private double MonCotizField;
+    
+    private string FchCotizField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string MonId
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposPaises", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposPaisesRequestBody Body;
-        
-        public FEParamGetTiposPaisesRequest()
+        get
         {
+            return this.MonIdField;
         }
-        
-        public FEParamGetTiposPaisesRequest(AfipServiceReference.FEParamGetTiposPaisesRequestBody Body)
+        set
         {
-            this.Body = Body;
+            this.MonIdField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposPaisesRequestBody
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+    public double MonCotiz
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEAuthRequest Auth;
-        
-        public FEParamGetTiposPaisesRequestBody()
+        get
         {
+            return this.MonCotizField;
         }
-        
-        public FEParamGetTiposPaisesRequestBody(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            this.Auth = Auth;
+            this.MonCotizField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class FEParamGetTiposPaisesResponse
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchCotiz
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposPaisesResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
-        public AfipServiceReference.FEParamGetTiposPaisesResponseBody Body;
-        
-        public FEParamGetTiposPaisesResponse()
+        get
         {
+            return this.FchCotizField;
         }
-        
-        public FEParamGetTiposPaisesResponse(AfipServiceReference.FEParamGetTiposPaisesResponseBody Body)
+        set
         {
-            this.Body = Body;
+            this.FchCotizField = value;
         }
     }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FETributoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FETributoResponse : object
+{
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
-    public partial class FEParamGetTiposPaisesResponseBody
+    private System.Collections.Generic.List<AfipServiceReference.TributoTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.TributoTipo> ResultGet
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipServiceReference.FEPaisResponse FEParamGetTiposPaisesResult;
-        
-        public FEParamGetTiposPaisesResponseBody()
+        get
         {
+            return this.ResultGetField;
         }
-        
-        public FEParamGetTiposPaisesResponseBody(AfipServiceReference.FEPaisResponse FEParamGetTiposPaisesResult)
+        set
         {
-            this.FEParamGetTiposPaisesResult = FEParamGetTiposPaisesResult;
+            this.ResultGetField = value;
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public interface ServiceSoapChannel : AfipServiceReference.ServiceSoap, System.ServiceModel.IClientChannel
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
     {
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public partial class ServiceSoapClient : System.ServiceModel.ClientBase<AfipServiceReference.ServiceSoap>, AfipServiceReference.ServiceSoap
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
     {
-        
-        /// <summary>
-        /// Implement this partial method to configure the service endpoint.
-        /// </summary>
-        /// <param name="serviceEndpoint">The endpoint to configure</param>
-        /// <param name="clientCredentials">The client credentials</param>
-        static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration) : 
-                base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), ServiceSoapClient.GetEndpointAddress(endpointConfiguration))
+        get
         {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+            return this.EventsField;
         }
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
-                base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+        set
         {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+            this.EventsField = value;
         }
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="TributoTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class TributoTipo : object
+{
+    
+    private short IdField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public short Id
+    {
+        get
         {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+            return this.IdField;
         }
-        
-        public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress)
+        set
         {
+            this.IdField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAESolicitarResponse> AfipServiceReference.ServiceSoap.FECAESolicitarAsync(AfipServiceReference.FECAESolicitarRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
         {
-            return base.Channel.FECAESolicitarAsync(request);
+            return this.DescField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECAESolicitarResponse> FECAESolicitarAsync(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAERequest FeCAEReq)
+        set
         {
-            AfipServiceReference.FECAESolicitarRequest inValue = new AfipServiceReference.FECAESolicitarRequest();
-            inValue.Body = new AfipServiceReference.FECAESolicitarRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.FeCAEReq = FeCAEReq;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECAESolicitarAsync(inValue);
+            this.DescField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECompTotXRequestResponse> AfipServiceReference.ServiceSoap.FECompTotXRequestAsync(AfipServiceReference.FECompTotXRequestRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchDesde
+    {
+        get
         {
-            return base.Channel.FECompTotXRequestAsync(request);
+            return this.FchDesdeField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECompTotXRequestResponse> FECompTotXRequestAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FECompTotXRequestRequest inValue = new AfipServiceReference.FECompTotXRequestRequest();
-            inValue.Body = new AfipServiceReference.FECompTotXRequestRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECompTotXRequestAsync(inValue);
+            this.FchDesdeField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEDummyResponse> AfipServiceReference.ServiceSoap.FEDummyAsync(AfipServiceReference.FEDummyRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchHasta
+    {
+        get
         {
-            return base.Channel.FEDummyAsync(request);
+            return this.FchHastaField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEDummyResponse> FEDummyAsync()
+        set
         {
-            AfipServiceReference.FEDummyRequest inValue = new AfipServiceReference.FEDummyRequest();
-            inValue.Body = new AfipServiceReference.FEDummyRequestBody();
-            return ((AfipServiceReference.ServiceSoap)(this)).FEDummyAsync(inValue);
+            this.FchHastaField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECompUltimoAutorizadoResponse> AfipServiceReference.ServiceSoap.FECompUltimoAutorizadoAsync(AfipServiceReference.FECompUltimoAutorizadoRequest request)
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="MonedaResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class MonedaResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.Moneda> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.Moneda> ResultGet
+    {
+        get
         {
-            return base.Channel.FECompUltimoAutorizadoAsync(request);
+            return this.ResultGetField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECompUltimoAutorizadoResponse> FECompUltimoAutorizadoAsync(AfipServiceReference.FEAuthRequest Auth, int PtoVta, int CbteTipo)
-        {
-            AfipServiceReference.FECompUltimoAutorizadoRequest inValue = new AfipServiceReference.FECompUltimoAutorizadoRequest();
-            inValue.Body = new AfipServiceReference.FECompUltimoAutorizadoRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.PtoVta = PtoVta;
-            inValue.Body.CbteTipo = CbteTipo;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECompUltimoAutorizadoAsync(inValue);
+        set
+        {
+            this.ResultGetField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECompConsultarResponse> AfipServiceReference.ServiceSoap.FECompConsultarAsync(AfipServiceReference.FECompConsultarRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
         {
-            return base.Channel.FECompConsultarAsync(request);
+            return this.ErrorsField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECompConsultarResponse> FECompConsultarAsync(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECompConsultaReq FeCompConsReq)
+        set
         {
-            AfipServiceReference.FECompConsultarRequest inValue = new AfipServiceReference.FECompConsultarRequest();
-            inValue.Body = new AfipServiceReference.FECompConsultarRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.FeCompConsReq = FeCompConsReq;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECompConsultarAsync(inValue);
+            this.ErrorsField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEARegInformativoResponse> AfipServiceReference.ServiceSoap.FECAEARegInformativoAsync(AfipServiceReference.FECAEARegInformativoRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
         {
-            return base.Channel.FECAEARegInformativoAsync(request);
+            return this.EventsField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECAEARegInformativoResponse> FECAEARegInformativoAsync(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAEARequest FeCAEARegInfReq)
+        set
         {
-            AfipServiceReference.FECAEARegInformativoRequest inValue = new AfipServiceReference.FECAEARegInformativoRequest();
-            inValue.Body = new AfipServiceReference.FECAEARegInformativoRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.FeCAEARegInfReq = FeCAEARegInfReq;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECAEARegInformativoAsync(inValue);
+            this.EventsField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEASolicitarResponse> AfipServiceReference.ServiceSoap.FECAEASolicitarAsync(AfipServiceReference.FECAEASolicitarRequest request)
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Moneda", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class Moneda : object
+{
+    
+    private string IdField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Id
+    {
+        get
         {
-            return base.Channel.FECAEASolicitarAsync(request);
+            return this.IdField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECAEASolicitarResponse> FECAEASolicitarAsync(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
-        {
-            AfipServiceReference.FECAEASolicitarRequest inValue = new AfipServiceReference.FECAEASolicitarRequest();
-            inValue.Body = new AfipServiceReference.FECAEASolicitarRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.Periodo = Periodo;
-            inValue.Body.Orden = Orden;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECAEASolicitarAsync(inValue);
+        set
+        {
+            this.IdField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoConsultarResponse> AfipServiceReference.ServiceSoap.FECAEASinMovimientoConsultarAsync(AfipServiceReference.FECAEASinMovimientoConsultarRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
         {
-            return base.Channel.FECAEASinMovimientoConsultarAsync(request);
+            return this.DescField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoConsultarResponse> FECAEASinMovimientoConsultarAsync(AfipServiceReference.FEAuthRequest Auth, string CAEA, int PtoVta)
-        {
-            AfipServiceReference.FECAEASinMovimientoConsultarRequest inValue = new AfipServiceReference.FECAEASinMovimientoConsultarRequest();
-            inValue.Body = new AfipServiceReference.FECAEASinMovimientoConsultarRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.CAEA = CAEA;
-            inValue.Body.PtoVta = PtoVta;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECAEASinMovimientoConsultarAsync(inValue);
+        set
+        {
+            this.DescField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoInformarResponse> AfipServiceReference.ServiceSoap.FECAEASinMovimientoInformarAsync(AfipServiceReference.FECAEASinMovimientoInformarRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchDesde
+    {
+        get
         {
-            return base.Channel.FECAEASinMovimientoInformarAsync(request);
+            return this.FchDesdeField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoInformarResponse> FECAEASinMovimientoInformarAsync(AfipServiceReference.FEAuthRequest Auth, int PtoVta, string CAEA)
-        {
-            AfipServiceReference.FECAEASinMovimientoInformarRequest inValue = new AfipServiceReference.FECAEASinMovimientoInformarRequest();
-            inValue.Body = new AfipServiceReference.FECAEASinMovimientoInformarRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.PtoVta = PtoVta;
-            inValue.Body.CAEA = CAEA;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECAEASinMovimientoInformarAsync(inValue);
+        set
+        {
+            this.FchDesdeField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FECAEAConsultarResponse> AfipServiceReference.ServiceSoap.FECAEAConsultarAsync(AfipServiceReference.FECAEAConsultarRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchHasta
+    {
+        get
         {
-            return base.Channel.FECAEAConsultarAsync(request);
+            return this.FchHastaField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FECAEAConsultarResponse> FECAEAConsultarAsync(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
-        {
-            AfipServiceReference.FECAEAConsultarRequest inValue = new AfipServiceReference.FECAEAConsultarRequest();
-            inValue.Body = new AfipServiceReference.FECAEAConsultarRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.Periodo = Periodo;
-            inValue.Body.Orden = Orden;
-            return ((AfipServiceReference.ServiceSoap)(this)).FECAEAConsultarAsync(inValue);
+        set
+        {
+            this.FchHastaField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetCotizacionResponse> AfipServiceReference.ServiceSoap.FEParamGetCotizacionAsync(AfipServiceReference.FEParamGetCotizacionRequest request)
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="IvaTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class IvaTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.IvaTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.IvaTipo> ResultGet
+    {
+        get
         {
-            return base.Channel.FEParamGetCotizacionAsync(request);
+            return this.ResultGetField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetCotizacionResponse> FEParamGetCotizacionAsync(AfipServiceReference.FEAuthRequest Auth, string MonId)
+        set
         {
-            AfipServiceReference.FEParamGetCotizacionRequest inValue = new AfipServiceReference.FEParamGetCotizacionRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetCotizacionRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.MonId = MonId;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetCotizacionAsync(inValue);
+            this.ResultGetField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposTributosResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposTributosAsync(AfipServiceReference.FEParamGetTiposTributosRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposTributosAsync(request);
+            return this.ErrorsField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposTributosResponse> FEParamGetTiposTributosAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposTributosRequest inValue = new AfipServiceReference.FEParamGetTiposTributosRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposTributosRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposTributosAsync(inValue);
+            this.ErrorsField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposMonedasResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposMonedasAsync(AfipServiceReference.FEParamGetTiposMonedasRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposMonedasAsync(request);
+            return this.EventsField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposMonedasResponse> FEParamGetTiposMonedasAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposMonedasRequest inValue = new AfipServiceReference.FEParamGetTiposMonedasRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposMonedasRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposMonedasAsync(inValue);
+            this.EventsField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposIvaResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposIvaAsync(AfipServiceReference.FEParamGetTiposIvaRequest request)
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="IvaTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class IvaTipo : object
+{
+    
+    private string IdField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Id
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposIvaAsync(request);
+            return this.IdField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposIvaResponse> FEParamGetTiposIvaAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposIvaRequest inValue = new AfipServiceReference.FEParamGetTiposIvaRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposIvaRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposIvaAsync(inValue);
+            this.IdField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposOpcionalResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposOpcionalAsync(AfipServiceReference.FEParamGetTiposOpcionalRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposOpcionalAsync(request);
+            return this.DescField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposOpcionalResponse> FEParamGetTiposOpcionalAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposOpcionalRequest inValue = new AfipServiceReference.FEParamGetTiposOpcionalRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposOpcionalRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposOpcionalAsync(inValue);
+            this.DescField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposConceptoResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposConceptoAsync(AfipServiceReference.FEParamGetTiposConceptoRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchDesde
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposConceptoAsync(request);
+            return this.FchDesdeField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposConceptoResponse> FEParamGetTiposConceptoAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposConceptoRequest inValue = new AfipServiceReference.FEParamGetTiposConceptoRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposConceptoRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposConceptoAsync(inValue);
+            this.FchDesdeField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetPtosVentaResponse> AfipServiceReference.ServiceSoap.FEParamGetPtosVentaAsync(AfipServiceReference.FEParamGetPtosVentaRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchHasta
+    {
+        get
         {
-            return base.Channel.FEParamGetPtosVentaAsync(request);
+            return this.FchHastaField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetPtosVentaResponse> FEParamGetPtosVentaAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetPtosVentaRequest inValue = new AfipServiceReference.FEParamGetPtosVentaRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetPtosVentaRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetPtosVentaAsync(inValue);
+            this.FchHastaField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposCbteResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposCbteAsync(AfipServiceReference.FEParamGetTiposCbteRequest request)
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class OpcionalTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.OpcionalTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.OpcionalTipo> ResultGet
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposCbteAsync(request);
+            return this.ResultGetField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposCbteResponse> FEParamGetTiposCbteAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposCbteRequest inValue = new AfipServiceReference.FEParamGetTiposCbteRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposCbteRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposCbteAsync(inValue);
+            this.ResultGetField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposDocResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposDocAsync(AfipServiceReference.FEParamGetTiposDocRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposDocAsync(request);
+            return this.ErrorsField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposDocResponse> FEParamGetTiposDocAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposDocRequest inValue = new AfipServiceReference.FEParamGetTiposDocRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposDocRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposDocAsync(inValue);
+            this.ErrorsField = value;
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposPaisesResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposPaisesAsync(AfipServiceReference.FEParamGetTiposPaisesRequest request)
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
         {
-            return base.Channel.FEParamGetTiposPaisesAsync(request);
+            return this.EventsField;
         }
-        
-        public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposPaisesResponse> FEParamGetTiposPaisesAsync(AfipServiceReference.FEAuthRequest Auth)
+        set
         {
-            AfipServiceReference.FEParamGetTiposPaisesRequest inValue = new AfipServiceReference.FEParamGetTiposPaisesRequest();
-            inValue.Body = new AfipServiceReference.FEParamGetTiposPaisesRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposPaisesAsync(inValue);
+            this.EventsField = value;
         }
-        
-        public virtual System.Threading.Tasks.Task OpenAsync()
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class OpcionalTipo : object
+{
+    
+    private string IdField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Id
+    {
+        get
         {
-            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
+            return this.IdField;
         }
-        
-        public virtual System.Threading.Tasks.Task CloseAsync()
+        set
         {
-            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
+            this.IdField = value;
         }
-        
-        private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
-        {
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
-            {
-                System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
-                result.MaxBufferSize = int.MaxValue;
-                result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
-                result.MaxReceivedMessageSize = int.MaxValue;
-                result.AllowCookies = true;
-                result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
-                return result;
-            }
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
-            {
-                System.ServiceModel.Channels.CustomBinding result = new System.ServiceModel.Channels.CustomBinding();
-                System.ServiceModel.Channels.TextMessageEncodingBindingElement textBindingElement = new System.ServiceModel.Channels.TextMessageEncodingBindingElement();
-                textBindingElement.MessageVersion = System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion.Soap12, System.ServiceModel.Channels.AddressingVersion.None);
-                result.Elements.Add(textBindingElement);
-                System.ServiceModel.Channels.HttpsTransportBindingElement httpsBindingElement = new System.ServiceModel.Channels.HttpsTransportBindingElement();
-                httpsBindingElement.AllowCookies = true;
-                httpsBindingElement.MaxBufferSize = int.MaxValue;
-                httpsBindingElement.MaxReceivedMessageSize = int.MaxValue;
-                result.Elements.Add(httpsBindingElement);
-                return result;
-            }
-            throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
+        {
+            return this.DescField;
         }
-        
-        private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
-        {
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
-            {
-                return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/wsfev1/service.asmx");
-            }
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
-            {
-                return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/wsfev1/service.asmx");
-            }
-            throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
+        set
+        {
+            this.DescField = value;
         }
-        
-        public enum EndpointConfiguration
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchDesde
+    {
+        get
+        {
+            return this.FchDesdeField;
+        }
+        set
+        {
+            this.FchDesdeField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchHasta
+    {
+        get
+        {
+            return this.FchHastaField;
+        }
+        set
+        {
+            this.FchHastaField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="ConceptoTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class ConceptoTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.ConceptoTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.ConceptoTipo> ResultGet
+    {
+        get
+        {
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
+        {
+            return this.EventsField;
+        }
+        set
+        {
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="ConceptoTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class ConceptoTipo : object
+{
+    
+    private int IdField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Id
+    {
+        get
         {
-            
-            ServiceSoap,
-            
-            ServiceSoap12,
+            return this.IdField;
         }
+        set
+        {
+            this.IdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
+        {
+            return this.DescField;
+        }
+        set
+        {
+            this.DescField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchDesde
+    {
+        get
+        {
+            return this.FchDesdeField;
+        }
+        set
+        {
+            this.FchDesdeField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchHasta
+    {
+        get
+        {
+            return this.FchHastaField;
+        }
+        set
+        {
+            this.FchHastaField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FEPtoVentaResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEPtoVentaResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.PtoVenta> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.PtoVenta> ResultGet
+    {
+        get
+        {
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
+        {
+            return this.EventsField;
+        }
+        set
+        {
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="PtoVenta", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class PtoVenta : object
+{
+    
+    private int NroField;
+    
+    private string EmisionTipoField;
+    
+    private string BloqueadoField;
+    
+    private string FchBajaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Nro
+    {
+        get
+        {
+            return this.NroField;
+        }
+        set
+        {
+            this.NroField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string EmisionTipo
+    {
+        get
+        {
+            return this.EmisionTipoField;
+        }
+        set
+        {
+            this.EmisionTipoField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string Bloqueado
+    {
+        get
+        {
+            return this.BloqueadoField;
+        }
+        set
+        {
+            this.BloqueadoField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchBaja
+    {
+        get
+        {
+            return this.FchBajaField;
+        }
+        set
+        {
+            this.FchBajaField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CbteTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class CbteTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.CbteTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.CbteTipo> ResultGet
+    {
+        get
+        {
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
+        {
+            return this.EventsField;
+        }
+        set
+        {
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CbteTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class CbteTipo : object
+{
+    
+    private int IdField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Id
+    {
+        get
+        {
+            return this.IdField;
+        }
+        set
+        {
+            this.IdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
+        {
+            return this.DescField;
+        }
+        set
+        {
+            this.DescField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchDesde
+    {
+        get
+        {
+            return this.FchDesdeField;
+        }
+        set
+        {
+            this.FchDesdeField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchHasta
+    {
+        get
+        {
+            return this.FchHastaField;
+        }
+        set
+        {
+            this.FchHastaField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DocTipoResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class DocTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.DocTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.DocTipo> ResultGet
+    {
+        get
+        {
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
+        {
+            return this.EventsField;
+        }
+        set
+        {
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DocTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class DocTipo : object
+{
+    
+    private int IdField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Id
+    {
+        get
+        {
+            return this.IdField;
+        }
+        set
+        {
+            this.IdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
+        {
+            return this.DescField;
+        }
+        set
+        {
+            this.DescField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string FchDesde
+    {
+        get
+        {
+            return this.FchDesdeField;
+        }
+        set
+        {
+            this.FchDesdeField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchHasta
+    {
+        get
+        {
+            return this.FchHastaField;
+        }
+        set
+        {
+            this.FchHastaField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FEPaisResponse", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEPaisResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipServiceReference.PaisTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipServiceReference.PaisTipo> ResultGet
+    {
+        get
+        {
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipServiceReference.Err> Errors
+    {
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipServiceReference.Evt> Events
+    {
+        get
+        {
+            return this.EventsField;
+        }
+        set
+        {
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="PaisTipo", Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class PaisTipo : object
+{
+    
+    private short IdField;
+    
+    private string DescField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public short Id
+    {
+        get
+        {
+            return this.IdField;
+        }
+        set
+        {
+            this.IdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
+        {
+            return this.DescField;
+        }
+        set
+        {
+            this.DescField = value;
+        }
+    }
+}
+
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ServiceModel.ServiceContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/", ConfigurationName="AfipServiceReference.ServiceSoap")]
+public interface ServiceSoap
+{
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAESolicitar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAESolicitarResponse> FECAESolicitarAsync(AfipServiceReference.FECAESolicitarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECompTotXRequest", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECompTotXRequestResponse> FECompTotXRequestAsync(AfipServiceReference.FECompTotXRequestRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEDummy", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEDummyResponse> FEDummyAsync(AfipServiceReference.FEDummyRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECompUltimoAutorizado", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECompUltimoAutorizadoResponse> FECompUltimoAutorizadoAsync(AfipServiceReference.FECompUltimoAutorizadoRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECompConsultar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECompConsultarResponse> FECompConsultarAsync(AfipServiceReference.FECompConsultarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEARegInformativo", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEARegInformativoResponse> FECAEARegInformativoAsync(AfipServiceReference.FECAEARegInformativoRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEASolicitar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEASolicitarResponse> FECAEASolicitarAsync(AfipServiceReference.FECAEASolicitarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEASinMovimientoConsultar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoConsultarResponse> FECAEASinMovimientoConsultarAsync(AfipServiceReference.FECAEASinMovimientoConsultarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEASinMovimientoInformar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoInformarResponse> FECAEASinMovimientoInformarAsync(AfipServiceReference.FECAEASinMovimientoInformarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FECAEAConsultar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEAConsultarResponse> FECAEAConsultarAsync(AfipServiceReference.FECAEAConsultarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetCotizacion", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetCotizacionResponse> FEParamGetCotizacionAsync(AfipServiceReference.FEParamGetCotizacionRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposTributos", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposTributosResponse> FEParamGetTiposTributosAsync(AfipServiceReference.FEParamGetTiposTributosRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposMonedas", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposMonedasResponse> FEParamGetTiposMonedasAsync(AfipServiceReference.FEParamGetTiposMonedasRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposIva", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposIvaResponse> FEParamGetTiposIvaAsync(AfipServiceReference.FEParamGetTiposIvaRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposOpcional", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposOpcionalResponse> FEParamGetTiposOpcionalAsync(AfipServiceReference.FEParamGetTiposOpcionalRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposConcepto", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposConceptoResponse> FEParamGetTiposConceptoAsync(AfipServiceReference.FEParamGetTiposConceptoRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetPtosVenta", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetPtosVentaResponse> FEParamGetPtosVentaAsync(AfipServiceReference.FEParamGetPtosVentaRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposCbte", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposCbteResponse> FEParamGetTiposCbteAsync(AfipServiceReference.FEParamGetTiposCbteRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposDoc", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposDocResponse> FEParamGetTiposDocAsync(AfipServiceReference.FEParamGetTiposDocRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://ar.gov.afip.dif.FEV1/FEParamGetTiposPaises", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposPaisesResponse> FEParamGetTiposPaisesAsync(AfipServiceReference.FEParamGetTiposPaisesRequest request);
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAESolicitarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAESolicitar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAESolicitarRequestBody Body;
+    
+    public FECAESolicitarRequest()
+    {
+    }
+    
+    public FECAESolicitarRequest(AfipServiceReference.FECAESolicitarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAESolicitarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public AfipServiceReference.FECAERequest FeCAEReq;
+    
+    public FECAESolicitarRequestBody()
+    {
+    }
+    
+    public FECAESolicitarRequestBody(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAERequest FeCAEReq)
+    {
+        this.Auth = Auth;
+        this.FeCAEReq = FeCAEReq;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAESolicitarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAESolicitarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAESolicitarResponseBody Body;
+    
+    public FECAESolicitarResponse()
+    {
+    }
+    
+    public FECAESolicitarResponse(AfipServiceReference.FECAESolicitarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAESolicitarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECAEResponse FECAESolicitarResult;
+    
+    public FECAESolicitarResponseBody()
+    {
+    }
+    
+    public FECAESolicitarResponseBody(AfipServiceReference.FECAEResponse FECAESolicitarResult)
+    {
+        this.FECAESolicitarResult = FECAESolicitarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECompTotXRequestRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompTotXRequest", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECompTotXRequestRequestBody Body;
+    
+    public FECompTotXRequestRequest()
+    {
+    }
+    
+    public FECompTotXRequestRequest(AfipServiceReference.FECompTotXRequestRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompTotXRequestRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FECompTotXRequestRequestBody()
+    {
+    }
+    
+    public FECompTotXRequestRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECompTotXRequestResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompTotXRequestResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECompTotXRequestResponseBody Body;
+    
+    public FECompTotXRequestResponse()
+    {
+    }
+    
+    public FECompTotXRequestResponse(AfipServiceReference.FECompTotXRequestResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompTotXRequestResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FERegXReqResponse FECompTotXRequestResult;
+    
+    public FECompTotXRequestResponseBody()
+    {
+    }
+    
+    public FECompTotXRequestResponseBody(AfipServiceReference.FERegXReqResponse FECompTotXRequestResult)
+    {
+        this.FECompTotXRequestResult = FECompTotXRequestResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEDummyRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEDummy", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEDummyRequestBody Body;
+    
+    public FEDummyRequest()
+    {
+    }
+    
+    public FEDummyRequest(AfipServiceReference.FEDummyRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute()]
+public partial class FEDummyRequestBody
+{
+    
+    public FEDummyRequestBody()
+    {
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEDummyResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEDummyResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEDummyResponseBody Body;
+    
+    public FEDummyResponse()
+    {
+    }
+    
+    public FEDummyResponse(AfipServiceReference.FEDummyResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEDummyResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.DummyResponse FEDummyResult;
+    
+    public FEDummyResponseBody()
+    {
+    }
+    
+    public FEDummyResponseBody(AfipServiceReference.DummyResponse FEDummyResult)
+    {
+        this.FEDummyResult = FEDummyResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECompUltimoAutorizadoRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompUltimoAutorizado", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECompUltimoAutorizadoRequestBody Body;
+    
+    public FECompUltimoAutorizadoRequest()
+    {
+    }
+    
+    public FECompUltimoAutorizadoRequest(AfipServiceReference.FECompUltimoAutorizadoRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompUltimoAutorizadoRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+    public int PtoVta;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+    public int CbteTipo;
+    
+    public FECompUltimoAutorizadoRequestBody()
+    {
+    }
+    
+    public FECompUltimoAutorizadoRequestBody(AfipServiceReference.FEAuthRequest Auth, int PtoVta, int CbteTipo)
+    {
+        this.Auth = Auth;
+        this.PtoVta = PtoVta;
+        this.CbteTipo = CbteTipo;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECompUltimoAutorizadoResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompUltimoAutorizadoResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECompUltimoAutorizadoResponseBody Body;
+    
+    public FECompUltimoAutorizadoResponse()
+    {
+    }
+    
+    public FECompUltimoAutorizadoResponse(AfipServiceReference.FECompUltimoAutorizadoResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompUltimoAutorizadoResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FERecuperaLastCbteResponse FECompUltimoAutorizadoResult;
+    
+    public FECompUltimoAutorizadoResponseBody()
+    {
+    }
+    
+    public FECompUltimoAutorizadoResponseBody(AfipServiceReference.FERecuperaLastCbteResponse FECompUltimoAutorizadoResult)
+    {
+        this.FECompUltimoAutorizadoResult = FECompUltimoAutorizadoResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECompConsultarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompConsultar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECompConsultarRequestBody Body;
+    
+    public FECompConsultarRequest()
+    {
+    }
+    
+    public FECompConsultarRequest(AfipServiceReference.FECompConsultarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompConsultarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public AfipServiceReference.FECompConsultaReq FeCompConsReq;
+    
+    public FECompConsultarRequestBody()
+    {
+    }
+    
+    public FECompConsultarRequestBody(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECompConsultaReq FeCompConsReq)
+    {
+        this.Auth = Auth;
+        this.FeCompConsReq = FeCompConsReq;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECompConsultarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECompConsultarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECompConsultarResponseBody Body;
+    
+    public FECompConsultarResponse()
+    {
+    }
+    
+    public FECompConsultarResponse(AfipServiceReference.FECompConsultarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECompConsultarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECompConsultaResponse FECompConsultarResult;
+    
+    public FECompConsultarResponseBody()
+    {
+    }
+    
+    public FECompConsultarResponseBody(AfipServiceReference.FECompConsultaResponse FECompConsultarResult)
+    {
+        this.FECompConsultarResult = FECompConsultarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEARegInformativoRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEARegInformativo", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEARegInformativoRequestBody Body;
+    
+    public FECAEARegInformativoRequest()
+    {
+    }
+    
+    public FECAEARegInformativoRequest(AfipServiceReference.FECAEARegInformativoRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEARegInformativoRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public AfipServiceReference.FECAEARequest FeCAEARegInfReq;
+    
+    public FECAEARegInformativoRequestBody()
+    {
+    }
+    
+    public FECAEARegInformativoRequestBody(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAEARequest FeCAEARegInfReq)
+    {
+        this.Auth = Auth;
+        this.FeCAEARegInfReq = FeCAEARegInfReq;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEARegInformativoResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEARegInformativoResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEARegInformativoResponseBody Body;
+    
+    public FECAEARegInformativoResponse()
+    {
+    }
+    
+    public FECAEARegInformativoResponse(AfipServiceReference.FECAEARegInformativoResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEARegInformativoResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECAEAResponse FECAEARegInformativoResult;
+    
+    public FECAEARegInformativoResponseBody()
+    {
+    }
+    
+    public FECAEARegInformativoResponseBody(AfipServiceReference.FECAEAResponse FECAEARegInformativoResult)
+    {
+        this.FECAEARegInformativoResult = FECAEARegInformativoResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEASolicitarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASolicitar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEASolicitarRequestBody Body;
+    
+    public FECAEASolicitarRequest()
+    {
+    }
+    
+    public FECAEASolicitarRequest(AfipServiceReference.FECAEASolicitarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASolicitarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+    public int Periodo;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+    public short Orden;
+    
+    public FECAEASolicitarRequestBody()
+    {
+    }
+    
+    public FECAEASolicitarRequestBody(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
+    {
+        this.Auth = Auth;
+        this.Periodo = Periodo;
+        this.Orden = Orden;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEASolicitarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASolicitarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEASolicitarResponseBody Body;
+    
+    public FECAEASolicitarResponse()
+    {
+    }
+    
+    public FECAEASolicitarResponse(AfipServiceReference.FECAEASolicitarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASolicitarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECAEAGetResponse FECAEASolicitarResult;
+    
+    public FECAEASolicitarResponseBody()
+    {
+    }
+    
+    public FECAEASolicitarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEASolicitarResult)
+    {
+        this.FECAEASolicitarResult = FECAEASolicitarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEASinMovimientoConsultarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoConsultar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEASinMovimientoConsultarRequestBody Body;
+    
+    public FECAEASinMovimientoConsultarRequest()
+    {
+    }
+    
+    public FECAEASinMovimientoConsultarRequest(AfipServiceReference.FECAEASinMovimientoConsultarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASinMovimientoConsultarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string CAEA;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+    public int PtoVta;
+    
+    public FECAEASinMovimientoConsultarRequestBody()
+    {
+    }
+    
+    public FECAEASinMovimientoConsultarRequestBody(AfipServiceReference.FEAuthRequest Auth, string CAEA, int PtoVta)
+    {
+        this.Auth = Auth;
+        this.CAEA = CAEA;
+        this.PtoVta = PtoVta;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEASinMovimientoConsultarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoConsultarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEASinMovimientoConsultarResponseBody Body;
+    
+    public FECAEASinMovimientoConsultarResponse()
+    {
+    }
+    
+    public FECAEASinMovimientoConsultarResponse(AfipServiceReference.FECAEASinMovimientoConsultarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASinMovimientoConsultarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECAEASinMovConsResponse FECAEASinMovimientoConsultarResult;
+    
+    public FECAEASinMovimientoConsultarResponseBody()
+    {
+    }
+    
+    public FECAEASinMovimientoConsultarResponseBody(AfipServiceReference.FECAEASinMovConsResponse FECAEASinMovimientoConsultarResult)
+    {
+        this.FECAEASinMovimientoConsultarResult = FECAEASinMovimientoConsultarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEASinMovimientoInformarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoInformar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEASinMovimientoInformarRequestBody Body;
+    
+    public FECAEASinMovimientoInformarRequest()
+    {
+    }
+    
+    public FECAEASinMovimientoInformarRequest(AfipServiceReference.FECAEASinMovimientoInformarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASinMovimientoInformarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+    public int PtoVta;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string CAEA;
+    
+    public FECAEASinMovimientoInformarRequestBody()
+    {
+    }
+    
+    public FECAEASinMovimientoInformarRequestBody(AfipServiceReference.FEAuthRequest Auth, int PtoVta, string CAEA)
+    {
+        this.Auth = Auth;
+        this.PtoVta = PtoVta;
+        this.CAEA = CAEA;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEASinMovimientoInformarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEASinMovimientoInformarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEASinMovimientoInformarResponseBody Body;
+    
+    public FECAEASinMovimientoInformarResponse()
+    {
+    }
+    
+    public FECAEASinMovimientoInformarResponse(AfipServiceReference.FECAEASinMovimientoInformarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEASinMovimientoInformarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECAEASinMovResponse FECAEASinMovimientoInformarResult;
+    
+    public FECAEASinMovimientoInformarResponseBody()
+    {
+    }
+    
+    public FECAEASinMovimientoInformarResponseBody(AfipServiceReference.FECAEASinMovResponse FECAEASinMovimientoInformarResult)
+    {
+        this.FECAEASinMovimientoInformarResult = FECAEASinMovimientoInformarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEAConsultarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEAConsultar", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEAConsultarRequestBody Body;
+    
+    public FECAEAConsultarRequest()
+    {
+    }
+    
+    public FECAEAConsultarRequest(AfipServiceReference.FECAEAConsultarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEAConsultarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+    public int Periodo;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+    public short Orden;
+    
+    public FECAEAConsultarRequestBody()
+    {
+    }
+    
+    public FECAEAConsultarRequestBody(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
+    {
+        this.Auth = Auth;
+        this.Periodo = Periodo;
+        this.Orden = Orden;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FECAEAConsultarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FECAEAConsultarResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FECAEAConsultarResponseBody Body;
+    
+    public FECAEAConsultarResponse()
+    {
+    }
+    
+    public FECAEAConsultarResponse(AfipServiceReference.FECAEAConsultarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FECAEAConsultarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECAEAGetResponse FECAEAConsultarResult;
+    
+    public FECAEAConsultarResponseBody()
+    {
+    }
+    
+    public FECAEAConsultarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEAConsultarResult)
+    {
+        this.FECAEAConsultarResult = FECAEAConsultarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetCotizacionRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetCotizacion", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetCotizacionRequestBody Body;
+    
+    public FEParamGetCotizacionRequest()
+    {
+    }
+    
+    public FEParamGetCotizacionRequest(AfipServiceReference.FEParamGetCotizacionRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetCotizacionRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string MonId;
+    
+    public FEParamGetCotizacionRequestBody()
+    {
+    }
+    
+    public FEParamGetCotizacionRequestBody(AfipServiceReference.FEAuthRequest Auth, string MonId)
+    {
+        this.Auth = Auth;
+        this.MonId = MonId;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetCotizacionResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetCotizacionResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetCotizacionResponseBody Body;
+    
+    public FEParamGetCotizacionResponse()
+    {
+    }
+    
+    public FEParamGetCotizacionResponse(AfipServiceReference.FEParamGetCotizacionResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetCotizacionResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FECotizacionResponse FEParamGetCotizacionResult;
+    
+    public FEParamGetCotizacionResponseBody()
+    {
+    }
+    
+    public FEParamGetCotizacionResponseBody(AfipServiceReference.FECotizacionResponse FEParamGetCotizacionResult)
+    {
+        this.FEParamGetCotizacionResult = FEParamGetCotizacionResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposTributosRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposTributos", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposTributosRequestBody Body;
+    
+    public FEParamGetTiposTributosRequest()
+    {
+    }
+    
+    public FEParamGetTiposTributosRequest(AfipServiceReference.FEParamGetTiposTributosRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposTributosRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposTributosRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposTributosRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposTributosResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposTributosResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposTributosResponseBody Body;
+    
+    public FEParamGetTiposTributosResponse()
+    {
+    }
+    
+    public FEParamGetTiposTributosResponse(AfipServiceReference.FEParamGetTiposTributosResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposTributosResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FETributoResponse FEParamGetTiposTributosResult;
+    
+    public FEParamGetTiposTributosResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposTributosResponseBody(AfipServiceReference.FETributoResponse FEParamGetTiposTributosResult)
+    {
+        this.FEParamGetTiposTributosResult = FEParamGetTiposTributosResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposMonedasRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposMonedas", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposMonedasRequestBody Body;
+    
+    public FEParamGetTiposMonedasRequest()
+    {
+    }
+    
+    public FEParamGetTiposMonedasRequest(AfipServiceReference.FEParamGetTiposMonedasRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposMonedasRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposMonedasRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposMonedasRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposMonedasResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposMonedasResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposMonedasResponseBody Body;
+    
+    public FEParamGetTiposMonedasResponse()
+    {
+    }
+    
+    public FEParamGetTiposMonedasResponse(AfipServiceReference.FEParamGetTiposMonedasResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposMonedasResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.MonedaResponse FEParamGetTiposMonedasResult;
+    
+    public FEParamGetTiposMonedasResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposMonedasResponseBody(AfipServiceReference.MonedaResponse FEParamGetTiposMonedasResult)
+    {
+        this.FEParamGetTiposMonedasResult = FEParamGetTiposMonedasResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposIvaRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposIva", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposIvaRequestBody Body;
+    
+    public FEParamGetTiposIvaRequest()
+    {
+    }
+    
+    public FEParamGetTiposIvaRequest(AfipServiceReference.FEParamGetTiposIvaRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposIvaRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposIvaRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposIvaRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposIvaResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposIvaResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposIvaResponseBody Body;
+    
+    public FEParamGetTiposIvaResponse()
+    {
+    }
+    
+    public FEParamGetTiposIvaResponse(AfipServiceReference.FEParamGetTiposIvaResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposIvaResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.IvaTipoResponse FEParamGetTiposIvaResult;
+    
+    public FEParamGetTiposIvaResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposIvaResponseBody(AfipServiceReference.IvaTipoResponse FEParamGetTiposIvaResult)
+    {
+        this.FEParamGetTiposIvaResult = FEParamGetTiposIvaResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposOpcionalRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposOpcional", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposOpcionalRequestBody Body;
+    
+    public FEParamGetTiposOpcionalRequest()
+    {
+    }
+    
+    public FEParamGetTiposOpcionalRequest(AfipServiceReference.FEParamGetTiposOpcionalRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposOpcionalRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposOpcionalRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposOpcionalRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposOpcionalResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposOpcionalResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposOpcionalResponseBody Body;
+    
+    public FEParamGetTiposOpcionalResponse()
+    {
+    }
+    
+    public FEParamGetTiposOpcionalResponse(AfipServiceReference.FEParamGetTiposOpcionalResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposOpcionalResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.OpcionalTipoResponse FEParamGetTiposOpcionalResult;
+    
+    public FEParamGetTiposOpcionalResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposOpcionalResponseBody(AfipServiceReference.OpcionalTipoResponse FEParamGetTiposOpcionalResult)
+    {
+        this.FEParamGetTiposOpcionalResult = FEParamGetTiposOpcionalResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposConceptoRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposConcepto", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposConceptoRequestBody Body;
+    
+    public FEParamGetTiposConceptoRequest()
+    {
+    }
+    
+    public FEParamGetTiposConceptoRequest(AfipServiceReference.FEParamGetTiposConceptoRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposConceptoRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposConceptoRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposConceptoRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposConceptoResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposConceptoResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposConceptoResponseBody Body;
+    
+    public FEParamGetTiposConceptoResponse()
+    {
+    }
+    
+    public FEParamGetTiposConceptoResponse(AfipServiceReference.FEParamGetTiposConceptoResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposConceptoResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.ConceptoTipoResponse FEParamGetTiposConceptoResult;
+    
+    public FEParamGetTiposConceptoResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposConceptoResponseBody(AfipServiceReference.ConceptoTipoResponse FEParamGetTiposConceptoResult)
+    {
+        this.FEParamGetTiposConceptoResult = FEParamGetTiposConceptoResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetPtosVentaRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetPtosVenta", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetPtosVentaRequestBody Body;
+    
+    public FEParamGetPtosVentaRequest()
+    {
+    }
+    
+    public FEParamGetPtosVentaRequest(AfipServiceReference.FEParamGetPtosVentaRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetPtosVentaRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetPtosVentaRequestBody()
+    {
+    }
+    
+    public FEParamGetPtosVentaRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetPtosVentaResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetPtosVentaResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetPtosVentaResponseBody Body;
+    
+    public FEParamGetPtosVentaResponse()
+    {
+    }
+    
+    public FEParamGetPtosVentaResponse(AfipServiceReference.FEParamGetPtosVentaResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetPtosVentaResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEPtoVentaResponse FEParamGetPtosVentaResult;
+    
+    public FEParamGetPtosVentaResponseBody()
+    {
+    }
+    
+    public FEParamGetPtosVentaResponseBody(AfipServiceReference.FEPtoVentaResponse FEParamGetPtosVentaResult)
+    {
+        this.FEParamGetPtosVentaResult = FEParamGetPtosVentaResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposCbteRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposCbte", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposCbteRequestBody Body;
+    
+    public FEParamGetTiposCbteRequest()
+    {
+    }
+    
+    public FEParamGetTiposCbteRequest(AfipServiceReference.FEParamGetTiposCbteRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposCbteRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposCbteRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposCbteRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposCbteResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposCbteResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposCbteResponseBody Body;
+    
+    public FEParamGetTiposCbteResponse()
+    {
+    }
+    
+    public FEParamGetTiposCbteResponse(AfipServiceReference.FEParamGetTiposCbteResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposCbteResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.CbteTipoResponse FEParamGetTiposCbteResult;
+    
+    public FEParamGetTiposCbteResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposCbteResponseBody(AfipServiceReference.CbteTipoResponse FEParamGetTiposCbteResult)
+    {
+        this.FEParamGetTiposCbteResult = FEParamGetTiposCbteResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposDocRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposDoc", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposDocRequestBody Body;
+    
+    public FEParamGetTiposDocRequest()
+    {
+    }
+    
+    public FEParamGetTiposDocRequest(AfipServiceReference.FEParamGetTiposDocRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposDocRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposDocRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposDocRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposDocResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposDocResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposDocResponseBody Body;
+    
+    public FEParamGetTiposDocResponse()
+    {
+    }
+    
+    public FEParamGetTiposDocResponse(AfipServiceReference.FEParamGetTiposDocResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposDocResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.DocTipoResponse FEParamGetTiposDocResult;
+    
+    public FEParamGetTiposDocResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposDocResponseBody(AfipServiceReference.DocTipoResponse FEParamGetTiposDocResult)
+    {
+        this.FEParamGetTiposDocResult = FEParamGetTiposDocResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposPaisesRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposPaises", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposPaisesRequestBody Body;
+    
+    public FEParamGetTiposPaisesRequest()
+    {
+    }
+    
+    public FEParamGetTiposPaisesRequest(AfipServiceReference.FEParamGetTiposPaisesRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposPaisesRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEAuthRequest Auth;
+    
+    public FEParamGetTiposPaisesRequestBody()
+    {
+    }
+    
+    public FEParamGetTiposPaisesRequestBody(AfipServiceReference.FEAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class FEParamGetTiposPaisesResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="FEParamGetTiposPaisesResponse", Namespace="http://ar.gov.afip.dif.FEV1/", Order=0)]
+    public AfipServiceReference.FEParamGetTiposPaisesResponseBody Body;
+    
+    public FEParamGetTiposPaisesResponse()
+    {
+    }
+    
+    public FEParamGetTiposPaisesResponse(AfipServiceReference.FEParamGetTiposPaisesResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://ar.gov.afip.dif.FEV1/")]
+public partial class FEParamGetTiposPaisesResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipServiceReference.FEPaisResponse FEParamGetTiposPaisesResult;
+    
+    public FEParamGetTiposPaisesResponseBody()
+    {
+    }
+    
+    public FEParamGetTiposPaisesResponseBody(AfipServiceReference.FEPaisResponse FEParamGetTiposPaisesResult)
+    {
+        this.FEParamGetTiposPaisesResult = FEParamGetTiposPaisesResult;
+    }
+}
+
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+public interface ServiceSoapChannel : AfipServiceReference.ServiceSoap, System.ServiceModel.IClientChannel
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+public partial class ServiceSoapClient : System.ServiceModel.ClientBase<AfipServiceReference.ServiceSoap>, AfipServiceReference.ServiceSoap
+{
+    
+    /// <summary>
+    /// Implement this partial method to configure the service endpoint.
+    /// </summary>
+    /// <param name="serviceEndpoint">The endpoint to configure</param>
+    /// <param name="clientCredentials">The client credentials</param>
+    static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
+    
+    public ServiceSoapClient(EndpointConfiguration endpointConfiguration) : 
+            base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), ServiceSoapClient.GetEndpointAddress(endpointConfiguration))
+    {
+        this.Endpoint.Name = endpointConfiguration.ToString();
+        ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+    }
+    
+    public ServiceSoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
+            base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+    {
+        this.Endpoint.Name = endpointConfiguration.ToString();
+        ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+    }
+    
+    public ServiceSoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
+            base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+    {
+        this.Endpoint.Name = endpointConfiguration.ToString();
+        ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+    }
+    
+    public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+            base(binding, remoteAddress)
+    {
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAESolicitarResponse> AfipServiceReference.ServiceSoap.FECAESolicitarAsync(AfipServiceReference.FECAESolicitarRequest request)
+    {
+        return base.Channel.FECAESolicitarAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECAESolicitarResponse> FECAESolicitarAsync(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAERequest FeCAEReq)
+    {
+        AfipServiceReference.FECAESolicitarRequest inValue = new AfipServiceReference.FECAESolicitarRequest();
+        inValue.Body = new AfipServiceReference.FECAESolicitarRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.FeCAEReq = FeCAEReq;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECAESolicitarAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECompTotXRequestResponse> AfipServiceReference.ServiceSoap.FECompTotXRequestAsync(AfipServiceReference.FECompTotXRequestRequest request)
+    {
+        return base.Channel.FECompTotXRequestAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECompTotXRequestResponse> FECompTotXRequestAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FECompTotXRequestRequest inValue = new AfipServiceReference.FECompTotXRequestRequest();
+        inValue.Body = new AfipServiceReference.FECompTotXRequestRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECompTotXRequestAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEDummyResponse> AfipServiceReference.ServiceSoap.FEDummyAsync(AfipServiceReference.FEDummyRequest request)
+    {
+        return base.Channel.FEDummyAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEDummyResponse> FEDummyAsync()
+    {
+        AfipServiceReference.FEDummyRequest inValue = new AfipServiceReference.FEDummyRequest();
+        inValue.Body = new AfipServiceReference.FEDummyRequestBody();
+        return ((AfipServiceReference.ServiceSoap)(this)).FEDummyAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECompUltimoAutorizadoResponse> AfipServiceReference.ServiceSoap.FECompUltimoAutorizadoAsync(AfipServiceReference.FECompUltimoAutorizadoRequest request)
+    {
+        return base.Channel.FECompUltimoAutorizadoAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECompUltimoAutorizadoResponse> FECompUltimoAutorizadoAsync(AfipServiceReference.FEAuthRequest Auth, int PtoVta, int CbteTipo)
+    {
+        AfipServiceReference.FECompUltimoAutorizadoRequest inValue = new AfipServiceReference.FECompUltimoAutorizadoRequest();
+        inValue.Body = new AfipServiceReference.FECompUltimoAutorizadoRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.PtoVta = PtoVta;
+        inValue.Body.CbteTipo = CbteTipo;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECompUltimoAutorizadoAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECompConsultarResponse> AfipServiceReference.ServiceSoap.FECompConsultarAsync(AfipServiceReference.FECompConsultarRequest request)
+    {
+        return base.Channel.FECompConsultarAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECompConsultarResponse> FECompConsultarAsync(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECompConsultaReq FeCompConsReq)
+    {
+        AfipServiceReference.FECompConsultarRequest inValue = new AfipServiceReference.FECompConsultarRequest();
+        inValue.Body = new AfipServiceReference.FECompConsultarRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.FeCompConsReq = FeCompConsReq;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECompConsultarAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEARegInformativoResponse> AfipServiceReference.ServiceSoap.FECAEARegInformativoAsync(AfipServiceReference.FECAEARegInformativoRequest request)
+    {
+        return base.Channel.FECAEARegInformativoAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECAEARegInformativoResponse> FECAEARegInformativoAsync(AfipServiceReference.FEAuthRequest Auth, AfipServiceReference.FECAEARequest FeCAEARegInfReq)
+    {
+        AfipServiceReference.FECAEARegInformativoRequest inValue = new AfipServiceReference.FECAEARegInformativoRequest();
+        inValue.Body = new AfipServiceReference.FECAEARegInformativoRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.FeCAEARegInfReq = FeCAEARegInfReq;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECAEARegInformativoAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEASolicitarResponse> AfipServiceReference.ServiceSoap.FECAEASolicitarAsync(AfipServiceReference.FECAEASolicitarRequest request)
+    {
+        return base.Channel.FECAEASolicitarAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECAEASolicitarResponse> FECAEASolicitarAsync(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
+    {
+        AfipServiceReference.FECAEASolicitarRequest inValue = new AfipServiceReference.FECAEASolicitarRequest();
+        inValue.Body = new AfipServiceReference.FECAEASolicitarRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.Periodo = Periodo;
+        inValue.Body.Orden = Orden;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECAEASolicitarAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoConsultarResponse> AfipServiceReference.ServiceSoap.FECAEASinMovimientoConsultarAsync(AfipServiceReference.FECAEASinMovimientoConsultarRequest request)
+    {
+        return base.Channel.FECAEASinMovimientoConsultarAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoConsultarResponse> FECAEASinMovimientoConsultarAsync(AfipServiceReference.FEAuthRequest Auth, string CAEA, int PtoVta)
+    {
+        AfipServiceReference.FECAEASinMovimientoConsultarRequest inValue = new AfipServiceReference.FECAEASinMovimientoConsultarRequest();
+        inValue.Body = new AfipServiceReference.FECAEASinMovimientoConsultarRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.CAEA = CAEA;
+        inValue.Body.PtoVta = PtoVta;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECAEASinMovimientoConsultarAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoInformarResponse> AfipServiceReference.ServiceSoap.FECAEASinMovimientoInformarAsync(AfipServiceReference.FECAEASinMovimientoInformarRequest request)
+    {
+        return base.Channel.FECAEASinMovimientoInformarAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECAEASinMovimientoInformarResponse> FECAEASinMovimientoInformarAsync(AfipServiceReference.FEAuthRequest Auth, int PtoVta, string CAEA)
+    {
+        AfipServiceReference.FECAEASinMovimientoInformarRequest inValue = new AfipServiceReference.FECAEASinMovimientoInformarRequest();
+        inValue.Body = new AfipServiceReference.FECAEASinMovimientoInformarRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.PtoVta = PtoVta;
+        inValue.Body.CAEA = CAEA;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECAEASinMovimientoInformarAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FECAEAConsultarResponse> AfipServiceReference.ServiceSoap.FECAEAConsultarAsync(AfipServiceReference.FECAEAConsultarRequest request)
+    {
+        return base.Channel.FECAEAConsultarAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FECAEAConsultarResponse> FECAEAConsultarAsync(AfipServiceReference.FEAuthRequest Auth, int Periodo, short Orden)
+    {
+        AfipServiceReference.FECAEAConsultarRequest inValue = new AfipServiceReference.FECAEAConsultarRequest();
+        inValue.Body = new AfipServiceReference.FECAEAConsultarRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.Periodo = Periodo;
+        inValue.Body.Orden = Orden;
+        return ((AfipServiceReference.ServiceSoap)(this)).FECAEAConsultarAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetCotizacionResponse> AfipServiceReference.ServiceSoap.FEParamGetCotizacionAsync(AfipServiceReference.FEParamGetCotizacionRequest request)
+    {
+        return base.Channel.FEParamGetCotizacionAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetCotizacionResponse> FEParamGetCotizacionAsync(AfipServiceReference.FEAuthRequest Auth, string MonId)
+    {
+        AfipServiceReference.FEParamGetCotizacionRequest inValue = new AfipServiceReference.FEParamGetCotizacionRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetCotizacionRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.MonId = MonId;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetCotizacionAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposTributosResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposTributosAsync(AfipServiceReference.FEParamGetTiposTributosRequest request)
+    {
+        return base.Channel.FEParamGetTiposTributosAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposTributosResponse> FEParamGetTiposTributosAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposTributosRequest inValue = new AfipServiceReference.FEParamGetTiposTributosRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposTributosRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposTributosAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposMonedasResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposMonedasAsync(AfipServiceReference.FEParamGetTiposMonedasRequest request)
+    {
+        return base.Channel.FEParamGetTiposMonedasAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposMonedasResponse> FEParamGetTiposMonedasAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposMonedasRequest inValue = new AfipServiceReference.FEParamGetTiposMonedasRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposMonedasRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposMonedasAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposIvaResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposIvaAsync(AfipServiceReference.FEParamGetTiposIvaRequest request)
+    {
+        return base.Channel.FEParamGetTiposIvaAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposIvaResponse> FEParamGetTiposIvaAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposIvaRequest inValue = new AfipServiceReference.FEParamGetTiposIvaRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposIvaRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposIvaAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposOpcionalResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposOpcionalAsync(AfipServiceReference.FEParamGetTiposOpcionalRequest request)
+    {
+        return base.Channel.FEParamGetTiposOpcionalAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposOpcionalResponse> FEParamGetTiposOpcionalAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposOpcionalRequest inValue = new AfipServiceReference.FEParamGetTiposOpcionalRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposOpcionalRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposOpcionalAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposConceptoResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposConceptoAsync(AfipServiceReference.FEParamGetTiposConceptoRequest request)
+    {
+        return base.Channel.FEParamGetTiposConceptoAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposConceptoResponse> FEParamGetTiposConceptoAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposConceptoRequest inValue = new AfipServiceReference.FEParamGetTiposConceptoRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposConceptoRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposConceptoAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetPtosVentaResponse> AfipServiceReference.ServiceSoap.FEParamGetPtosVentaAsync(AfipServiceReference.FEParamGetPtosVentaRequest request)
+    {
+        return base.Channel.FEParamGetPtosVentaAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetPtosVentaResponse> FEParamGetPtosVentaAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetPtosVentaRequest inValue = new AfipServiceReference.FEParamGetPtosVentaRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetPtosVentaRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetPtosVentaAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposCbteResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposCbteAsync(AfipServiceReference.FEParamGetTiposCbteRequest request)
+    {
+        return base.Channel.FEParamGetTiposCbteAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposCbteResponse> FEParamGetTiposCbteAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposCbteRequest inValue = new AfipServiceReference.FEParamGetTiposCbteRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposCbteRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposCbteAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposDocResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposDocAsync(AfipServiceReference.FEParamGetTiposDocRequest request)
+    {
+        return base.Channel.FEParamGetTiposDocAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposDocResponse> FEParamGetTiposDocAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposDocRequest inValue = new AfipServiceReference.FEParamGetTiposDocRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposDocRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposDocAsync(inValue);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposPaisesResponse> AfipServiceReference.ServiceSoap.FEParamGetTiposPaisesAsync(AfipServiceReference.FEParamGetTiposPaisesRequest request)
+    {
+        return base.Channel.FEParamGetTiposPaisesAsync(request);
+    }
+    
+    public System.Threading.Tasks.Task<AfipServiceReference.FEParamGetTiposPaisesResponse> FEParamGetTiposPaisesAsync(AfipServiceReference.FEAuthRequest Auth)
+    {
+        AfipServiceReference.FEParamGetTiposPaisesRequest inValue = new AfipServiceReference.FEParamGetTiposPaisesRequest();
+        inValue.Body = new AfipServiceReference.FEParamGetTiposPaisesRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipServiceReference.ServiceSoap)(this)).FEParamGetTiposPaisesAsync(inValue);
+    }
+    
+    public virtual System.Threading.Tasks.Task OpenAsync()
+    {
+        return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
+    }
+    
+    public virtual System.Threading.Tasks.Task CloseAsync()
+    {
+        return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
+    }
+    
+    private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
+    {
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
+        {
+            System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
+            result.MaxBufferSize = int.MaxValue;
+            result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
+            result.MaxReceivedMessageSize = int.MaxValue;
+            result.AllowCookies = true;
+            result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
+            return result;
+        }
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
+        {
+            System.ServiceModel.Channels.CustomBinding result = new System.ServiceModel.Channels.CustomBinding();
+            System.ServiceModel.Channels.TextMessageEncodingBindingElement textBindingElement = new System.ServiceModel.Channels.TextMessageEncodingBindingElement();
+            textBindingElement.MessageVersion = System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion.Soap12, System.ServiceModel.Channels.AddressingVersion.None);
+            result.Elements.Add(textBindingElement);
+            System.ServiceModel.Channels.HttpsTransportBindingElement httpsBindingElement = new System.ServiceModel.Channels.HttpsTransportBindingElement();
+            httpsBindingElement.AllowCookies = true;
+            httpsBindingElement.MaxBufferSize = int.MaxValue;
+            httpsBindingElement.MaxReceivedMessageSize = int.MaxValue;
+            result.Elements.Add(httpsBindingElement);
+            return result;
+        }
+        throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
+    }
+    
+    private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
+    {
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
+        {
+            return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/wsfev1/service.asmx");
+        }
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
+        {
+            return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/wsfev1/service.asmx");
+        }
+        throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
+    }
+    
+    public enum EndpointConfiguration
+    {
+        
+        ServiceSoap,
+        
+        ServiceSoap12,
     }
 }

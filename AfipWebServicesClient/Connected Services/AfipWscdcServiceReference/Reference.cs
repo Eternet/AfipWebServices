@@ -7,1602 +7,1601 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AfipWscdcServiceReference
+namespace AfipWscdcServiceReference;
+
+using System.Runtime.Serialization;
+
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CmpAuthRequest", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class CmpAuthRequest : object
 {
-    using System.Runtime.Serialization;
     
+    private string TokenField;
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CmpAuthRequest", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class CmpAuthRequest : object
+    private string SignField;
+    
+    private long CuitField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Token
     {
-        
-        private string TokenField;
-        
-        private string SignField;
-        
-        private long CuitField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Token
+        get
         {
-            get
-            {
-                return this.TokenField;
-            }
-            set
-            {
-                this.TokenField = value;
-            }
+            return this.TokenField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Sign
+        set
         {
-            get
-            {
-                return this.SignField;
-            }
-            set
-            {
-                this.SignField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public long Cuit
-        {
-            get
-            {
-                return this.CuitField;
-            }
-            set
-            {
-                this.CuitField = value;
-            }
+            this.TokenField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FacModTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class FacModTipoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Sign
     {
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.FacModTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.FacModTipo> ResultGet
+        get
         {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
+            return this.SignField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
+        set
         {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
-        {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.SignField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FacModTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class FacModTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+    public long Cuit
     {
-        
-        private string CodField;
-        
-        private string DescField;
-        
-        private string FchDesdeField;
-        
-        private string FchHastaField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Cod
+        get
         {
-            get
-            {
-                return this.CodField;
-            }
-            set
-            {
-                this.CodField = value;
-            }
+            return this.CuitField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Desc
+        set
         {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
+            this.CuitField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string FchDesde
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FacModTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class FacModTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.FacModTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.FacModTipo> ResultGet
+    {
+        get
         {
-            get
-            {
-                return this.FchDesdeField;
-            }
-            set
-            {
-                this.FchDesdeField = value;
-            }
+            return this.ResultGetField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string FchHasta
+        set
         {
-            get
-            {
-                return this.FchHastaField;
-            }
-            set
-            {
-                this.FchHastaField = value;
-            }
+            this.ResultGetField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Err", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class Err : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
     {
-        
-        private int CodeField;
-        
-        private string MsgField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Code
+        get
         {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
+            return this.ErrorsField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Msg
+        set
         {
-            get
-            {
-                return this.MsgField;
-            }
-            set
-            {
-                this.MsgField = value;
-            }
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Evt", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class Evt : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
     {
-        
-        private int CodeField;
-        
-        private string MsgField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Code
+        get
         {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
+            return this.EventsField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Msg
+        set
         {
-            get
-            {
-                return this.MsgField;
-            }
-            set
-            {
-                this.MsgField = value;
-            }
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="FacModTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class FacModTipo : object
+{
+    
+    private string CodField;
+    
+    private string DescField;
+    
+    private string FchDesdeField;
+    
+    private string FchHastaField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Cod
+    {
+        get
+        {
+            return this.CodField;
+        }
+        set
+        {
+            this.CodField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CbteTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class CbteTipoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Desc
     {
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.CbteTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.CbteTipo> ResultGet
+        get
         {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
+            return this.DescField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
+        set
         {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
-        {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            this.DescField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CbteTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class CbteTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string FchDesde
     {
-        
-        private int IdField;
-        
-        private string DescField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Id
+        get
         {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
+            return this.FchDesdeField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
+        set
         {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
+            this.FchDesdeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DocTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class DocTipoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string FchHasta
     {
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.DocTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.DocTipo> ResultGet
+        get
         {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
+            return this.FchHastaField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
+        set
         {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+            this.FchHastaField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Err", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class Err : object
+{
+    
+    private int CodeField;
+    
+    private string MsgField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Code
+    {
+        get
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            return this.CodeField;
+        }
+        set
+        {
+            this.CodeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DocTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class DocTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Msg
     {
-        
-        private string IdField;
-        
-        private string DescField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Id
+        get
         {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
+            return this.MsgField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
+        set
         {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
+            this.MsgField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Evt", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class Evt : object
+{
+    
+    private int CodeField;
+    
+    private string MsgField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Code
+    {
+        get
+        {
+            return this.CodeField;
+        }
+        set
+        {
+            this.CodeField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class OpcionalTipoResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Msg
     {
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.OpcionalTipo> ResultGetField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.OpcionalTipo> ResultGet
+        get
         {
-            get
-            {
-                return this.ResultGetField;
-            }
-            set
-            {
-                this.ResultGetField = value;
-            }
+            return this.MsgField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
+        set
         {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+            this.MsgField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CbteTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class CbteTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.CbteTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.CbteTipo> ResultGet
+    {
+        get
         {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class OpcionalTipo : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
     {
-        
-        private string IdField;
-        
-        private string DescField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Id
+        get
         {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
+            return this.ErrorsField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string Desc
+        set
         {
-            get
-            {
-                return this.DescField;
-            }
-            set
-            {
-                this.DescField = value;
-            }
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CmpDatos", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class CmpDatos : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
     {
-        
-        private string CbteModoField;
-        
-        private long CuitEmisorField;
-        
-        private int PtoVtaField;
-        
-        private int CbteTipoField;
-        
-        private long CbteNroField;
-        
-        private string CbteFchField;
-        
-        private double ImpTotalField;
-        
-        private string CodAutorizacionField;
-        
-        private string DocTipoReceptorField;
-        
-        private string DocNroReceptorField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Opcional> OpcionalesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string CbteModo
+        get
         {
-            get
-            {
-                return this.CbteModoField;
-            }
-            set
-            {
-                this.CbteModoField = value;
-            }
+            return this.EventsField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public long CuitEmisor
+        set
         {
-            get
-            {
-                return this.CuitEmisorField;
-            }
-            set
-            {
-                this.CuitEmisorField = value;
-            }
+            this.EventsField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int PtoVta
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CbteTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class CbteTipo : object
+{
+    
+    private int IdField;
+    
+    private string DescField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Id
+    {
+        get
         {
-            get
-            {
-                return this.PtoVtaField;
-            }
-            set
-            {
-                this.PtoVtaField = value;
-            }
+            return this.IdField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public int CbteTipo
+        set
         {
-            get
-            {
-                return this.CbteTipoField;
-            }
-            set
-            {
-                this.CbteTipoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public long CbteNro
-        {
-            get
-            {
-                return this.CbteNroField;
-            }
-            set
-            {
-                this.CbteNroField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public string CbteFch
-        {
-            get
-            {
-                return this.CbteFchField;
-            }
-            set
-            {
-                this.CbteFchField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
-        public double ImpTotal
-        {
-            get
-            {
-                return this.ImpTotalField;
-            }
-            set
-            {
-                this.ImpTotalField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public string CodAutorizacion
-        {
-            get
-            {
-                return this.CodAutorizacionField;
-            }
-            set
-            {
-                this.CodAutorizacionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
-        public string DocTipoReceptor
-        {
-            get
-            {
-                return this.DocTipoReceptorField;
-            }
-            set
-            {
-                this.DocTipoReceptorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public string DocNroReceptor
-        {
-            get
-            {
-                return this.DocNroReceptorField;
-            }
-            set
-            {
-                this.DocNroReceptorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Opcional> Opcionales
-        {
-            get
-            {
-                return this.OpcionalesField;
-            }
-            set
-            {
-                this.OpcionalesField = value;
-            }
+            this.IdField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Opcional", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class Opcional : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
     {
-        
-        private string IdField;
-        
-        private string ValorField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Id
+        get
         {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
+            return this.DescField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Valor
+        set
         {
-            get
-            {
-                return this.ValorField;
-            }
-            set
-            {
-                this.ValorField = value;
-            }
+            this.DescField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DocTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class DocTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.DocTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.DocTipo> ResultGet
+    {
+        get
+        {
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CmpResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class CmpResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
     {
-        
-        private AfipWscdcServiceReference.CmpDatos CmpRespField;
-        
-        private string ResultadoField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Obs> ObservacionesField;
-        
-        private string FchProcesoField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
-        
-        private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public AfipWscdcServiceReference.CmpDatos CmpResp
+        get
         {
-            get
-            {
-                return this.CmpRespField;
-            }
-            set
-            {
-                this.CmpRespField = value;
-            }
+            return this.ErrorsField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Resultado
+        set
         {
-            get
-            {
-                return this.ResultadoField;
-            }
-            set
-            {
-                this.ResultadoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Obs> Observaciones
-        {
-            get
-            {
-                return this.ObservacionesField;
-            }
-            set
-            {
-                this.ObservacionesField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string FchProceso
-        {
-            get
-            {
-                return this.FchProcesoField;
-            }
-            set
-            {
-                this.FchProcesoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
-        {
-            get
-            {
-                return this.EventsField;
-            }
-            set
-            {
-                this.EventsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
-        {
-            get
-            {
-                return this.ErrorsField;
-            }
-            set
-            {
-                this.ErrorsField = value;
-            }
+            this.ErrorsField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Obs", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class Obs : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
     {
-        
-        private int CodeField;
-        
-        private string MsgField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Code
+        get
         {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
+            return this.EventsField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Msg
+        set
         {
-            get
-            {
-                return this.MsgField;
-            }
-            set
-            {
-                this.MsgField = value;
-            }
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DocTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class DocTipo : object
+{
+    
+    private string IdField;
+    
+    private string DescField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Id
+    {
+        get
+        {
+            return this.IdField;
+        }
+        set
+        {
+            this.IdField = value;
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DummyResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class DummyResponse : object
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
     {
-        
-        private string AppServerField;
-        
-        private string DbServerField;
-        
-        private string AuthServerField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string AppServer
+        get
         {
-            get
-            {
-                return this.AppServerField;
-            }
-            set
-            {
-                this.AppServerField = value;
-            }
+            return this.DescField;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string DbServer
+        set
         {
-            get
-            {
-                return this.DbServerField;
-            }
-            set
-            {
-                this.DbServerField = value;
-            }
+            this.DescField = value;
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string AuthServer
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipoResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class OpcionalTipoResponse : object
+{
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.OpcionalTipo> ResultGetField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.OpcionalTipo> ResultGet
+    {
+        get
         {
-            get
-            {
-                return this.AuthServerField;
-            }
-            set
-            {
-                this.AuthServerField = value;
-            }
+            return this.ResultGetField;
+        }
+        set
+        {
+            this.ResultGetField = value;
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/", ConfigurationName="AfipWscdcServiceReference.ServiceSoap")]
-    public interface ServiceSoap
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
     {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobantesModalidadConsultar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesModalidadConsultarResponse> ComprobantesModalidadConsultarAsync(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobantesTipoConsultar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesTipoConsultarResponse> ComprobantesTipoConsultarAsync(AfipWscdcServiceReference.ComprobantesTipoConsultarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/DocumentosTipoConsultar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.DocumentosTipoConsultarResponse> DocumentosTipoConsultarAsync(AfipWscdcServiceReference.DocumentosTipoConsultarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/OpcionalesTipoConsultar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.OpcionalesTipoConsultarResponse> OpcionalesTipoConsultarAsync(AfipWscdcServiceReference.OpcionalesTipoConsultarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobanteConstatar", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteConstatarResponse> ComprobanteConstatarAsync(AfipWscdcServiceReference.ComprobanteConstatarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobanteDummy", ReplyAction="*")]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteDummyResponse> ComprobanteDummyAsync(AfipWscdcServiceReference.ComprobanteDummyRequest request);
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
+    {
+        get
+        {
+            return this.EventsField;
+        }
+        set
+        {
+            this.EventsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="OpcionalTipo", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class OpcionalTipo : object
+{
+    
+    private string IdField;
+    
+    private string DescField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Id
+    {
+        get
+        {
+            return this.IdField;
+        }
+        set
+        {
+            this.IdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public string Desc
+    {
+        get
+        {
+            return this.DescField;
+        }
+        set
+        {
+            this.DescField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CmpDatos", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class CmpDatos : object
+{
+    
+    private string CbteModoField;
+    
+    private long CuitEmisorField;
+    
+    private int PtoVtaField;
+    
+    private int CbteTipoField;
+    
+    private long CbteNroField;
+    
+    private string CbteFchField;
+    
+    private double ImpTotalField;
+    
+    private string CodAutorizacionField;
+    
+    private string DocTipoReceptorField;
+    
+    private string DocNroReceptorField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Opcional> OpcionalesField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string CbteModo
+    {
+        get
+        {
+            return this.CbteModoField;
+        }
+        set
+        {
+            this.CbteModoField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public long CuitEmisor
+    {
+        get
+        {
+            return this.CuitEmisorField;
+        }
+        set
+        {
+            this.CuitEmisorField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int PtoVta
+    {
+        get
+        {
+            return this.PtoVtaField;
+        }
+        set
+        {
+            this.PtoVtaField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+    public int CbteTipo
+    {
+        get
+        {
+            return this.CbteTipoField;
+        }
+        set
+        {
+            this.CbteTipoField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+    public long CbteNro
+    {
+        get
+        {
+            return this.CbteNroField;
+        }
+        set
+        {
+            this.CbteNroField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+    public string CbteFch
+    {
+        get
+        {
+            return this.CbteFchField;
+        }
+        set
+        {
+            this.CbteFchField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+    public double ImpTotal
+    {
+        get
+        {
+            return this.ImpTotalField;
+        }
+        set
+        {
+            this.ImpTotalField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+    public string CodAutorizacion
+    {
+        get
+        {
+            return this.CodAutorizacionField;
+        }
+        set
+        {
+            this.CodAutorizacionField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+    public string DocTipoReceptor
+    {
+        get
+        {
+            return this.DocTipoReceptorField;
+        }
+        set
+        {
+            this.DocTipoReceptorField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+    public string DocNroReceptor
+    {
+        get
+        {
+            return this.DocNroReceptorField;
+        }
+        set
+        {
+            this.DocNroReceptorField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Opcional> Opcionales
+    {
+        get
+        {
+            return this.OpcionalesField;
+        }
+        set
+        {
+            this.OpcionalesField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Opcional", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class Opcional : object
+{
+    
+    private string IdField;
+    
+    private string ValorField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Id
+    {
+        get
+        {
+            return this.IdField;
+        }
+        set
+        {
+            this.IdField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Valor
+    {
+        get
+        {
+            return this.ValorField;
+        }
+        set
+        {
+            this.ValorField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="CmpResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class CmpResponse : object
+{
+    
+    private AfipWscdcServiceReference.CmpDatos CmpRespField;
+    
+    private string ResultadoField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Obs> ObservacionesField;
+    
+    private string FchProcesoField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Evt> EventsField;
+    
+    private System.Collections.Generic.List<AfipWscdcServiceReference.Err> ErrorsField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public AfipWscdcServiceReference.CmpDatos CmpResp
+    {
+        get
+        {
+            return this.CmpRespField;
+        }
+        set
+        {
+            this.CmpRespField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Resultado
+    {
+        get
+        {
+            return this.ResultadoField;
+        }
+        set
+        {
+            this.ResultadoField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Obs> Observaciones
+    {
+        get
+        {
+            return this.ObservacionesField;
+        }
+        set
+        {
+            this.ObservacionesField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+    public string FchProceso
+    {
+        get
+        {
+            return this.FchProcesoField;
+        }
+        set
+        {
+            this.FchProcesoField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Evt> Events
+    {
+        get
+        {
+            return this.EventsField;
+        }
+        set
+        {
+            this.EventsField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+    public System.Collections.Generic.List<AfipWscdcServiceReference.Err> Errors
+    {
+        get
+        {
+            return this.ErrorsField;
+        }
+        set
+        {
+            this.ErrorsField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="Obs", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class Obs : object
+{
+    
+    private int CodeField;
+    
+    private string MsgField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+    public int Code
+    {
+        get
+        {
+            return this.CodeField;
+        }
+        set
+        {
+            this.CodeField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string Msg
+    {
+        get
+        {
+            return this.MsgField;
+        }
+        set
+        {
+            this.MsgField = value;
+        }
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.Runtime.Serialization.DataContractAttribute(Name="DummyResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class DummyResponse : object
+{
+    
+    private string AppServerField;
+    
+    private string DbServerField;
+    
+    private string AuthServerField;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string AppServer
+    {
+        get
+        {
+            return this.AppServerField;
+        }
+        set
+        {
+            this.AppServerField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+    public string DbServer
+    {
+        get
+        {
+            return this.DbServerField;
+        }
+        set
+        {
+            this.DbServerField = value;
+        }
+    }
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+    public string AuthServer
+    {
+        get
+        {
+            return this.AuthServerField;
+        }
+        set
+        {
+            this.AuthServerField = value;
+        }
+    }
+}
+
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ServiceModel.ServiceContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/", ConfigurationName="AfipWscdcServiceReference.ServiceSoap")]
+public interface ServiceSoap
+{
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobantesModalidadConsultar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesModalidadConsultarResponse> ComprobantesModalidadConsultarAsync(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobantesTipoConsultar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesTipoConsultarResponse> ComprobantesTipoConsultarAsync(AfipWscdcServiceReference.ComprobantesTipoConsultarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/DocumentosTipoConsultar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.DocumentosTipoConsultarResponse> DocumentosTipoConsultarAsync(AfipWscdcServiceReference.DocumentosTipoConsultarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/OpcionalesTipoConsultar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.OpcionalesTipoConsultarResponse> OpcionalesTipoConsultarAsync(AfipWscdcServiceReference.OpcionalesTipoConsultarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobanteConstatar", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteConstatarResponse> ComprobanteConstatarAsync(AfipWscdcServiceReference.ComprobanteConstatarRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://servicios1.afip.gob.ar/wscdc/ComprobanteDummy", ReplyAction="*")]
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteDummyResponse> ComprobanteDummyAsync(AfipWscdcServiceReference.ComprobanteDummyRequest request);
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobantesModalidadConsultarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesModalidadConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody Body;
+    
+    public ComprobantesModalidadConsultarRequest()
+    {
+    }
+    
+    public ComprobantesModalidadConsultarRequest(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class ComprobantesModalidadConsultarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.CmpAuthRequest Auth;
+    
+    public ComprobantesModalidadConsultarRequestBody()
+    {
+    }
+    
+    public ComprobantesModalidadConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobantesModalidadConsultarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesModalidadConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobantesModalidadConsultarResponseBody Body;
+    
+    public ComprobantesModalidadConsultarResponse()
+    {
+    }
+    
+    public ComprobantesModalidadConsultarResponse(AfipWscdcServiceReference.ComprobantesModalidadConsultarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class ComprobantesModalidadConsultarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.FacModTipoResponse ComprobantesModalidadConsultarResult;
+    
+    public ComprobantesModalidadConsultarResponseBody()
+    {
+    }
+    
+    public ComprobantesModalidadConsultarResponseBody(AfipWscdcServiceReference.FacModTipoResponse ComprobantesModalidadConsultarResult)
+    {
+        this.ComprobantesModalidadConsultarResult = ComprobantesModalidadConsultarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobantesTipoConsultarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesTipoConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody Body;
+    
+    public ComprobantesTipoConsultarRequest()
+    {
+    }
+    
+    public ComprobantesTipoConsultarRequest(AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class ComprobantesTipoConsultarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.CmpAuthRequest Auth;
+    
+    public ComprobantesTipoConsultarRequestBody()
+    {
+    }
+    
+    public ComprobantesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobantesTipoConsultarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesTipoConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobantesTipoConsultarResponseBody Body;
+    
+    public ComprobantesTipoConsultarResponse()
+    {
+    }
+    
+    public ComprobantesTipoConsultarResponse(AfipWscdcServiceReference.ComprobantesTipoConsultarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class ComprobantesTipoConsultarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.CbteTipoResponse ComprobantesTipoConsultarResult;
+    
+    public ComprobantesTipoConsultarResponseBody()
+    {
+    }
+    
+    public ComprobantesTipoConsultarResponseBody(AfipWscdcServiceReference.CbteTipoResponse ComprobantesTipoConsultarResult)
+    {
+        this.ComprobantesTipoConsultarResult = ComprobantesTipoConsultarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class DocumentosTipoConsultarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="DocumentosTipoConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody Body;
+    
+    public DocumentosTipoConsultarRequest()
+    {
+    }
+    
+    public DocumentosTipoConsultarRequest(AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class DocumentosTipoConsultarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.CmpAuthRequest Auth;
+    
+    public DocumentosTipoConsultarRequestBody()
+    {
+    }
+    
+    public DocumentosTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class DocumentosTipoConsultarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="DocumentosTipoConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.DocumentosTipoConsultarResponseBody Body;
+    
+    public DocumentosTipoConsultarResponse()
+    {
+    }
+    
+    public DocumentosTipoConsultarResponse(AfipWscdcServiceReference.DocumentosTipoConsultarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class DocumentosTipoConsultarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.DocTipoResponse DocumentosTipoConsultarResult;
+    
+    public DocumentosTipoConsultarResponseBody()
+    {
+    }
+    
+    public DocumentosTipoConsultarResponseBody(AfipWscdcServiceReference.DocTipoResponse DocumentosTipoConsultarResult)
+    {
+        this.DocumentosTipoConsultarResult = DocumentosTipoConsultarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class OpcionalesTipoConsultarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="OpcionalesTipoConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody Body;
+    
+    public OpcionalesTipoConsultarRequest()
+    {
+    }
+    
+    public OpcionalesTipoConsultarRequest(AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class OpcionalesTipoConsultarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.CmpAuthRequest Auth;
+    
+    public OpcionalesTipoConsultarRequestBody()
+    {
+    }
+    
+    public OpcionalesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        this.Auth = Auth;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class OpcionalesTipoConsultarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="OpcionalesTipoConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.OpcionalesTipoConsultarResponseBody Body;
+    
+    public OpcionalesTipoConsultarResponse()
+    {
+    }
+    
+    public OpcionalesTipoConsultarResponse(AfipWscdcServiceReference.OpcionalesTipoConsultarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class OpcionalesTipoConsultarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.OpcionalTipoResponse OpcionalesTipoConsultarResult;
+    
+    public OpcionalesTipoConsultarResponseBody()
+    {
+    }
+    
+    public OpcionalesTipoConsultarResponseBody(AfipWscdcServiceReference.OpcionalTipoResponse OpcionalesTipoConsultarResult)
+    {
+        this.OpcionalesTipoConsultarResult = OpcionalesTipoConsultarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobanteConstatarRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteConstatar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobanteConstatarRequestBody Body;
+    
+    public ComprobanteConstatarRequest()
+    {
+    }
+    
+    public ComprobanteConstatarRequest(AfipWscdcServiceReference.ComprobanteConstatarRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class ComprobanteConstatarRequestBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.CmpAuthRequest Auth;
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+    public AfipWscdcServiceReference.CmpDatos CmpReq;
+    
+    public ComprobanteConstatarRequestBody()
+    {
+    }
+    
+    public ComprobanteConstatarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth, AfipWscdcServiceReference.CmpDatos CmpReq)
+    {
+        this.Auth = Auth;
+        this.CmpReq = CmpReq;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobanteConstatarResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteConstatarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobanteConstatarResponseBody Body;
+    
+    public ComprobanteConstatarResponse()
+    {
+    }
+    
+    public ComprobanteConstatarResponse(AfipWscdcServiceReference.ComprobanteConstatarResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class ComprobanteConstatarResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.CmpResponse ComprobanteConstatarResult;
+    
+    public ComprobanteConstatarResponseBody()
+    {
+    }
+    
+    public ComprobanteConstatarResponseBody(AfipWscdcServiceReference.CmpResponse ComprobanteConstatarResult)
+    {
+        this.ComprobanteConstatarResult = ComprobanteConstatarResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobanteDummyRequest
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteDummy", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobanteDummyRequestBody Body;
+    
+    public ComprobanteDummyRequest()
+    {
+    }
+    
+    public ComprobanteDummyRequest(AfipWscdcServiceReference.ComprobanteDummyRequestBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute()]
+public partial class ComprobanteDummyRequestBody
+{
+    
+    public ComprobanteDummyRequestBody()
+    {
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+public partial class ComprobanteDummyResponse
+{
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteDummyResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
+    public AfipWscdcServiceReference.ComprobanteDummyResponseBody Body;
+    
+    public ComprobanteDummyResponse()
+    {
+    }
+    
+    public ComprobanteDummyResponse(AfipWscdcServiceReference.ComprobanteDummyResponseBody Body)
+    {
+        this.Body = Body;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
+public partial class ComprobanteDummyResponseBody
+{
+    
+    [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+    public AfipWscdcServiceReference.DummyResponse ComprobanteDummyResult;
+    
+    public ComprobanteDummyResponseBody()
+    {
+    }
+    
+    public ComprobanteDummyResponseBody(AfipWscdcServiceReference.DummyResponse ComprobanteDummyResult)
+    {
+        this.ComprobanteDummyResult = ComprobanteDummyResult;
+    }
+}
+
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+public interface ServiceSoapChannel : AfipWscdcServiceReference.ServiceSoap, System.ServiceModel.IClientChannel
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+public partial class ServiceSoapClient : System.ServiceModel.ClientBase<AfipWscdcServiceReference.ServiceSoap>, AfipWscdcServiceReference.ServiceSoap
+{
+    
+    /// <summary>
+    /// Implement this partial method to configure the service endpoint.
+    /// </summary>
+    /// <param name="serviceEndpoint">The endpoint to configure</param>
+    /// <param name="clientCredentials">The client credentials</param>
+    static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
+    
+    public ServiceSoapClient(EndpointConfiguration endpointConfiguration) : 
+            base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), ServiceSoapClient.GetEndpointAddress(endpointConfiguration))
+    {
+        this.Endpoint.Name = endpointConfiguration.ToString();
+        ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+    }
+    
+    public ServiceSoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
+            base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+    {
+        this.Endpoint.Name = endpointConfiguration.ToString();
+        ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+    }
+    
+    public ServiceSoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
+            base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+    {
+        this.Endpoint.Name = endpointConfiguration.ToString();
+        ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+    }
+    
+    public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+            base(binding, remoteAddress)
+    {
+    }
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobantesModalidadConsultarRequest
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesModalidadConsultarResponse> AfipWscdcServiceReference.ServiceSoap.ComprobantesModalidadConsultarAsync(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest request)
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesModalidadConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody Body;
-        
-        public ComprobantesModalidadConsultarRequest()
-        {
-        }
-        
-        public ComprobantesModalidadConsultarRequest(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody Body)
-        {
-            this.Body = Body;
-        }
+        return base.Channel.ComprobantesModalidadConsultarAsync(request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesModalidadConsultarResponse> ComprobantesModalidadConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest inValue = new AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest();
+        inValue.Body = new AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobantesModalidadConsultarAsync(inValue);
+    }
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class ComprobantesModalidadConsultarRequestBody
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesTipoConsultarResponse> AfipWscdcServiceReference.ServiceSoap.ComprobantesTipoConsultarAsync(AfipWscdcServiceReference.ComprobantesTipoConsultarRequest request)
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.CmpAuthRequest Auth;
-        
-        public ComprobantesModalidadConsultarRequestBody()
-        {
-        }
-        
-        public ComprobantesModalidadConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
-        {
-            this.Auth = Auth;
-        }
+        return base.Channel.ComprobantesTipoConsultarAsync(request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesTipoConsultarResponse> ComprobantesTipoConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        AfipWscdcServiceReference.ComprobantesTipoConsultarRequest inValue = new AfipWscdcServiceReference.ComprobantesTipoConsultarRequest();
+        inValue.Body = new AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobantesTipoConsultarAsync(inValue);
+    }
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobantesModalidadConsultarResponse
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.DocumentosTipoConsultarResponse> AfipWscdcServiceReference.ServiceSoap.DocumentosTipoConsultarAsync(AfipWscdcServiceReference.DocumentosTipoConsultarRequest request)
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesModalidadConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobantesModalidadConsultarResponseBody Body;
-        
-        public ComprobantesModalidadConsultarResponse()
-        {
-        }
-        
-        public ComprobantesModalidadConsultarResponse(AfipWscdcServiceReference.ComprobantesModalidadConsultarResponseBody Body)
-        {
-            this.Body = Body;
-        }
+        return base.Channel.DocumentosTipoConsultarAsync(request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    public System.Threading.Tasks.Task<AfipWscdcServiceReference.DocumentosTipoConsultarResponse> DocumentosTipoConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        AfipWscdcServiceReference.DocumentosTipoConsultarRequest inValue = new AfipWscdcServiceReference.DocumentosTipoConsultarRequest();
+        inValue.Body = new AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipWscdcServiceReference.ServiceSoap)(this)).DocumentosTipoConsultarAsync(inValue);
+    }
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class ComprobantesModalidadConsultarResponseBody
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.OpcionalesTipoConsultarResponse> AfipWscdcServiceReference.ServiceSoap.OpcionalesTipoConsultarAsync(AfipWscdcServiceReference.OpcionalesTipoConsultarRequest request)
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.FacModTipoResponse ComprobantesModalidadConsultarResult;
-        
-        public ComprobantesModalidadConsultarResponseBody()
-        {
-        }
-        
-        public ComprobantesModalidadConsultarResponseBody(AfipWscdcServiceReference.FacModTipoResponse ComprobantesModalidadConsultarResult)
-        {
-            this.ComprobantesModalidadConsultarResult = ComprobantesModalidadConsultarResult;
-        }
+        return base.Channel.OpcionalesTipoConsultarAsync(request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    public System.Threading.Tasks.Task<AfipWscdcServiceReference.OpcionalesTipoConsultarResponse> OpcionalesTipoConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
+    {
+        AfipWscdcServiceReference.OpcionalesTipoConsultarRequest inValue = new AfipWscdcServiceReference.OpcionalesTipoConsultarRequest();
+        inValue.Body = new AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody();
+        inValue.Body.Auth = Auth;
+        return ((AfipWscdcServiceReference.ServiceSoap)(this)).OpcionalesTipoConsultarAsync(inValue);
+    }
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobantesTipoConsultarRequest
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteConstatarResponse> AfipWscdcServiceReference.ServiceSoap.ComprobanteConstatarAsync(AfipWscdcServiceReference.ComprobanteConstatarRequest request)
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesTipoConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody Body;
-        
-        public ComprobantesTipoConsultarRequest()
-        {
-        }
-        
-        public ComprobantesTipoConsultarRequest(AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody Body)
-        {
-            this.Body = Body;
-        }
+        return base.Channel.ComprobanteConstatarAsync(request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
+    public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteConstatarResponse> ComprobanteConstatarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth, AfipWscdcServiceReference.CmpDatos CmpReq)
+    {
+        AfipWscdcServiceReference.ComprobanteConstatarRequest inValue = new AfipWscdcServiceReference.ComprobanteConstatarRequest();
+        inValue.Body = new AfipWscdcServiceReference.ComprobanteConstatarRequestBody();
+        inValue.Body.Auth = Auth;
+        inValue.Body.CmpReq = CmpReq;
+        return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobanteConstatarAsync(inValue);
+    }
+    
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class ComprobantesTipoConsultarRequestBody
+    System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteDummyResponse> AfipWscdcServiceReference.ServiceSoap.ComprobanteDummyAsync(AfipWscdcServiceReference.ComprobanteDummyRequest request)
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.CmpAuthRequest Auth;
-        
-        public ComprobantesTipoConsultarRequestBody()
-        {
-        }
-        
-        public ComprobantesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
-        {
-            this.Auth = Auth;
-        }
+        return base.Channel.ComprobanteDummyAsync(request);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobantesTipoConsultarResponse
+    public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteDummyResponse> ComprobanteDummyAsync()
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobantesTipoConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobantesTipoConsultarResponseBody Body;
-        
-        public ComprobantesTipoConsultarResponse()
-        {
-        }
-        
-        public ComprobantesTipoConsultarResponse(AfipWscdcServiceReference.ComprobantesTipoConsultarResponseBody Body)
-        {
-            this.Body = Body;
-        }
+        AfipWscdcServiceReference.ComprobanteDummyRequest inValue = new AfipWscdcServiceReference.ComprobanteDummyRequest();
+        inValue.Body = new AfipWscdcServiceReference.ComprobanteDummyRequestBody();
+        return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobanteDummyAsync(inValue);
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class ComprobantesTipoConsultarResponseBody
+    public virtual System.Threading.Tasks.Task OpenAsync()
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.CbteTipoResponse ComprobantesTipoConsultarResult;
-        
-        public ComprobantesTipoConsultarResponseBody()
-        {
-        }
-        
-        public ComprobantesTipoConsultarResponseBody(AfipWscdcServiceReference.CbteTipoResponse ComprobantesTipoConsultarResult)
-        {
-            this.ComprobantesTipoConsultarResult = ComprobantesTipoConsultarResult;
-        }
+        return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class DocumentosTipoConsultarRequest
+    public virtual System.Threading.Tasks.Task CloseAsync()
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="DocumentosTipoConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody Body;
-        
-        public DocumentosTipoConsultarRequest()
-        {
-        }
-        
-        public DocumentosTipoConsultarRequest(AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody Body)
-        {
-            this.Body = Body;
-        }
+        return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class DocumentosTipoConsultarRequestBody
+    private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.CmpAuthRequest Auth;
-        
-        public DocumentosTipoConsultarRequestBody()
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
         {
+            System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
+            result.MaxBufferSize = int.MaxValue;
+            result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
+            result.MaxReceivedMessageSize = int.MaxValue;
+            result.AllowCookies = true;
+            result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
+            return result;
         }
-        
-        public DocumentosTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
         {
-            this.Auth = Auth;
+            System.ServiceModel.Channels.CustomBinding result = new System.ServiceModel.Channels.CustomBinding();
+            System.ServiceModel.Channels.TextMessageEncodingBindingElement textBindingElement = new System.ServiceModel.Channels.TextMessageEncodingBindingElement();
+            textBindingElement.MessageVersion = System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion.Soap12, System.ServiceModel.Channels.AddressingVersion.None);
+            result.Elements.Add(textBindingElement);
+            System.ServiceModel.Channels.HttpsTransportBindingElement httpsBindingElement = new System.ServiceModel.Channels.HttpsTransportBindingElement();
+            httpsBindingElement.AllowCookies = true;
+            httpsBindingElement.MaxBufferSize = int.MaxValue;
+            httpsBindingElement.MaxReceivedMessageSize = int.MaxValue;
+            result.Elements.Add(httpsBindingElement);
+            return result;
         }
+        throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class DocumentosTipoConsultarResponse
+    private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="DocumentosTipoConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.DocumentosTipoConsultarResponseBody Body;
-        
-        public DocumentosTipoConsultarResponse()
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
         {
+            return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/WSCDC/service.asmx");
         }
-        
-        public DocumentosTipoConsultarResponse(AfipWscdcServiceReference.DocumentosTipoConsultarResponseBody Body)
+        if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
         {
-            this.Body = Body;
+            return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/WSCDC/service.asmx");
         }
+        throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class DocumentosTipoConsultarResponseBody
+    public enum EndpointConfiguration
     {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.DocTipoResponse DocumentosTipoConsultarResult;
+        ServiceSoap,
         
-        public DocumentosTipoConsultarResponseBody()
-        {
-        }
-        
-        public DocumentosTipoConsultarResponseBody(AfipWscdcServiceReference.DocTipoResponse DocumentosTipoConsultarResult)
-        {
-            this.DocumentosTipoConsultarResult = DocumentosTipoConsultarResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class OpcionalesTipoConsultarRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="OpcionalesTipoConsultar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody Body;
-        
-        public OpcionalesTipoConsultarRequest()
-        {
-        }
-        
-        public OpcionalesTipoConsultarRequest(AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class OpcionalesTipoConsultarRequestBody
-    {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.CmpAuthRequest Auth;
-        
-        public OpcionalesTipoConsultarRequestBody()
-        {
-        }
-        
-        public OpcionalesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
-        {
-            this.Auth = Auth;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class OpcionalesTipoConsultarResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="OpcionalesTipoConsultarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.OpcionalesTipoConsultarResponseBody Body;
-        
-        public OpcionalesTipoConsultarResponse()
-        {
-        }
-        
-        public OpcionalesTipoConsultarResponse(AfipWscdcServiceReference.OpcionalesTipoConsultarResponseBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class OpcionalesTipoConsultarResponseBody
-    {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.OpcionalTipoResponse OpcionalesTipoConsultarResult;
-        
-        public OpcionalesTipoConsultarResponseBody()
-        {
-        }
-        
-        public OpcionalesTipoConsultarResponseBody(AfipWscdcServiceReference.OpcionalTipoResponse OpcionalesTipoConsultarResult)
-        {
-            this.OpcionalesTipoConsultarResult = OpcionalesTipoConsultarResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobanteConstatarRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteConstatar", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobanteConstatarRequestBody Body;
-        
-        public ComprobanteConstatarRequest()
-        {
-        }
-        
-        public ComprobanteConstatarRequest(AfipWscdcServiceReference.ComprobanteConstatarRequestBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class ComprobanteConstatarRequestBody
-    {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.CmpAuthRequest Auth;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public AfipWscdcServiceReference.CmpDatos CmpReq;
-        
-        public ComprobanteConstatarRequestBody()
-        {
-        }
-        
-        public ComprobanteConstatarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth, AfipWscdcServiceReference.CmpDatos CmpReq)
-        {
-            this.Auth = Auth;
-            this.CmpReq = CmpReq;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobanteConstatarResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteConstatarResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobanteConstatarResponseBody Body;
-        
-        public ComprobanteConstatarResponse()
-        {
-        }
-        
-        public ComprobanteConstatarResponse(AfipWscdcServiceReference.ComprobanteConstatarResponseBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class ComprobanteConstatarResponseBody
-    {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.CmpResponse ComprobanteConstatarResult;
-        
-        public ComprobanteConstatarResponseBody()
-        {
-        }
-        
-        public ComprobanteConstatarResponseBody(AfipWscdcServiceReference.CmpResponse ComprobanteConstatarResult)
-        {
-            this.ComprobanteConstatarResult = ComprobanteConstatarResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobanteDummyRequest
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteDummy", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobanteDummyRequestBody Body;
-        
-        public ComprobanteDummyRequest()
-        {
-        }
-        
-        public ComprobanteDummyRequest(AfipWscdcServiceReference.ComprobanteDummyRequestBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ComprobanteDummyRequestBody
-    {
-        
-        public ComprobanteDummyRequestBody()
-        {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ComprobanteDummyResponse
-    {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ComprobanteDummyResponse", Namespace="http://servicios1.afip.gob.ar/wscdc/", Order=0)]
-        public AfipWscdcServiceReference.ComprobanteDummyResponseBody Body;
-        
-        public ComprobanteDummyResponse()
-        {
-        }
-        
-        public ComprobanteDummyResponse(AfipWscdcServiceReference.ComprobanteDummyResponseBody Body)
-        {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://servicios1.afip.gob.ar/wscdc/")]
-    public partial class ComprobanteDummyResponseBody
-    {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public AfipWscdcServiceReference.DummyResponse ComprobanteDummyResult;
-        
-        public ComprobanteDummyResponseBody()
-        {
-        }
-        
-        public ComprobanteDummyResponseBody(AfipWscdcServiceReference.DummyResponse ComprobanteDummyResult)
-        {
-            this.ComprobanteDummyResult = ComprobanteDummyResult;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public interface ServiceSoapChannel : AfipWscdcServiceReference.ServiceSoap, System.ServiceModel.IClientChannel
-    {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
-    public partial class ServiceSoapClient : System.ServiceModel.ClientBase<AfipWscdcServiceReference.ServiceSoap>, AfipWscdcServiceReference.ServiceSoap
-    {
-        
-        /// <summary>
-        /// Implement this partial method to configure the service endpoint.
-        /// </summary>
-        /// <param name="serviceEndpoint">The endpoint to configure</param>
-        /// <param name="clientCredentials">The client credentials</param>
-        static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration) : 
-                base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), ServiceSoapClient.GetEndpointAddress(endpointConfiguration))
-        {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
-                base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
-        {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
-        {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress)
-        {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesModalidadConsultarResponse> AfipWscdcServiceReference.ServiceSoap.ComprobantesModalidadConsultarAsync(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest request)
-        {
-            return base.Channel.ComprobantesModalidadConsultarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesModalidadConsultarResponse> ComprobantesModalidadConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
-        {
-            AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest inValue = new AfipWscdcServiceReference.ComprobantesModalidadConsultarRequest();
-            inValue.Body = new AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobantesModalidadConsultarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesTipoConsultarResponse> AfipWscdcServiceReference.ServiceSoap.ComprobantesTipoConsultarAsync(AfipWscdcServiceReference.ComprobantesTipoConsultarRequest request)
-        {
-            return base.Channel.ComprobantesTipoConsultarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobantesTipoConsultarResponse> ComprobantesTipoConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
-        {
-            AfipWscdcServiceReference.ComprobantesTipoConsultarRequest inValue = new AfipWscdcServiceReference.ComprobantesTipoConsultarRequest();
-            inValue.Body = new AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobantesTipoConsultarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.DocumentosTipoConsultarResponse> AfipWscdcServiceReference.ServiceSoap.DocumentosTipoConsultarAsync(AfipWscdcServiceReference.DocumentosTipoConsultarRequest request)
-        {
-            return base.Channel.DocumentosTipoConsultarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AfipWscdcServiceReference.DocumentosTipoConsultarResponse> DocumentosTipoConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
-        {
-            AfipWscdcServiceReference.DocumentosTipoConsultarRequest inValue = new AfipWscdcServiceReference.DocumentosTipoConsultarRequest();
-            inValue.Body = new AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipWscdcServiceReference.ServiceSoap)(this)).DocumentosTipoConsultarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.OpcionalesTipoConsultarResponse> AfipWscdcServiceReference.ServiceSoap.OpcionalesTipoConsultarAsync(AfipWscdcServiceReference.OpcionalesTipoConsultarRequest request)
-        {
-            return base.Channel.OpcionalesTipoConsultarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AfipWscdcServiceReference.OpcionalesTipoConsultarResponse> OpcionalesTipoConsultarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth)
-        {
-            AfipWscdcServiceReference.OpcionalesTipoConsultarRequest inValue = new AfipWscdcServiceReference.OpcionalesTipoConsultarRequest();
-            inValue.Body = new AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody();
-            inValue.Body.Auth = Auth;
-            return ((AfipWscdcServiceReference.ServiceSoap)(this)).OpcionalesTipoConsultarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteConstatarResponse> AfipWscdcServiceReference.ServiceSoap.ComprobanteConstatarAsync(AfipWscdcServiceReference.ComprobanteConstatarRequest request)
-        {
-            return base.Channel.ComprobanteConstatarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteConstatarResponse> ComprobanteConstatarAsync(AfipWscdcServiceReference.CmpAuthRequest Auth, AfipWscdcServiceReference.CmpDatos CmpReq)
-        {
-            AfipWscdcServiceReference.ComprobanteConstatarRequest inValue = new AfipWscdcServiceReference.ComprobanteConstatarRequest();
-            inValue.Body = new AfipWscdcServiceReference.ComprobanteConstatarRequestBody();
-            inValue.Body.Auth = Auth;
-            inValue.Body.CmpReq = CmpReq;
-            return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobanteConstatarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteDummyResponse> AfipWscdcServiceReference.ServiceSoap.ComprobanteDummyAsync(AfipWscdcServiceReference.ComprobanteDummyRequest request)
-        {
-            return base.Channel.ComprobanteDummyAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<AfipWscdcServiceReference.ComprobanteDummyResponse> ComprobanteDummyAsync()
-        {
-            AfipWscdcServiceReference.ComprobanteDummyRequest inValue = new AfipWscdcServiceReference.ComprobanteDummyRequest();
-            inValue.Body = new AfipWscdcServiceReference.ComprobanteDummyRequestBody();
-            return ((AfipWscdcServiceReference.ServiceSoap)(this)).ComprobanteDummyAsync(inValue);
-        }
-        
-        public virtual System.Threading.Tasks.Task OpenAsync()
-        {
-            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
-        }
-        
-        public virtual System.Threading.Tasks.Task CloseAsync()
-        {
-            return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
-        }
-        
-        private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
-        {
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
-            {
-                System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
-                result.MaxBufferSize = int.MaxValue;
-                result.ReaderQuotas = System.Xml.XmlDictionaryReaderQuotas.Max;
-                result.MaxReceivedMessageSize = int.MaxValue;
-                result.AllowCookies = true;
-                result.Security.Mode = System.ServiceModel.BasicHttpSecurityMode.Transport;
-                return result;
-            }
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
-            {
-                System.ServiceModel.Channels.CustomBinding result = new System.ServiceModel.Channels.CustomBinding();
-                System.ServiceModel.Channels.TextMessageEncodingBindingElement textBindingElement = new System.ServiceModel.Channels.TextMessageEncodingBindingElement();
-                textBindingElement.MessageVersion = System.ServiceModel.Channels.MessageVersion.CreateVersion(System.ServiceModel.EnvelopeVersion.Soap12, System.ServiceModel.Channels.AddressingVersion.None);
-                result.Elements.Add(textBindingElement);
-                System.ServiceModel.Channels.HttpsTransportBindingElement httpsBindingElement = new System.ServiceModel.Channels.HttpsTransportBindingElement();
-                httpsBindingElement.AllowCookies = true;
-                httpsBindingElement.MaxBufferSize = int.MaxValue;
-                httpsBindingElement.MaxReceivedMessageSize = int.MaxValue;
-                result.Elements.Add(httpsBindingElement);
-                return result;
-            }
-            throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
-        }
-        
-        private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
-        {
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
-            {
-                return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/WSCDC/service.asmx");
-            }
-            if ((endpointConfiguration == EndpointConfiguration.ServiceSoap12))
-            {
-                return new System.ServiceModel.EndpointAddress("https://wswhomo.afip.gov.ar/WSCDC/service.asmx");
-            }
-            throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
-        }
-        
-        public enum EndpointConfiguration
-        {
-            
-            ServiceSoap,
-            
-            ServiceSoap12,
-        }
+        ServiceSoap12,
     }
 }

@@ -4,92 +4,91 @@ using System.ServiceModel;
 using System.Threading.Tasks;
 using ServiceSoapClient = AfipServiceReference.ServiceSoapClient;
 
-namespace AfipWebServicesClient
+namespace AfipWebServicesClient;
+
+public interface IAfipFeSoapClientFactory
 {
-    public interface IAfipFeSoapClientFactory
+    public AfipServiceReference.ServiceSoap CreateClient(EndpointAddress endpointAddress);
+    public ValueTask<WebServiceFeClient> CreateClientFromEnvironment(bool isProduction);
+}
+
+
+/// <summary>
+/// AfipFeSoapClientFactory must to be singleton!!!
+/// </summary>
+public class AfipFeSoapClientFactory : IAfipFeSoapClientFactory
+{
+    private readonly ILogger<LoginCmsClient> _logger;
+    private readonly AfipEnvironments _afipEnvironments;
+
+    private WsaaTicket? _ticketProduction;
+    private WsaaTicket? _ticketTesting;
+    private WebServiceFeClient? _clientProduction;
+    private WebServiceFeClient? _clientTesting;
+
+    public AfipFeSoapClientFactory(
+        ILogger<LoginCmsClient> logger,
+        AfipEnvironments afipEnvironments)
     {
-        public AfipServiceReference.ServiceSoap CreateClient(EndpointAddress endpointAddress);
-        public ValueTask<WebServiceFeClient> CreateClientFromEnvironment(bool isProduction);
+        _logger = logger;
+        _afipEnvironments = afipEnvironments;
     }
 
-
-    /// <summary>
-    /// AfipFeSoapClientFactory must to be singleton!!!
-    /// </summary>
-    public class AfipFeSoapClientFactory : IAfipFeSoapClientFactory
+    public AfipServiceReference.ServiceSoap CreateClient(EndpointAddress endpointAddress)
     {
-        private readonly ILogger<LoginCmsClient> _logger;
-        private readonly AfipEnvironments _afipEnvironments;
+        var client = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
+        client.Endpoint.Address = endpointAddress;
+        return client;
+    }
 
-        private WsaaTicket? _ticketProduction;
-        private WsaaTicket? _ticketTesting;
-        private WebServiceFeClient? _clientProduction;
-        private WebServiceFeClient? _clientTesting;
-
-        public AfipFeSoapClientFactory(
-            ILogger<LoginCmsClient> logger,
-            AfipEnvironments afipEnvironments)
+    public async ValueTask<WebServiceFeClient> CreateClientFromEnvironment(bool isProduction)
+    {
+        if (isProduction)
         {
-            _logger = logger;
-            _afipEnvironments = afipEnvironments;
+            if (_ticketProduction is { } ticketProduction &&
+                DateTime.Now < ticketProduction.ExpirationTime &&
+                _clientProduction is { } clientProduction)
+                return clientProduction;
+            return await CreateNewClient(isProduction);
         }
-
-        public AfipServiceReference.ServiceSoap CreateClient(EndpointAddress endpointAddress)
+        else
         {
-            var client = new ServiceSoapClient(ServiceSoapClient.EndpointConfiguration.ServiceSoap);
-            client.Endpoint.Address = endpointAddress;
-            return client;
+            if (_ticketTesting is { } ticketTesting &&
+                DateTime.Now < ticketTesting.ExpirationTime &&
+                _clientTesting is { } clientTesting)
+                return clientTesting;
+            return await CreateNewClient(isProduction);
         }
+    }
 
-        public async ValueTask<WebServiceFeClient> CreateClientFromEnvironment(bool isProduction)
+    private async ValueTask<WebServiceFeClient> CreateNewClient(bool isProduction)
+    {
+        try
         {
+            var environment = _afipEnvironments.GetAfipEnvironment(isProduction: isProduction);
+            var loginClient = new LoginCmsClient(environment, _logger);
+            var wsfeTicket = await loginClient.LoginCmsAsync("wsfe");
+            var wsfeClient = new WebServiceFeClient(environment.Cuit, wsfeTicket.Token, wsfeTicket.Sign, isProduction, this);
             if (isProduction)
             {
-                if (_ticketProduction is { } ticketProduction &&
-                    DateTime.Now < ticketProduction.ExpirationTime &&
-                    _clientProduction is { } clientProduction)
-                    return clientProduction;
-                return await CreateNewClient(isProduction);
+                _clientProduction = wsfeClient;
+                _ticketProduction = wsfeTicket;
             }
             else
             {
-                if (_ticketTesting is { } ticketTesting &&
-                    DateTime.Now < ticketTesting.ExpirationTime &&
-                    _clientTesting is { } clientTesting)
-                    return clientTesting;
-                return await CreateNewClient(isProduction);
+                _clientTesting = wsfeClient;
+                _ticketTesting = wsfeTicket;
             }
+            return wsfeClient;
         }
-
-        private async ValueTask<WebServiceFeClient> CreateNewClient(bool isProduction)
+        catch (Exception ex)
         {
-            try
-            {
-                var environment = _afipEnvironments.GetAfipEnvironment(isProduction: isProduction);
-                var loginClient = new LoginCmsClient(environment, _logger);
-                var wsfeTicket = await loginClient.LoginCmsAsync("wsfe");
-                var wsfeClient = new WebServiceFeClient(environment.Cuit, wsfeTicket.Token, wsfeTicket.Sign, isProduction, this);
-                if (isProduction)
-                {
-                    _clientProduction = wsfeClient;
-                    _ticketProduction = wsfeTicket;
-                }
-                else
-                {
-                    _clientTesting = wsfeClient;
-                    _ticketTesting = wsfeTicket;
-                }
-                return wsfeClient;
-            }
-            catch (Exception ex)
-            {
-                _clientProduction = null;
-                _ticketProduction = null;
-                _clientTesting = null;
-                _ticketTesting = null;
-                _logger.LogError(ex, $"AfipFeSoapClientFactory.CreateNewClient - Error: {ex.Message}");
-                throw;
-            }            
-        }
+            _clientProduction = null;
+            _ticketProduction = null;
+            _clientTesting = null;
+            _ticketTesting = null;
+            _logger.LogError(ex, $"AfipFeSoapClientFactory.CreateNewClient - Error: {ex.Message}");
+            throw;
+        }            
     }
 }
