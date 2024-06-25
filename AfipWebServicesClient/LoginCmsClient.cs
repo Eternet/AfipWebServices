@@ -11,69 +11,43 @@ using System.Xml;
 
 namespace AfipWebServicesClient;
 
-public class AfipEnvironments
+public class AfipEnvironments(AfipEnvironment production, AfipEnvironment testing)
 {
-    private AfipEnvironment Production { get; }
-    private AfipEnvironment Testing { get; }
-
-    public AfipEnvironments(AfipEnvironment production, AfipEnvironment testing)
-    {
-        Production = production;
-        Testing = testing;
-    }
-
     public AfipEnvironment GetAfipEnvironment(bool isProduction)
     {
-        return isProduction ? Production : Testing;
+        return isProduction ? production : testing;
     }
 }
-public class AfipEnvironment
+public class AfipEnvironment(long cuit, bool isProduction, string certFile, string password)
 {
-    public long Cuit { get; }
-    public bool IsProduction { get; }
-    public string CertificateFile { get; }
-    public string Password { get; }
+    public long Cuit { get; } = cuit;
+    public bool IsProduction { get; } = isProduction;
+    public string CertificateFile { get; } = certFile;
+    public string Password { get; } = password;
     public string EnvironmentName => IsProduction ? "Production" : "Testing";
-    public AfipEnvironment(long cuit, bool isProduction, string certFile, string password)
-    {
-        Cuit = cuit;
-        IsProduction = isProduction;
-        CertificateFile = certFile;
-        Password = password;
-    }
 }
 
 // ReSharper disable StringLiteralTypo
 // ReSharper disable CommentTypo
-public class LoginCmsClient
+public class LoginCmsClient(AfipEnvironment environment, ILogger<LoginCmsClient>? logger = null)
 {
-    public bool IsProduction { get; }
+    public bool IsProduction { get; } = environment.IsProduction;
     public string TestingEnvironment { get; set; } = "https://wsaahomo.afip.gov.ar/ws/services/LoginCms";
     public string ProductionEnvironment { get; set; } = "https://wsaa.afip.gov.ar/ws/services/LoginCms";
 
     private static string TicketCacheFolderPath => "";
 
-    public string CertificateFile;
-    public string Password;
+    public string CertificateFile = environment.CertificateFile;
+    public string Password = environment.Password;
     public string XmlStrLoginTicketRequestTemplate = "<loginTicketRequest><header><uniqueId></uniqueId><generationTime></generationTime><expirationTime></expirationTime></header><service></service></loginTicketRequest>";
     private static uint _globalUniqueId; // NO ES THREAD-SAFE
-    private readonly AfipEnvironment _environment;
-    private readonly ILogger<LoginCmsClient> _logger;
-
-    public LoginCmsClient(AfipEnvironment environment, ILogger<LoginCmsClient>? logger = null)
-    {
-        IsProduction = environment.IsProduction;
-        CertificateFile = environment.CertificateFile;
-        Password = environment.Password;
-        _environment = environment;
-        _logger = logger ?? new Mock<ILogger<LoginCmsClient>>().Object;
-    }
+    private readonly ILogger<LoginCmsClient> _logger = logger ?? new Mock<ILogger<LoginCmsClient>>().Object;
 
     public async Task<WsaaTicket> LoginCmsAsync(string service)
     {
         var ticketCacheFile = string.IsNullOrEmpty(TicketCacheFolderPath) ?
-                                    service + $"ticket_{_environment.EnvironmentName}.json" :
-                                    TicketCacheFolderPath + service + $"ticket_{_environment.EnvironmentName}.json";
+                                    service + $"ticket_{environment.EnvironmentName}.json" :
+                                    TicketCacheFolderPath + service + $"ticket_{environment.EnvironmentName}.json";
 
         if (File.Exists(ticketCacheFile))
         {

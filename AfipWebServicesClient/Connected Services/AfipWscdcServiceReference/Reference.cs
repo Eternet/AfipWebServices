@@ -956,11 +956,8 @@ public partial class ComprobantesModalidadConsultarRequest
     public ComprobantesModalidadConsultarRequest()
     {
     }
-    
-    public ComprobantesModalidadConsultarRequest(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobantesModalidadConsultarRequest(AfipWscdcServiceReference.ComprobantesModalidadConsultarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -976,11 +973,8 @@ public partial class ComprobantesModalidadConsultarRequestBody
     public ComprobantesModalidadConsultarRequestBody()
     {
     }
-    
-    public ComprobantesModalidadConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public ComprobantesModalidadConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -996,11 +990,8 @@ public partial class ComprobantesModalidadConsultarResponse
     public ComprobantesModalidadConsultarResponse()
     {
     }
-    
-    public ComprobantesModalidadConsultarResponse(AfipWscdcServiceReference.ComprobantesModalidadConsultarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobantesModalidadConsultarResponse(AfipWscdcServiceReference.ComprobantesModalidadConsultarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1016,11 +1007,8 @@ public partial class ComprobantesModalidadConsultarResponseBody
     public ComprobantesModalidadConsultarResponseBody()
     {
     }
-    
-    public ComprobantesModalidadConsultarResponseBody(AfipWscdcServiceReference.FacModTipoResponse ComprobantesModalidadConsultarResult)
-    {
-        this.ComprobantesModalidadConsultarResult = ComprobantesModalidadConsultarResult;
-    }
+
+    public ComprobantesModalidadConsultarResponseBody(AfipWscdcServiceReference.FacModTipoResponse ComprobantesModalidadConsultarResult) => this.ComprobantesModalidadConsultarResult = ComprobantesModalidadConsultarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1036,11 +1024,8 @@ public partial class ComprobantesTipoConsultarRequest
     public ComprobantesTipoConsultarRequest()
     {
     }
-    
-    public ComprobantesTipoConsultarRequest(AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobantesTipoConsultarRequest(AfipWscdcServiceReference.ComprobantesTipoConsultarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1056,11 +1041,8 @@ public partial class ComprobantesTipoConsultarRequestBody
     public ComprobantesTipoConsultarRequestBody()
     {
     }
-    
-    public ComprobantesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public ComprobantesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1076,11 +1058,8 @@ public partial class ComprobantesTipoConsultarResponse
     public ComprobantesTipoConsultarResponse()
     {
     }
-    
-    public ComprobantesTipoConsultarResponse(AfipWscdcServiceReference.ComprobantesTipoConsultarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobantesTipoConsultarResponse(AfipWscdcServiceReference.ComprobantesTipoConsultarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1096,11 +1075,8 @@ public partial class ComprobantesTipoConsultarResponseBody
     public ComprobantesTipoConsultarResponseBody()
     {
     }
-    
-    public ComprobantesTipoConsultarResponseBody(AfipWscdcServiceReference.CbteTipoResponse ComprobantesTipoConsultarResult)
-    {
-        this.ComprobantesTipoConsultarResult = ComprobantesTipoConsultarResult;
-    }
+
+    public ComprobantesTipoConsultarResponseBody(AfipWscdcServiceReference.CbteTipoResponse ComprobantesTipoConsultarResult) => this.ComprobantesTipoConsultarResult = ComprobantesTipoConsultarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1116,11 +1092,8 @@ public partial class DocumentosTipoConsultarRequest
     public DocumentosTipoConsultarRequest()
     {
     }
-    
-    public DocumentosTipoConsultarRequest(AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public DocumentosTipoConsultarRequest(AfipWscdcServiceReference.DocumentosTipoConsultarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1136,11 +1109,8 @@ public partial class DocumentosTipoConsultarRequestBody
     public DocumentosTipoConsultarRequestBody()
     {
     }
-    
-    public DocumentosTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public DocumentosTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1156,11 +1126,8 @@ public partial class DocumentosTipoConsultarResponse
     public DocumentosTipoConsultarResponse()
     {
     }
-    
-    public DocumentosTipoConsultarResponse(AfipWscdcServiceReference.DocumentosTipoConsultarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public DocumentosTipoConsultarResponse(AfipWscdcServiceReference.DocumentosTipoConsultarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1176,11 +1143,8 @@ public partial class DocumentosTipoConsultarResponseBody
     public DocumentosTipoConsultarResponseBody()
     {
     }
-    
-    public DocumentosTipoConsultarResponseBody(AfipWscdcServiceReference.DocTipoResponse DocumentosTipoConsultarResult)
-    {
-        this.DocumentosTipoConsultarResult = DocumentosTipoConsultarResult;
-    }
+
+    public DocumentosTipoConsultarResponseBody(AfipWscdcServiceReference.DocTipoResponse DocumentosTipoConsultarResult) => this.DocumentosTipoConsultarResult = DocumentosTipoConsultarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1196,11 +1160,8 @@ public partial class OpcionalesTipoConsultarRequest
     public OpcionalesTipoConsultarRequest()
     {
     }
-    
-    public OpcionalesTipoConsultarRequest(AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public OpcionalesTipoConsultarRequest(AfipWscdcServiceReference.OpcionalesTipoConsultarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1216,11 +1177,8 @@ public partial class OpcionalesTipoConsultarRequestBody
     public OpcionalesTipoConsultarRequestBody()
     {
     }
-    
-    public OpcionalesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public OpcionalesTipoConsultarRequestBody(AfipWscdcServiceReference.CmpAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1236,11 +1194,8 @@ public partial class OpcionalesTipoConsultarResponse
     public OpcionalesTipoConsultarResponse()
     {
     }
-    
-    public OpcionalesTipoConsultarResponse(AfipWscdcServiceReference.OpcionalesTipoConsultarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public OpcionalesTipoConsultarResponse(AfipWscdcServiceReference.OpcionalesTipoConsultarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1256,11 +1211,8 @@ public partial class OpcionalesTipoConsultarResponseBody
     public OpcionalesTipoConsultarResponseBody()
     {
     }
-    
-    public OpcionalesTipoConsultarResponseBody(AfipWscdcServiceReference.OpcionalTipoResponse OpcionalesTipoConsultarResult)
-    {
-        this.OpcionalesTipoConsultarResult = OpcionalesTipoConsultarResult;
-    }
+
+    public OpcionalesTipoConsultarResponseBody(AfipWscdcServiceReference.OpcionalTipoResponse OpcionalesTipoConsultarResult) => this.OpcionalesTipoConsultarResult = OpcionalesTipoConsultarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1276,11 +1228,8 @@ public partial class ComprobanteConstatarRequest
     public ComprobanteConstatarRequest()
     {
     }
-    
-    public ComprobanteConstatarRequest(AfipWscdcServiceReference.ComprobanteConstatarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobanteConstatarRequest(AfipWscdcServiceReference.ComprobanteConstatarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1320,11 +1269,8 @@ public partial class ComprobanteConstatarResponse
     public ComprobanteConstatarResponse()
     {
     }
-    
-    public ComprobanteConstatarResponse(AfipWscdcServiceReference.ComprobanteConstatarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobanteConstatarResponse(AfipWscdcServiceReference.ComprobanteConstatarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1340,11 +1286,8 @@ public partial class ComprobanteConstatarResponseBody
     public ComprobanteConstatarResponseBody()
     {
     }
-    
-    public ComprobanteConstatarResponseBody(AfipWscdcServiceReference.CmpResponse ComprobanteConstatarResult)
-    {
-        this.ComprobanteConstatarResult = ComprobanteConstatarResult;
-    }
+
+    public ComprobanteConstatarResponseBody(AfipWscdcServiceReference.CmpResponse ComprobanteConstatarResult) => this.ComprobanteConstatarResult = ComprobanteConstatarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1360,11 +1303,8 @@ public partial class ComprobanteDummyRequest
     public ComprobanteDummyRequest()
     {
     }
-    
-    public ComprobanteDummyRequest(AfipWscdcServiceReference.ComprobanteDummyRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobanteDummyRequest(AfipWscdcServiceReference.ComprobanteDummyRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1392,11 +1332,8 @@ public partial class ComprobanteDummyResponse
     public ComprobanteDummyResponse()
     {
     }
-    
-    public ComprobanteDummyResponse(AfipWscdcServiceReference.ComprobanteDummyResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public ComprobanteDummyResponse(AfipWscdcServiceReference.ComprobanteDummyResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1412,11 +1349,8 @@ public partial class ComprobanteDummyResponseBody
     public ComprobanteDummyResponseBody()
     {
     }
-    
-    public ComprobanteDummyResponseBody(AfipWscdcServiceReference.DummyResponse ComprobanteDummyResult)
-    {
-        this.ComprobanteDummyResult = ComprobanteDummyResult;
-    }
+
+    public ComprobanteDummyResponseBody(AfipWscdcServiceReference.DummyResponse ComprobanteDummyResult) => this.ComprobanteDummyResult = ComprobanteDummyResult;
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]

@@ -3486,11 +3486,8 @@ public partial class FECAESolicitarRequest
     public FECAESolicitarRequest()
     {
     }
-    
-    public FECAESolicitarRequest(AfipServiceReference.FECAESolicitarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAESolicitarRequest(AfipServiceReference.FECAESolicitarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3530,11 +3527,8 @@ public partial class FECAESolicitarResponse
     public FECAESolicitarResponse()
     {
     }
-    
-    public FECAESolicitarResponse(AfipServiceReference.FECAESolicitarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAESolicitarResponse(AfipServiceReference.FECAESolicitarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3550,11 +3544,8 @@ public partial class FECAESolicitarResponseBody
     public FECAESolicitarResponseBody()
     {
     }
-    
-    public FECAESolicitarResponseBody(AfipServiceReference.FECAEResponse FECAESolicitarResult)
-    {
-        this.FECAESolicitarResult = FECAESolicitarResult;
-    }
+
+    public FECAESolicitarResponseBody(AfipServiceReference.FECAEResponse FECAESolicitarResult) => this.FECAESolicitarResult = FECAESolicitarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3570,11 +3561,8 @@ public partial class FECompTotXRequestRequest
     public FECompTotXRequestRequest()
     {
     }
-    
-    public FECompTotXRequestRequest(AfipServiceReference.FECompTotXRequestRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECompTotXRequestRequest(AfipServiceReference.FECompTotXRequestRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3590,11 +3578,8 @@ public partial class FECompTotXRequestRequestBody
     public FECompTotXRequestRequestBody()
     {
     }
-    
-    public FECompTotXRequestRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FECompTotXRequestRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3610,11 +3595,8 @@ public partial class FECompTotXRequestResponse
     public FECompTotXRequestResponse()
     {
     }
-    
-    public FECompTotXRequestResponse(AfipServiceReference.FECompTotXRequestResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECompTotXRequestResponse(AfipServiceReference.FECompTotXRequestResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3630,11 +3612,8 @@ public partial class FECompTotXRequestResponseBody
     public FECompTotXRequestResponseBody()
     {
     }
-    
-    public FECompTotXRequestResponseBody(AfipServiceReference.FERegXReqResponse FECompTotXRequestResult)
-    {
-        this.FECompTotXRequestResult = FECompTotXRequestResult;
-    }
+
+    public FECompTotXRequestResponseBody(AfipServiceReference.FERegXReqResponse FECompTotXRequestResult) => this.FECompTotXRequestResult = FECompTotXRequestResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3650,11 +3629,8 @@ public partial class FEDummyRequest
     public FEDummyRequest()
     {
     }
-    
-    public FEDummyRequest(AfipServiceReference.FEDummyRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEDummyRequest(AfipServiceReference.FEDummyRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3682,11 +3658,8 @@ public partial class FEDummyResponse
     public FEDummyResponse()
     {
     }
-    
-    public FEDummyResponse(AfipServiceReference.FEDummyResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEDummyResponse(AfipServiceReference.FEDummyResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3702,11 +3675,8 @@ public partial class FEDummyResponseBody
     public FEDummyResponseBody()
     {
     }
-    
-    public FEDummyResponseBody(AfipServiceReference.DummyResponse FEDummyResult)
-    {
-        this.FEDummyResult = FEDummyResult;
-    }
+
+    public FEDummyResponseBody(AfipServiceReference.DummyResponse FEDummyResult) => this.FEDummyResult = FEDummyResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3722,11 +3692,8 @@ public partial class FECompUltimoAutorizadoRequest
     public FECompUltimoAutorizadoRequest()
     {
     }
-    
-    public FECompUltimoAutorizadoRequest(AfipServiceReference.FECompUltimoAutorizadoRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECompUltimoAutorizadoRequest(AfipServiceReference.FECompUltimoAutorizadoRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3770,11 +3737,8 @@ public partial class FECompUltimoAutorizadoResponse
     public FECompUltimoAutorizadoResponse()
     {
     }
-    
-    public FECompUltimoAutorizadoResponse(AfipServiceReference.FECompUltimoAutorizadoResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECompUltimoAutorizadoResponse(AfipServiceReference.FECompUltimoAutorizadoResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3790,11 +3754,8 @@ public partial class FECompUltimoAutorizadoResponseBody
     public FECompUltimoAutorizadoResponseBody()
     {
     }
-    
-    public FECompUltimoAutorizadoResponseBody(AfipServiceReference.FERecuperaLastCbteResponse FECompUltimoAutorizadoResult)
-    {
-        this.FECompUltimoAutorizadoResult = FECompUltimoAutorizadoResult;
-    }
+
+    public FECompUltimoAutorizadoResponseBody(AfipServiceReference.FERecuperaLastCbteResponse FECompUltimoAutorizadoResult) => this.FECompUltimoAutorizadoResult = FECompUltimoAutorizadoResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3810,11 +3771,8 @@ public partial class FECompConsultarRequest
     public FECompConsultarRequest()
     {
     }
-    
-    public FECompConsultarRequest(AfipServiceReference.FECompConsultarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECompConsultarRequest(AfipServiceReference.FECompConsultarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3854,11 +3812,8 @@ public partial class FECompConsultarResponse
     public FECompConsultarResponse()
     {
     }
-    
-    public FECompConsultarResponse(AfipServiceReference.FECompConsultarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECompConsultarResponse(AfipServiceReference.FECompConsultarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3874,11 +3829,8 @@ public partial class FECompConsultarResponseBody
     public FECompConsultarResponseBody()
     {
     }
-    
-    public FECompConsultarResponseBody(AfipServiceReference.FECompConsultaResponse FECompConsultarResult)
-    {
-        this.FECompConsultarResult = FECompConsultarResult;
-    }
+
+    public FECompConsultarResponseBody(AfipServiceReference.FECompConsultaResponse FECompConsultarResult) => this.FECompConsultarResult = FECompConsultarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3894,11 +3846,8 @@ public partial class FECAEARegInformativoRequest
     public FECAEARegInformativoRequest()
     {
     }
-    
-    public FECAEARegInformativoRequest(AfipServiceReference.FECAEARegInformativoRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEARegInformativoRequest(AfipServiceReference.FECAEARegInformativoRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3938,11 +3887,8 @@ public partial class FECAEARegInformativoResponse
     public FECAEARegInformativoResponse()
     {
     }
-    
-    public FECAEARegInformativoResponse(AfipServiceReference.FECAEARegInformativoResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEARegInformativoResponse(AfipServiceReference.FECAEARegInformativoResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3958,11 +3904,8 @@ public partial class FECAEARegInformativoResponseBody
     public FECAEARegInformativoResponseBody()
     {
     }
-    
-    public FECAEARegInformativoResponseBody(AfipServiceReference.FECAEAResponse FECAEARegInformativoResult)
-    {
-        this.FECAEARegInformativoResult = FECAEARegInformativoResult;
-    }
+
+    public FECAEARegInformativoResponseBody(AfipServiceReference.FECAEAResponse FECAEARegInformativoResult) => this.FECAEARegInformativoResult = FECAEARegInformativoResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3978,11 +3921,8 @@ public partial class FECAEASolicitarRequest
     public FECAEASolicitarRequest()
     {
     }
-    
-    public FECAEASolicitarRequest(AfipServiceReference.FECAEASolicitarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEASolicitarRequest(AfipServiceReference.FECAEASolicitarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4026,11 +3966,8 @@ public partial class FECAEASolicitarResponse
     public FECAEASolicitarResponse()
     {
     }
-    
-    public FECAEASolicitarResponse(AfipServiceReference.FECAEASolicitarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEASolicitarResponse(AfipServiceReference.FECAEASolicitarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4046,11 +3983,8 @@ public partial class FECAEASolicitarResponseBody
     public FECAEASolicitarResponseBody()
     {
     }
-    
-    public FECAEASolicitarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEASolicitarResult)
-    {
-        this.FECAEASolicitarResult = FECAEASolicitarResult;
-    }
+
+    public FECAEASolicitarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEASolicitarResult) => this.FECAEASolicitarResult = FECAEASolicitarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4066,11 +4000,8 @@ public partial class FECAEASinMovimientoConsultarRequest
     public FECAEASinMovimientoConsultarRequest()
     {
     }
-    
-    public FECAEASinMovimientoConsultarRequest(AfipServiceReference.FECAEASinMovimientoConsultarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEASinMovimientoConsultarRequest(AfipServiceReference.FECAEASinMovimientoConsultarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4114,11 +4045,8 @@ public partial class FECAEASinMovimientoConsultarResponse
     public FECAEASinMovimientoConsultarResponse()
     {
     }
-    
-    public FECAEASinMovimientoConsultarResponse(AfipServiceReference.FECAEASinMovimientoConsultarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEASinMovimientoConsultarResponse(AfipServiceReference.FECAEASinMovimientoConsultarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4134,11 +4062,8 @@ public partial class FECAEASinMovimientoConsultarResponseBody
     public FECAEASinMovimientoConsultarResponseBody()
     {
     }
-    
-    public FECAEASinMovimientoConsultarResponseBody(AfipServiceReference.FECAEASinMovConsResponse FECAEASinMovimientoConsultarResult)
-    {
-        this.FECAEASinMovimientoConsultarResult = FECAEASinMovimientoConsultarResult;
-    }
+
+    public FECAEASinMovimientoConsultarResponseBody(AfipServiceReference.FECAEASinMovConsResponse FECAEASinMovimientoConsultarResult) => this.FECAEASinMovimientoConsultarResult = FECAEASinMovimientoConsultarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4154,11 +4079,8 @@ public partial class FECAEASinMovimientoInformarRequest
     public FECAEASinMovimientoInformarRequest()
     {
     }
-    
-    public FECAEASinMovimientoInformarRequest(AfipServiceReference.FECAEASinMovimientoInformarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEASinMovimientoInformarRequest(AfipServiceReference.FECAEASinMovimientoInformarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4202,11 +4124,8 @@ public partial class FECAEASinMovimientoInformarResponse
     public FECAEASinMovimientoInformarResponse()
     {
     }
-    
-    public FECAEASinMovimientoInformarResponse(AfipServiceReference.FECAEASinMovimientoInformarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEASinMovimientoInformarResponse(AfipServiceReference.FECAEASinMovimientoInformarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4222,11 +4141,8 @@ public partial class FECAEASinMovimientoInformarResponseBody
     public FECAEASinMovimientoInformarResponseBody()
     {
     }
-    
-    public FECAEASinMovimientoInformarResponseBody(AfipServiceReference.FECAEASinMovResponse FECAEASinMovimientoInformarResult)
-    {
-        this.FECAEASinMovimientoInformarResult = FECAEASinMovimientoInformarResult;
-    }
+
+    public FECAEASinMovimientoInformarResponseBody(AfipServiceReference.FECAEASinMovResponse FECAEASinMovimientoInformarResult) => this.FECAEASinMovimientoInformarResult = FECAEASinMovimientoInformarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4242,11 +4158,8 @@ public partial class FECAEAConsultarRequest
     public FECAEAConsultarRequest()
     {
     }
-    
-    public FECAEAConsultarRequest(AfipServiceReference.FECAEAConsultarRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEAConsultarRequest(AfipServiceReference.FECAEAConsultarRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4290,11 +4203,8 @@ public partial class FECAEAConsultarResponse
     public FECAEAConsultarResponse()
     {
     }
-    
-    public FECAEAConsultarResponse(AfipServiceReference.FECAEAConsultarResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FECAEAConsultarResponse(AfipServiceReference.FECAEAConsultarResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4310,11 +4220,8 @@ public partial class FECAEAConsultarResponseBody
     public FECAEAConsultarResponseBody()
     {
     }
-    
-    public FECAEAConsultarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEAConsultarResult)
-    {
-        this.FECAEAConsultarResult = FECAEAConsultarResult;
-    }
+
+    public FECAEAConsultarResponseBody(AfipServiceReference.FECAEAGetResponse FECAEAConsultarResult) => this.FECAEAConsultarResult = FECAEAConsultarResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4330,11 +4237,8 @@ public partial class FEParamGetCotizacionRequest
     public FEParamGetCotizacionRequest()
     {
     }
-    
-    public FEParamGetCotizacionRequest(AfipServiceReference.FEParamGetCotizacionRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetCotizacionRequest(AfipServiceReference.FEParamGetCotizacionRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4374,11 +4278,8 @@ public partial class FEParamGetCotizacionResponse
     public FEParamGetCotizacionResponse()
     {
     }
-    
-    public FEParamGetCotizacionResponse(AfipServiceReference.FEParamGetCotizacionResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetCotizacionResponse(AfipServiceReference.FEParamGetCotizacionResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4394,11 +4295,8 @@ public partial class FEParamGetCotizacionResponseBody
     public FEParamGetCotizacionResponseBody()
     {
     }
-    
-    public FEParamGetCotizacionResponseBody(AfipServiceReference.FECotizacionResponse FEParamGetCotizacionResult)
-    {
-        this.FEParamGetCotizacionResult = FEParamGetCotizacionResult;
-    }
+
+    public FEParamGetCotizacionResponseBody(AfipServiceReference.FECotizacionResponse FEParamGetCotizacionResult) => this.FEParamGetCotizacionResult = FEParamGetCotizacionResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4414,11 +4312,8 @@ public partial class FEParamGetTiposTributosRequest
     public FEParamGetTiposTributosRequest()
     {
     }
-    
-    public FEParamGetTiposTributosRequest(AfipServiceReference.FEParamGetTiposTributosRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposTributosRequest(AfipServiceReference.FEParamGetTiposTributosRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4434,11 +4329,8 @@ public partial class FEParamGetTiposTributosRequestBody
     public FEParamGetTiposTributosRequestBody()
     {
     }
-    
-    public FEParamGetTiposTributosRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposTributosRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4454,11 +4346,8 @@ public partial class FEParamGetTiposTributosResponse
     public FEParamGetTiposTributosResponse()
     {
     }
-    
-    public FEParamGetTiposTributosResponse(AfipServiceReference.FEParamGetTiposTributosResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposTributosResponse(AfipServiceReference.FEParamGetTiposTributosResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4474,11 +4363,8 @@ public partial class FEParamGetTiposTributosResponseBody
     public FEParamGetTiposTributosResponseBody()
     {
     }
-    
-    public FEParamGetTiposTributosResponseBody(AfipServiceReference.FETributoResponse FEParamGetTiposTributosResult)
-    {
-        this.FEParamGetTiposTributosResult = FEParamGetTiposTributosResult;
-    }
+
+    public FEParamGetTiposTributosResponseBody(AfipServiceReference.FETributoResponse FEParamGetTiposTributosResult) => this.FEParamGetTiposTributosResult = FEParamGetTiposTributosResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4494,11 +4380,8 @@ public partial class FEParamGetTiposMonedasRequest
     public FEParamGetTiposMonedasRequest()
     {
     }
-    
-    public FEParamGetTiposMonedasRequest(AfipServiceReference.FEParamGetTiposMonedasRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposMonedasRequest(AfipServiceReference.FEParamGetTiposMonedasRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4514,11 +4397,8 @@ public partial class FEParamGetTiposMonedasRequestBody
     public FEParamGetTiposMonedasRequestBody()
     {
     }
-    
-    public FEParamGetTiposMonedasRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposMonedasRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4534,11 +4414,8 @@ public partial class FEParamGetTiposMonedasResponse
     public FEParamGetTiposMonedasResponse()
     {
     }
-    
-    public FEParamGetTiposMonedasResponse(AfipServiceReference.FEParamGetTiposMonedasResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposMonedasResponse(AfipServiceReference.FEParamGetTiposMonedasResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4554,11 +4431,8 @@ public partial class FEParamGetTiposMonedasResponseBody
     public FEParamGetTiposMonedasResponseBody()
     {
     }
-    
-    public FEParamGetTiposMonedasResponseBody(AfipServiceReference.MonedaResponse FEParamGetTiposMonedasResult)
-    {
-        this.FEParamGetTiposMonedasResult = FEParamGetTiposMonedasResult;
-    }
+
+    public FEParamGetTiposMonedasResponseBody(AfipServiceReference.MonedaResponse FEParamGetTiposMonedasResult) => this.FEParamGetTiposMonedasResult = FEParamGetTiposMonedasResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4574,11 +4448,8 @@ public partial class FEParamGetTiposIvaRequest
     public FEParamGetTiposIvaRequest()
     {
     }
-    
-    public FEParamGetTiposIvaRequest(AfipServiceReference.FEParamGetTiposIvaRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposIvaRequest(AfipServiceReference.FEParamGetTiposIvaRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4594,11 +4465,8 @@ public partial class FEParamGetTiposIvaRequestBody
     public FEParamGetTiposIvaRequestBody()
     {
     }
-    
-    public FEParamGetTiposIvaRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposIvaRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4614,11 +4482,8 @@ public partial class FEParamGetTiposIvaResponse
     public FEParamGetTiposIvaResponse()
     {
     }
-    
-    public FEParamGetTiposIvaResponse(AfipServiceReference.FEParamGetTiposIvaResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposIvaResponse(AfipServiceReference.FEParamGetTiposIvaResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4634,11 +4499,8 @@ public partial class FEParamGetTiposIvaResponseBody
     public FEParamGetTiposIvaResponseBody()
     {
     }
-    
-    public FEParamGetTiposIvaResponseBody(AfipServiceReference.IvaTipoResponse FEParamGetTiposIvaResult)
-    {
-        this.FEParamGetTiposIvaResult = FEParamGetTiposIvaResult;
-    }
+
+    public FEParamGetTiposIvaResponseBody(AfipServiceReference.IvaTipoResponse FEParamGetTiposIvaResult) => this.FEParamGetTiposIvaResult = FEParamGetTiposIvaResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4654,11 +4516,8 @@ public partial class FEParamGetTiposOpcionalRequest
     public FEParamGetTiposOpcionalRequest()
     {
     }
-    
-    public FEParamGetTiposOpcionalRequest(AfipServiceReference.FEParamGetTiposOpcionalRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposOpcionalRequest(AfipServiceReference.FEParamGetTiposOpcionalRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4674,11 +4533,8 @@ public partial class FEParamGetTiposOpcionalRequestBody
     public FEParamGetTiposOpcionalRequestBody()
     {
     }
-    
-    public FEParamGetTiposOpcionalRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposOpcionalRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4694,11 +4550,8 @@ public partial class FEParamGetTiposOpcionalResponse
     public FEParamGetTiposOpcionalResponse()
     {
     }
-    
-    public FEParamGetTiposOpcionalResponse(AfipServiceReference.FEParamGetTiposOpcionalResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposOpcionalResponse(AfipServiceReference.FEParamGetTiposOpcionalResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4714,11 +4567,8 @@ public partial class FEParamGetTiposOpcionalResponseBody
     public FEParamGetTiposOpcionalResponseBody()
     {
     }
-    
-    public FEParamGetTiposOpcionalResponseBody(AfipServiceReference.OpcionalTipoResponse FEParamGetTiposOpcionalResult)
-    {
-        this.FEParamGetTiposOpcionalResult = FEParamGetTiposOpcionalResult;
-    }
+
+    public FEParamGetTiposOpcionalResponseBody(AfipServiceReference.OpcionalTipoResponse FEParamGetTiposOpcionalResult) => this.FEParamGetTiposOpcionalResult = FEParamGetTiposOpcionalResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4734,11 +4584,8 @@ public partial class FEParamGetTiposConceptoRequest
     public FEParamGetTiposConceptoRequest()
     {
     }
-    
-    public FEParamGetTiposConceptoRequest(AfipServiceReference.FEParamGetTiposConceptoRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposConceptoRequest(AfipServiceReference.FEParamGetTiposConceptoRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4754,11 +4601,8 @@ public partial class FEParamGetTiposConceptoRequestBody
     public FEParamGetTiposConceptoRequestBody()
     {
     }
-    
-    public FEParamGetTiposConceptoRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposConceptoRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4774,11 +4618,8 @@ public partial class FEParamGetTiposConceptoResponse
     public FEParamGetTiposConceptoResponse()
     {
     }
-    
-    public FEParamGetTiposConceptoResponse(AfipServiceReference.FEParamGetTiposConceptoResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposConceptoResponse(AfipServiceReference.FEParamGetTiposConceptoResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4794,11 +4635,8 @@ public partial class FEParamGetTiposConceptoResponseBody
     public FEParamGetTiposConceptoResponseBody()
     {
     }
-    
-    public FEParamGetTiposConceptoResponseBody(AfipServiceReference.ConceptoTipoResponse FEParamGetTiposConceptoResult)
-    {
-        this.FEParamGetTiposConceptoResult = FEParamGetTiposConceptoResult;
-    }
+
+    public FEParamGetTiposConceptoResponseBody(AfipServiceReference.ConceptoTipoResponse FEParamGetTiposConceptoResult) => this.FEParamGetTiposConceptoResult = FEParamGetTiposConceptoResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4814,11 +4652,8 @@ public partial class FEParamGetPtosVentaRequest
     public FEParamGetPtosVentaRequest()
     {
     }
-    
-    public FEParamGetPtosVentaRequest(AfipServiceReference.FEParamGetPtosVentaRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetPtosVentaRequest(AfipServiceReference.FEParamGetPtosVentaRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4834,11 +4669,8 @@ public partial class FEParamGetPtosVentaRequestBody
     public FEParamGetPtosVentaRequestBody()
     {
     }
-    
-    public FEParamGetPtosVentaRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetPtosVentaRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4854,11 +4686,8 @@ public partial class FEParamGetPtosVentaResponse
     public FEParamGetPtosVentaResponse()
     {
     }
-    
-    public FEParamGetPtosVentaResponse(AfipServiceReference.FEParamGetPtosVentaResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetPtosVentaResponse(AfipServiceReference.FEParamGetPtosVentaResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4874,11 +4703,8 @@ public partial class FEParamGetPtosVentaResponseBody
     public FEParamGetPtosVentaResponseBody()
     {
     }
-    
-    public FEParamGetPtosVentaResponseBody(AfipServiceReference.FEPtoVentaResponse FEParamGetPtosVentaResult)
-    {
-        this.FEParamGetPtosVentaResult = FEParamGetPtosVentaResult;
-    }
+
+    public FEParamGetPtosVentaResponseBody(AfipServiceReference.FEPtoVentaResponse FEParamGetPtosVentaResult) => this.FEParamGetPtosVentaResult = FEParamGetPtosVentaResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4894,11 +4720,8 @@ public partial class FEParamGetTiposCbteRequest
     public FEParamGetTiposCbteRequest()
     {
     }
-    
-    public FEParamGetTiposCbteRequest(AfipServiceReference.FEParamGetTiposCbteRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposCbteRequest(AfipServiceReference.FEParamGetTiposCbteRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4914,11 +4737,8 @@ public partial class FEParamGetTiposCbteRequestBody
     public FEParamGetTiposCbteRequestBody()
     {
     }
-    
-    public FEParamGetTiposCbteRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposCbteRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4934,11 +4754,8 @@ public partial class FEParamGetTiposCbteResponse
     public FEParamGetTiposCbteResponse()
     {
     }
-    
-    public FEParamGetTiposCbteResponse(AfipServiceReference.FEParamGetTiposCbteResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposCbteResponse(AfipServiceReference.FEParamGetTiposCbteResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4954,11 +4771,8 @@ public partial class FEParamGetTiposCbteResponseBody
     public FEParamGetTiposCbteResponseBody()
     {
     }
-    
-    public FEParamGetTiposCbteResponseBody(AfipServiceReference.CbteTipoResponse FEParamGetTiposCbteResult)
-    {
-        this.FEParamGetTiposCbteResult = FEParamGetTiposCbteResult;
-    }
+
+    public FEParamGetTiposCbteResponseBody(AfipServiceReference.CbteTipoResponse FEParamGetTiposCbteResult) => this.FEParamGetTiposCbteResult = FEParamGetTiposCbteResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4974,11 +4788,8 @@ public partial class FEParamGetTiposDocRequest
     public FEParamGetTiposDocRequest()
     {
     }
-    
-    public FEParamGetTiposDocRequest(AfipServiceReference.FEParamGetTiposDocRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposDocRequest(AfipServiceReference.FEParamGetTiposDocRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4994,11 +4805,8 @@ public partial class FEParamGetTiposDocRequestBody
     public FEParamGetTiposDocRequestBody()
     {
     }
-    
-    public FEParamGetTiposDocRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposDocRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5014,11 +4822,8 @@ public partial class FEParamGetTiposDocResponse
     public FEParamGetTiposDocResponse()
     {
     }
-    
-    public FEParamGetTiposDocResponse(AfipServiceReference.FEParamGetTiposDocResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposDocResponse(AfipServiceReference.FEParamGetTiposDocResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5034,11 +4839,8 @@ public partial class FEParamGetTiposDocResponseBody
     public FEParamGetTiposDocResponseBody()
     {
     }
-    
-    public FEParamGetTiposDocResponseBody(AfipServiceReference.DocTipoResponse FEParamGetTiposDocResult)
-    {
-        this.FEParamGetTiposDocResult = FEParamGetTiposDocResult;
-    }
+
+    public FEParamGetTiposDocResponseBody(AfipServiceReference.DocTipoResponse FEParamGetTiposDocResult) => this.FEParamGetTiposDocResult = FEParamGetTiposDocResult;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5054,11 +4856,8 @@ public partial class FEParamGetTiposPaisesRequest
     public FEParamGetTiposPaisesRequest()
     {
     }
-    
-    public FEParamGetTiposPaisesRequest(AfipServiceReference.FEParamGetTiposPaisesRequestBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposPaisesRequest(AfipServiceReference.FEParamGetTiposPaisesRequestBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5074,11 +4873,8 @@ public partial class FEParamGetTiposPaisesRequestBody
     public FEParamGetTiposPaisesRequestBody()
     {
     }
-    
-    public FEParamGetTiposPaisesRequestBody(AfipServiceReference.FEAuthRequest Auth)
-    {
-        this.Auth = Auth;
-    }
+
+    public FEParamGetTiposPaisesRequestBody(AfipServiceReference.FEAuthRequest Auth) => this.Auth = Auth;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5094,11 +4890,8 @@ public partial class FEParamGetTiposPaisesResponse
     public FEParamGetTiposPaisesResponse()
     {
     }
-    
-    public FEParamGetTiposPaisesResponse(AfipServiceReference.FEParamGetTiposPaisesResponseBody Body)
-    {
-        this.Body = Body;
-    }
+
+    public FEParamGetTiposPaisesResponse(AfipServiceReference.FEParamGetTiposPaisesResponseBody Body) => this.Body = Body;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -5114,11 +4907,8 @@ public partial class FEParamGetTiposPaisesResponseBody
     public FEParamGetTiposPaisesResponseBody()
     {
     }
-    
-    public FEParamGetTiposPaisesResponseBody(AfipServiceReference.FEPaisResponse FEParamGetTiposPaisesResult)
-    {
-        this.FEParamGetTiposPaisesResult = FEParamGetTiposPaisesResult;
-    }
+
+    public FEParamGetTiposPaisesResponseBody(AfipServiceReference.FEPaisResponse FEParamGetTiposPaisesResult) => this.FEParamGetTiposPaisesResult = FEParamGetTiposPaisesResult;
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]

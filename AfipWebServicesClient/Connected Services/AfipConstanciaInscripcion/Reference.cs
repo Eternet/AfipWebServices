@@ -1936,11 +1936,8 @@ public partial class getPersonaResponse
     public getPersonaResponse()
     {
     }
-    
-    public getPersonaResponse(AfipConstanciaInscripcion.personaReturn personaReturn)
-    {
-        this.personaReturn = personaReturn;
-    }
+
+    public getPersonaResponse(AfipConstanciaInscripcion.personaReturn personaReturn) => this.personaReturn = personaReturn;
 }
 
 /// <remarks/>
@@ -2135,11 +2132,8 @@ public partial class getPersonaListResponse
     public getPersonaListResponse()
     {
     }
-    
-    public getPersonaListResponse(AfipConstanciaInscripcion.personaListReturn personaListReturn)
-    {
-        this.personaListReturn = personaListReturn;
-    }
+
+    public getPersonaListResponse(AfipConstanciaInscripcion.personaListReturn personaListReturn) => this.personaListReturn = personaListReturn;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2190,11 +2184,8 @@ public partial class getPersona_v2Response
     public getPersona_v2Response()
     {
     }
-    
-    public getPersona_v2Response(AfipConstanciaInscripcion.personaReturn personaReturn)
-    {
-        this.personaReturn = personaReturn;
-    }
+
+    public getPersona_v2Response(AfipConstanciaInscripcion.personaReturn personaReturn) => this.personaReturn = personaReturn;
 }
 
 /// <remarks/>
@@ -2277,11 +2268,8 @@ public partial class dummyResponse
     public dummyResponse()
     {
     }
-    
-    public dummyResponse(AfipConstanciaInscripcion.dummyReturn @return)
-    {
-        this.@return = @return;
-    }
+
+    public dummyResponse(AfipConstanciaInscripcion.dummyReturn @return) => this.@return = @return;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2332,11 +2320,8 @@ public partial class getPersonaList_v2Response
     public getPersonaList_v2Response()
     {
     }
-    
-    public getPersonaList_v2Response(AfipConstanciaInscripcion.personaListReturn personaListReturn)
-    {
-        this.personaListReturn = personaListReturn;
-    }
+
+    public getPersonaList_v2Response(AfipConstanciaInscripcion.personaListReturn personaListReturn) => this.personaListReturn = personaListReturn;
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]

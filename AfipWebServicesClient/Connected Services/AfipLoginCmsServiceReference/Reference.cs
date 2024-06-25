@@ -42,11 +42,8 @@ public partial class loginCmsRequest
     public loginCmsRequest()
     {
     }
-    
-    public loginCmsRequest(string in0)
-    {
-        this.in0 = in0;
-    }
+
+    public loginCmsRequest(string in0) => this.in0 = in0;
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -62,11 +59,8 @@ public partial class loginCmsResponse
     public loginCmsResponse()
     {
     }
-    
-    public loginCmsResponse(string loginCmsReturn)
-    {
-        this.loginCmsReturn = loginCmsReturn;
-    }
+
+    public loginCmsResponse(string loginCmsReturn) => this.loginCmsReturn = loginCmsReturn;
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.2")]
