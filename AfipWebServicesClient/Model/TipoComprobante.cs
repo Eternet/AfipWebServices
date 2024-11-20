@@ -1,7 +1,5 @@
 ﻿namespace AfipWebServicesClient.Model;
 
-// ReSharper disable UnusedMember.Global
-// ReSharper disable IdentifierTypo
 public enum TipoComprobante
 {
     FacturaA = 1,
