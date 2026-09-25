@@ -1,6 +1,7 @@
-﻿using AfipServiceReference;
+using AfipServiceReference;
 using AfipWebServicesClient.Extensions;
 using AfipWebServicesClient.Model;
+using System;
 using System.ServiceModel;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ public class WebServiceFeClient
 {
     private readonly ServiceSoap _wsfeService;
     private bool IsProdEnvironment { get; }
-    private long Cuit { get; }
+    private long TaxId { get; }
     private string Token { get; }
     private string Sign { get; }
 
@@ -19,7 +20,7 @@ public class WebServiceFeClient
 
     public WebServiceFeClient(long cuit, string token, string sign, bool isProdEnvironment, IAfipFeSoapClientFactory afipSoapClientFactory)
     {
-        Cuit = cuit;
+        TaxId = cuit;
         Token = token;
         IsProdEnvironment = isProdEnvironment;
         Sign = sign;
@@ -28,7 +29,7 @@ public class WebServiceFeClient
 
     public async Task<FECompUltimoAutorizadoResponse> GetLastAuthorizedAsync(int salePoint, TipoComprobante voucherType)
     {
-        var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
+        var auth = new FEAuthRequest { Cuit = TaxId, Sign = Sign, Token = Token };
         var request = new FECompUltimoAutorizadoRequest
         {
             Body = new FECompUltimoAutorizadoRequestBody(auth, salePoint, voucherType.ToInt())
@@ -37,9 +38,24 @@ public class WebServiceFeClient
         return response;
     }
 
+    public async Task<FECompConsultarResponse> GetVoucherAsync(int salePoint, TipoComprobante voucherType, long voucherNumber)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(voucherNumber);
+
+        var auth = new FEAuthRequest { Cuit = TaxId, Sign = Sign, Token = Token };
+        var voucher = new FECompConsultaReq
+        {
+            CbteTipo = voucherType.ToInt(),
+            CbteNro = voucherNumber,
+            PtoVta = salePoint
+        };
+        return await _wsfeService.FECompConsultarAsync(
+            new FECompConsultarRequest(new FECompConsultarRequestBody(auth, voucher)));
+    }
+
     public async Task<FEParamGetPtosVentaResponse> GetSalesPointAsync()
     {
-        var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
+        var auth = new FEAuthRequest { Cuit = TaxId, Sign = Sign, Token = Token };
         var request = new FEParamGetPtosVentaRequest { Body = new FEParamGetPtosVentaRequestBody(auth) };
         var response = await _wsfeService.FEParamGetPtosVentaAsync(request);
         return response;
@@ -47,7 +63,7 @@ public class WebServiceFeClient
 
     public async Task<FEParamGetTiposTributosResponse> GetTaxesTypesAsync()
     {
-        var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
+        var auth = new FEAuthRequest { Cuit = TaxId, Sign = Sign, Token = Token };
         var request = new FEParamGetTiposTributosRequest { Body = new FEParamGetTiposTributosRequestBody(auth) };
         var response = await _wsfeService.FEParamGetTiposTributosAsync(request);
         return response;
@@ -56,7 +72,7 @@ public class WebServiceFeClient
     // ReSharper disable InconsistentNaming
     public async Task<FECAESolicitarResponse> GetCaeAsync(FECAERequest feCaeReq)
     {
-        var auth = new FEAuthRequest { Cuit = Cuit, Sign = Sign, Token = Token };
+        var auth = new FEAuthRequest { Cuit = TaxId, Sign = Sign, Token = Token };
         var request = new FECAESolicitarRequest { Body = new FECAESolicitarRequestBody(auth, feCaeReq) };
         var response = await _wsfeService.FECAESolicitarAsync(request);
         return response;
