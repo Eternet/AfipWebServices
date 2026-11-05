@@ -25,6 +25,7 @@ bld/
 [Ll]og/
 
 # Certs
+**/*ticket_*.json
 Certs/
 /Certs
 

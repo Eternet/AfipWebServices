@@ -122,7 +122,7 @@ public class LoginCmsClient(AfipEnvironment environment, ILogger<LoginCmsClient>
 
             var response = await wsaaService.loginCmsAsync(base64SignedCms);
             loginTicketResponse = response.loginCmsReturn;
-            _logger.LogInformation("loginCmsAsync response: {loginResponse}", loginTicketResponse);
+            _logger.LogInformation("WSAA authentication completed for {environment}", environment.EnvironmentName);
         }
         catch (Exception ex)
         {
